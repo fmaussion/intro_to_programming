@@ -6,8 +6,12 @@ root: welcome
 parts:
   - caption: Introduction
     chapters:
-    - file: syllabus
     - url: https://fabienmaussion.info/scientific_programming/faq.html
       title: Frequently Asked Questions
     - file: references
     - file: slides
+  - caption: Week 01 - Getting started
+    chapters:
+    - file: week_01/01-Installation
+    - file: week_01/02-Why-Program
+    - file: week_01/03-Assignment
