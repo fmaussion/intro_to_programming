@@ -43,12 +43,11 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -119,8 +118,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference external" href="https://fabienmaussion.info/scientific_programming/faq.html">
-   Frequently Asked Questions
+  <a class="reference internal" href="../learning_tips.html">
+   Learning tips
   </a>
  </li>
  <li class="toctree-l1">
@@ -131,6 +130,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../slides.html">
    Presentation slides
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://fabienmaussion.info/scientific_programming/faq.html">
+   Frequently Asked Questions
   </a>
  </li>
 </ul>
@@ -295,14 +299,14 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="why-program">
 <h1>Why program?<a class="headerlink" href="#why-program" title="Permalink to this headline">¶</a></h1>
-<p>This week, we will follow the lecture by PY4E in its entirety</p>
+<p>This week, we will follow the first lecture by PY4E entirely.</p>
 <div class="section" id="independent-learning">
 <h2>Independent learning<a class="headerlink" href="#independent-learning" title="Permalink to this headline">¶</a></h2>
 <p><strong>Lesson</strong>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.py4e.com/html3/01-intro">Chapter 1: Introduction</a></p></li>
 </ul>
-<p>Note: you do not need to open the python yourself for this lesson (you can if you want, but you don’t <em>have</em> to try the examples shown in the lesson - it’s only for reading for now).</p>
+<p>Note: you do not need to open the python interpreter yourself for this lesson (you can if you want, but you don’t <em>have</em> to try the examples shown in the lesson).</p>
 <p><strong>Videos</strong>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=fvhNadKjE8g">Part 1: Why Program?</a> (12’30)</p></li>
@@ -314,7 +318,7 @@
 <div class="section" id="what-to-remember">
 <h2>What to remember?<a class="headerlink" href="#what-to-remember" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>all the terms in the lesson’s “Glossary” are useful to understand and remember.</p></li>
+<li><p>all the terms in the <a class="reference external" href="https://www.py4e.com/html3/01-intro">lesson</a>’s “Glossary” are useful to understand and remember.</p></li>
 </ul>
 </div>
 </div>
