@@ -18,6 +18,7 @@ but before you give up or get frustrated, just ask for support. Asking questions
 so we can spend more time explaining the problematic concepts and make the most of the in-class time.
 
 You can ask questions:
+- to your friends and colleagues (highly recommended!)
 - in a search machine (one of the most important skills in programming!)
-- during class, with me
+- to me during class (and per email if necessary)
 - in the matrix/element chat (link on OLAT)

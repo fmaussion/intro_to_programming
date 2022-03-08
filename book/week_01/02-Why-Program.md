@@ -1,13 +1,13 @@
 # Why program?
 
-This week, we will follow the lecture by PY4E in its entirety
+This week, we will follow the first lecture by PY4E entirely.
 
 ## Independent learning
 
 **Lesson**: 
 - [Chapter 1: Introduction](https://www.py4e.com/html3/01-intro)
 
-Note: you do not need to open the python yourself for this lesson (you can if you want, but you don't *have* to try the examples shown in the lesson - it's only for reading for now). 
+Note: you do not need to open the python interpreter yourself for this lesson (you can if you want, but you don't *have* to try the examples shown in the lesson). 
 
 **Videos**:
 - [Part 1: Why Program?](https://www.youtube.com/watch?v=fvhNadKjE8g) (12'30)
@@ -17,4 +17,4 @@ Note: you do not need to open the python yourself for this lesson (you can if yo
 
 ## What to remember?
 
-- all the terms in the lesson's "Glossary" are useful to understand and remember.
+- all the terms in the [lesson](https://www.py4e.com/html3/01-intro)'s "Glossary" are useful to understand and remember.

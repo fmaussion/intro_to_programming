@@ -7,10 +7,11 @@ parts:
   - caption: Introduction
     chapters:
     - file: syllabus
-    - url: https://fabienmaussion.info/scientific_programming/faq.html
-      title: Frequently Asked Questions
+    - file: learning_tips
     - file: references
     - file: slides
+    - url: https://fabienmaussion.info/scientific_programming/faq.html
+      title: Frequently Asked Questions
   - caption: Week 01 - Getting started
     chapters:
     - file: week_01/01-Installation
