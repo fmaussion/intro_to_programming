@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Why program?" href="02-Why-Program.html" />
-    <link rel="prev" title="Presentation slides" href="../slides.html" />
+    <link rel="prev" title="External resources" href="../references.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -125,16 +125,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../references.html">
    External resources
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../slides.html">
-   Presentation slides
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://fabienmaussion.info/scientific_programming/faq.html">
-   Frequently Asked Questions
   </a>
  </li>
 </ul>
@@ -375,6 +365,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<div class="warning dropdown admonition">
+<p class="admonition-title">Important! For Windows 7 users</p>
+<p>I’m sorry Windows 7 is <a class="reference external" href="https://en.wikipedia.org/wiki/Windows_7">not supported since January 2020</a>. It seems that you can’t install <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> on Windows 7. Regardless of python, I strongly recommend to update to a version with security updates.</p>
+</div>
 <div class="section" id="install-miniconda">
 <h2>Install Miniconda<a class="headerlink" href="#install-miniconda" title="Permalink to this headline">¶</a></h2>
 <p>Go to the miniforge download website: <a class="reference external" href="https://github.com/conda-forge/miniforge#mambaforge">https://github.com/conda-forge/miniforge#mambaforge</a></p>
@@ -390,15 +384,23 @@ Unless you have an uncommon architecture (unlikely), you should choose the <code
 </div>
 <div class="section" id="on-mac-os-and-linux">
 <h3>On Mac OS and Linux<a class="headerlink" href="#on-mac-os-and-linux" title="Permalink to this headline">¶</a></h3>
-<p>In your terminal window, run:</p>
-<p><code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">Mambaforge-MacOSX-x86_64.sh</span></code></p>
-<p>Follow the prompts on the installer screens.</p>
-<p>If you are unsure about any setting, accept the defaults. You can change them later.</p>
+<p>For these platforms, no need to download the files yourself. Open a terminal and do:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl -L -O &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh&quot;
+bash Mambaforge-$(uname)-$(uname -m).sh
+</pre></div>
+</div>
+<p>or, if this doesn’t work:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>wget &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh&quot;
+bash Mambaforge-$(uname)-$(uname -m).sh
+</pre></div>
+</div>
+<p>The first command downloads the tool, and the second installs it. Follow the prompts on the installer screens.</p>
+<p>If you are unsure about any setting, accept the defaults <strong>except for the last question asking you if you wish to run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span></code>: here, answer “yes”.</strong></p>
 <p>To make the changes take effect, close and then re-open your terminal window.</p>
 </div>
 <div class="section" id="testing-your-installation">
 <h3>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline">¶</a></h3>
-<p>To see if everything worked well open a terminal. On Windows, open the <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code> (from the Start menu, search for and open “miniforge prompt”):</p>
+<p>To see if everything worked well, open a terminal (Mac and Linux). On Windows, open the <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code> (from the Start menu, search for and open “miniforge prompt”):</p>
 <a class="reference internal image-reference" href="../_images/prompt.png"><img alt="../_images/prompt.png" src="../_images/prompt.png" style="width: 400px;" /></a>
 <p><br><br>
 and type in:</p>
@@ -465,11 +467,11 @@ I should explain what we have just done in case you are interested or if you goo
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../slides.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../references.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Presentation slides</p>
+            <p class="prev-next-title">External resources</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="02-Why-Program.html" title="next page">
