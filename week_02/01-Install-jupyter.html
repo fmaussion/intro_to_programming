@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Why program? &#8212; Introduction to Programming</title>
+    <title>Installing Jupyter &#8212; Introduction to Programming</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Assignment 01" href="03-Assignment.html" />
-    <link rel="prev" title="Installing Python" href="01-Installation.html" />
+    <link rel="next" title="Introduction to Jupyter" href="02-Intro-jupyter.html" />
+    <link rel="prev" title="Assignment 01" href="../week_01/03-Assignment.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -133,19 +133,19 @@ const thebe_selector_output = ".output, .cell_output"
   Week 01 - Getting started
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Installation.html">
+  <a class="reference internal" href="../week_01/01-Installation.html">
    Installing Python
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_01/02-Why-Program.html">
    Why program?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Assignment.html">
+  <a class="reference internal" href="../week_01/03-Assignment.html">
    Assignment 01
   </a>
  </li>
@@ -155,24 +155,24 @@ const thebe_selector_output = ".output, .cell_output"
   Week 02 - Gaining speed
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../week_02/01-Install-jupyter.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Installing Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_02/02-Intro-jupyter.html">
+  <a class="reference internal" href="02-Intro-jupyter.html">
    Introduction to Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_02/03-Lessons.html">
+  <a class="reference internal" href="03-Lessons.html">
    Lessons
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_02/04-Assignment.html">
+  <a class="reference internal" href="04-Assignment.html">
    Assignment 02
   </a>
  </li>
@@ -217,9 +217,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/week_01/02-Why-Program.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/week_02/01-Install-jupyter.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -237,10 +237,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_01/02-Why-Program.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_02/01-Install-jupyter.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_01/02-Why-Program.md"><button
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_02/01-Install-jupyter.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -255,6 +255,23 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_02/01-Install-jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -266,13 +283,18 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#independent-learning">
-   Independent learning
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-to-remember">
-   What to remember?
+  <a class="reference internal nav-link" href="#install-ipython-and-jupyterlab">
+   Install ipython and jupyterlab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-summary">
+   Learning summary
   </a>
  </li>
 </ul>
@@ -285,7 +307,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Why program?</h1>
+                <h1>Installing Jupyter</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -296,13 +318,18 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#independent-learning">
-   Independent learning
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-to-remember">
-   What to remember?
+  <a class="reference internal nav-link" href="#install-ipython-and-jupyterlab">
+   Install ipython and jupyterlab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-summary">
+   Learning summary
   </a>
  </li>
 </ul>
@@ -314,28 +341,50 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="why-program">
-<h1>Why program?<a class="headerlink" href="#why-program" title="Permalink to this headline">¶</a></h1>
-<p>This week, we will follow the first lecture by PY4E entirely.</p>
-<div class="section" id="independent-learning">
-<h2>Independent learning<a class="headerlink" href="#independent-learning" title="Permalink to this headline">¶</a></h2>
-<p><strong>Lesson</strong>:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="installing-jupyter">
+<h1>Installing Jupyter<a class="headerlink" href="#installing-jupyter" title="Permalink to this headline">¶</a></h1>
+<p>This chapter contains some instructions about how to install additional useful tools which will enhance your python installation a great deal!</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>I’ll assume that the <a class="reference internal" href="../week_01/01-Installation.html"><span class="doc std std-doc">python installation instructions from last week</span></a> have worked for you, and that you:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.py4e.com/html3/01-intro">Chapter 1: Introduction</a></p></li>
+<li><p>are able to start a miniforge prompt</p></li>
+<li><p>can type <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">list</span></code> successfully</p></li>
+<li><p>can type <code class="docutils literal notranslate"><span class="pre">python</span></code> and open an interpreter.</p></li>
 </ul>
-<p>Note: you do not need to open the python interpreter yourself for this lesson (you can if you want, but you don’t <em>have</em> to try the examples shown in the lesson).</p>
-<p><strong>Videos</strong>:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=fvhNadKjE8g">Part 1: Why Program?</a> (12’30)</p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=VQZTZsXk8sA">Part 2: Hardware architecture</a> (12’15)</p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=LLzFNlCjTSo">Part 3: Python as a language</a> (7’50)</p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=gsry2SYOFCw">Part 4: What do we say?</a> (12’45)</p></li>
-</ul>
+<div class="warning dropdown admonition">
+<p class="admonition-title">You already have anaconda installed but not mamba or conda-forge</p>
+<p>If you already have jupyterlab installed, you can use it for now. If not, please ask me in class what to do!</p>
 </div>
-<div class="section" id="what-to-remember">
-<h2>What to remember?<a class="headerlink" href="#what-to-remember" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="install-ipython-and-jupyterlab">
+<h2>Install ipython and jupyterlab<a class="headerlink" href="#install-ipython-and-jupyterlab" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://ipython.org">ipython</a> and <a class="reference external" href="https://jupyter.org">jupyter</a> are fundamental tools of a scientific python installation. We will use them a LOT during the semester and your studies. I will make a demonstration in class, but first you have to install it! From the miniforge prompt, type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mamba install jupyterlab
+</pre></div>
+</div>
+<p>This will install both jupyter-lab and ipython at the same time. To check if it worked, type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ipython
+</pre></div>
+</div>
+<p>Which should display something like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Python 3.9.7 | packaged by conda-forge | (default, Sep 29 2021, 19:15:42) [MSC v.1916 64 bit (AMD64)]
+Type &#39;copyright&#39;, &#39;credits&#39; or &#39;license&#39; for more information
+IPython 8.1.1 -- An enhanced Interactive Python. Type &#39;?&#39; for help.
+
+In [1]:
+</pre></div>
+</div>
+<p>Exit <code class="docutils literal notranslate"><span class="pre">ipython</span></code> (remember how? Use <code class="docutils literal notranslate"><span class="pre">CTRL+D</span></code> or <code class="docutils literal notranslate"><span class="pre">exit()</span></code>), and then type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ jupyter-lab
+</pre></div>
+</div>
+<p>This should open a new window in your default web browser!</p>
+</div>
+<div class="section" id="learning-summary">
+<h2>Learning summary<a class="headerlink" href="#learning-summary" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>all the terms in the <a class="reference external" href="https://www.py4e.com/html3/01-intro">lesson</a>’s “Glossary” are useful to understand and remember.</p></li>
+<li><p>you know how to install jupyter on your computer and start ipython and jupyter-lab</p></li>
 </ul>
 </div>
 </div>
@@ -353,7 +402,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./week_01"
+            path: "./week_02"
         },
         predefinedOutput: true
     }
@@ -365,17 +414,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="01-Installation.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../week_01/03-Assignment.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Installing Python</p>
+            <p class="prev-next-title">Assignment 01</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="03-Assignment.html" title="next page">
+    <a class='right-next' id="next-link" href="02-Intro-jupyter.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Assignment 01</p>
+        <p class="prev-next-title">Introduction to Jupyter</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
