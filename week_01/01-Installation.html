@@ -123,6 +123,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../assignments.html">
+   Homework instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../references.html">
    External resources
   </a>
@@ -398,12 +403,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="install-miniconda">
 <h2>Install Miniconda<a class="headerlink" href="#install-miniconda" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="on-windows">
+<h3>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this headline">¶</a></h3>
 <p>Go to the miniforge download website: <a class="reference external" href="https://github.com/conda-forge/miniforge#mambaforge">https://github.com/conda-forge/miniforge#mambaforge</a></p>
 <p>Download the installers for <strong>Mambaforge</strong> and your operating system (Windows, Mac OS or Linux).
 Unless you have an uncommon architecture (unlikely), you should choose the <code class="docutils literal notranslate"><span class="pre">x86_64</span></code> files.</p>
-<a class="reference internal image-reference" href="../_images/download_options.png"><img alt="../_images/download_options.png" src="../_images/download_options.png" style="width: 400px;" /></a>
-<div class="section" id="on-windows">
-<h3>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../_images/download_options.png"><img alt="../_images/download_options.png" src="../_images/download_options.png" style="width: 400px;" /></a> <br></p>
 <p>Double-click the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file.</p>
 <p>Follow the instructions on the screen.</p>
 <p>If you are unsure about any setting, accept the defaults. You can change them later. At this stage, I recommend:</p>
@@ -428,13 +433,12 @@ bash Mambaforge-$(uname)-$(uname -m).sh
 <div class="section" id="testing-your-installation">
 <h3>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline">¶</a></h3>
 <p>To see if everything worked well, open a terminal (Mac and Linux). On Windows, open the <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code> (from the Start menu, search for and open “miniforge prompt”):</p>
-<a class="reference internal image-reference" href="../_images/prompt.png"><img alt="../_images/prompt.png" src="../_images/prompt.png" style="width: 400px;" /></a>
-<p><br><br>
-and type in:</p>
+<p><a class="reference internal" href="../_images/miniforge.png"><img alt="../_images/miniforge.png" src="../_images/miniforge.png" style="width: 400px;" /></a> <br></p>
+<p>and type in:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mamba list
 </pre></div>
 </div>
-<p>You should see a list of package names.</p>
+<p>You should see a long list of package names.</p>
 <p>If you type:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python
 </pre></div>

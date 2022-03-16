@@ -122,6 +122,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../assignments.html">
+   Homework instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../references.html">
    External resources
   </a>
@@ -259,6 +264,24 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1">
+   Exercise 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2">
+   Exercise 2
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -271,6 +294,24 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1">
+   Exercise 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2">
+   Exercise 2
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -279,7 +320,61 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="assignment-02">
 <h1>Assignment 02<a class="headerlink" href="#assignment-02" title="Permalink to this headline">¶</a></h1>
-<p>To be announced on Wednesday 16 of March</p>
+<p><em>Due date: 23.03.2022</em></p>
+<p>This week’s assignment has to be returned in the form of two python scripts. Have a look at the <a class="reference internal" href="../assignments.html"><span class="doc std std-doc">instructions</span></a> first!</p>
+<div class="section" id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that uses <code class="docutils literal notranslate"><span class="pre">input</span></code> to prompt a user for their name and preferred language, and then welcomes them.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enter your name: Sophie
+Enter your language: FR
+Bonjour Sophie!
+</pre></div>
+</div>
+<p>The allowed languages are <code class="docutils literal notranslate"><span class="pre">EN</span></code> (English), <code class="docutils literal notranslate"><span class="pre">DE</span></code> (German), <code class="docutils literal notranslate"><span class="pre">FR</span></code> (French), and a fourth language of your choice.
+If the language is not one of these three options, the program should print an error message and exit.</p>
+</div>
+<div class="section" id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that computes the probability of fog according to user input. The user first has to
+enter the relative humidity (a number between 0 and 100), and then, depending on the situation,
+the user will be asked in what season the prediction needs to be made.</p>
+<p>The rules of fog formation are pretty simple:</p>
+<ul class="simple">
+<li><p>if relative humidity is below 50%, then the probability of fog is 1%</p></li>
+<li><p>if relative humidity is above or equal 50%, then the probability of fog depends on the season:</p>
+<ul>
+<li><p>in summer, the probability of fog is equal to the relative humidity divided by 10</p></li>
+<li><p>in winter, the probability of fog is equal to the relative humidity divided by 2</p></li>
+</ul>
+</li>
+</ul>
+<p>If the relative humidity is not between 0 and 100, or not a number, then the program should print a message and exit.</p>
+<p>Here are a few examples of program execution:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enter the relative humidity: 30
+The probability of fog is: 1%
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enter the relative humidity: 51
+What is the season? (winter or summer): winter
+The probability of fog is: 26%
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enter the relative humidity: 91
+What is the season? (winter or summer): summer
+The probability of fog is: 9%
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enter the relative humidity: 101
+The entered value is not valid.
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enter the relative humidity: ups
+The entered value is not valid.
+</pre></div>
+</div>
+<p><strong>Tip:</strong> to convert your computed probability number to a string, please use the following command: <code class="docutils literal notranslate"><span class="pre">str(round(number))</span></code>.
+This command starts by rounding the number with <code class="docutils literal notranslate"><span class="pre">round()</span></code> then converts the output to a string with <code class="docutils literal notranslate"><span class="pre">str()</span></code>.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

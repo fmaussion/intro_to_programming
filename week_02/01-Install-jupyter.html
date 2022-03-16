@@ -123,6 +123,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../assignments.html">
+   Homework instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../references.html">
    External resources
   </a>
@@ -288,6 +293,34 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explanation-the-difference-between-the-command-prompt-the-miniforge-prompt-and-the-python-interpreter">
+   Explanation: the difference between the command prompt, the miniforge prompt, and the python interpreter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-command-prompt-or-cmd-exe">
+     The command prompt (or
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       cmd.exe
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-miniforge-prompt">
+     The miniforge prompt
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-python-interpreter">
+     The python interpreter
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#install-ipython-and-jupyterlab">
    Install ipython and jupyterlab
   </a>
@@ -321,6 +354,34 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#prerequisites">
    Prerequisites
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explanation-the-difference-between-the-command-prompt-the-miniforge-prompt-and-the-python-interpreter">
+   Explanation: the difference between the command prompt, the miniforge prompt, and the python interpreter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-command-prompt-or-cmd-exe">
+     The command prompt (or
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       cmd.exe
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-miniforge-prompt">
+     The miniforge prompt
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-python-interpreter">
+     The python interpreter
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#install-ipython-and-jupyterlab">
@@ -357,14 +418,61 @@ const thebe_selector_output = ".output, .cell_output"
 <p>If you already have jupyterlab installed, you can use it for now. If not, please ask me in class what to do!</p>
 </div>
 </div>
+<div class="section" id="explanation-the-difference-between-the-command-prompt-the-miniforge-prompt-and-the-python-interpreter">
+<h2>Explanation: the difference between the command prompt, the miniforge prompt, and the python interpreter<a class="headerlink" href="#explanation-the-difference-between-the-command-prompt-the-miniforge-prompt-and-the-python-interpreter" title="Permalink to this headline">¶</a></h2>
+<p>Many of you have opened a prompt (a terminal) for the first time in this class. When I was a child and my parents bought our first computer, opening a terminal was very normal and even needed to play games!</p>
+<p><strong>There is nothing to be afraid of</strong>. You will use the prompt very often, but you won’t need it for anything else than starting python, jupyterlab, or any other python tool of your choice.</p>
+<div class="section" id="the-command-prompt-or-cmd-exe">
+<h3>The command prompt (or <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code>)<a class="headerlink" href="#the-command-prompt-or-cmd-exe" title="Permalink to this headline">¶</a></h3>
+<p>You will find it by typing cmd in the windows search bar:</p>
+<p><a class="reference internal" href="../_images/cmd.png"><img alt="../_images/cmd.png" src="../_images/cmd.png" style="width: 400px;" /></a> <br></p>
+<p>In the command prompt, you can do many things, but the one thing you’ll really need is to <strong>navigate</strong> to the folder of your choice. The name of the currently active folder is always indicated at the start of the command line.</p>
+<p>Only a few commands are necessary for this class:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">help</span></code>: seeing the list of commands available</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dir</span></code>: list the directories (folders) in the current location</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">FolderName</span></code>: navigate to the folder FolderName</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code>: navigate one folder up</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TAB</span></code>: ask the command prompt to complete the name for you. For example, if you are lazy and type two letters of the desired folder only, typing <code class="docutils literal notranslate"><span class="pre">TAB</span></code> might complete it for you</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exit</span></code>: exit the prompt (you can also simply close the window)</p></li>
+</ul>
+<p>That’s it! The reason why you need to be able to navigate to a specific folder will be explained in the next lesson.</p>
+</div>
+<div class="section" id="the-miniforge-prompt">
+<h3>The miniforge prompt<a class="headerlink" href="#the-miniforge-prompt" title="Permalink to this headline">¶</a></h3>
+<p>You will find it by typing “miniforge” in the windows search bar:</p>
+<p><a class="reference internal" href="../_images/miniforge.png"><img alt="../_images/miniforge.png" src="../_images/miniforge.png" style="width: 400px;" /></a> <br></p>
+<p>You will recognize that you are in a miniforge prompt by the title of the window and the <code class="docutils literal notranslate"><span class="pre">(base)</span></code> text before the location:</p>
+<p><a class="reference internal" href="../_images/term.png"><img alt="../_images/term.png" src="../_images/term.png" style="width: 600px;" /></a> <br></p>
+<p><strong>The miniforge prompt is exactly like the command prompt, BUT it has python installed in it</strong>. All the commands explained above work in the miniforge prompt as well, but these new commands are now available to you:</p>
+<ul class="simple">
+<li><p>all the <code class="docutils literal notranslate"><span class="pre">mamba</span></code> commands (<code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">install</span></code>, …)</p></li>
+<li><p>opening a python interpreter (<code class="docutils literal notranslate"><span class="pre">python</span></code>, and later today also <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code>)</p></li>
+</ul>
+<p><strong>In practice, you will actually never open the command prompt, but always the miniforge prompt. You will use it to navigate to a folder and then start a python interpreter.</strong></p>
+</div>
+<div class="section" id="the-python-interpreter">
+<h3>The python interpreter<a class="headerlink" href="#the-python-interpreter" title="Permalink to this headline">¶</a></h3>
+<p>The python interpreter can be opened in many different ways, but the way you learn first is to start it from the miniforge prompt. The python interpreter is recognizable by the three “great than” sign at the beginning of the command line <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>. The python interpreter is where the python commands are valid.</p>
+<div class="important admonition">
+<p class="admonition-title">Be aware of the context</p>
+<p>Be aware of the interpreter your are using. To summarize:</p>
+<ul class="simple">
+<li><p>In the command prompt, you can navigate between folders (<code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">dir</span></code>, etc.)</p></li>
+<li><p>In the miniforge prompt, you can navigate between folders AND you can install python packages (<code class="docutils literal notranslate"><span class="pre">mamba</span></code>) and start python (<code class="docutils literal notranslate"><span class="pre">python</span></code> or <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code>)</p></li>
+<li><p>In the python interpreter, you can type python commands and much much more</p></li>
+</ul>
+</div>
+</div>
+</div>
 <div class="section" id="install-ipython-and-jupyterlab">
 <h2>Install ipython and jupyterlab<a class="headerlink" href="#install-ipython-and-jupyterlab" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://ipython.org">ipython</a> and <a class="reference external" href="https://jupyter.org">jupyter</a> are fundamental tools of a scientific python installation. We will use them a LOT during the semester and your studies. I will make a demonstration in class, but first you have to install it! From the miniforge prompt, type:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mamba install jupyterlab
+<p><a class="reference external" href="https://ipython.org">ipython</a> and <a class="reference external" href="https://jupyter.org">jupyter</a> are fundamental tools of a scientific python installation. We will use them a LOT during the semester and your studies. I will make a demonstration in class, but first you have to install it! <strong>From the miniforge prompt</strong>, type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mamba install jupyterlab
 </pre></div>
 </div>
 <p>This will install both jupyter-lab and ipython at the same time. To check if it worked, type:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ipython
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ipython
 </pre></div>
 </div>
 <p>Which should display something like:</p>
@@ -375,11 +483,12 @@ IPython 8.1.1 -- An enhanced Interactive Python. Type &#39;?&#39; for help.
 In [1]:
 </pre></div>
 </div>
-<p>Exit <code class="docutils literal notranslate"><span class="pre">ipython</span></code> (remember how? Use <code class="docutils literal notranslate"><span class="pre">CTRL+D</span></code> or <code class="docutils literal notranslate"><span class="pre">exit()</span></code>), and then type:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ jupyter-lab
+<p>The only <em>visual</em> difference between the <code class="docutils literal notranslate"><span class="pre">ipython</span></code> and <code class="docutils literal notranslate"><span class="pre">python</span></code> interpreters is that <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> has been replaced by <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[1]:</span></code>. More on this later.</p>
+<p>Exit <code class="docutils literal notranslate"><span class="pre">ipython</span></code> (remember how? Use <code class="docutils literal notranslate"><span class="pre">exit()</span></code>), and then type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jupyter-lab
 </pre></div>
 </div>
-<p>This should open a new window in your default web browser!</p>
+<p>This should open a new window in your default web browser! If all of this worked properly, you are good to go for today.</p>
 </div>
 <div class="section" id="learning-summary">
 <h2>Learning summary<a class="headerlink" href="#learning-summary" title="Permalink to this headline">¶</a></h2>
