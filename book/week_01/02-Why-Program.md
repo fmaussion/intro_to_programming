@@ -2,8 +2,6 @@
 
 This week, we will follow the first lecture by PY4E entirely.
 
-## Independent learning
-
 **Lesson**: 
 - [Chapter 1: Introduction](https://www.py4e.com/html3/01-intro)
 
@@ -14,7 +12,3 @@ Note: you do not need to open the python interpreter yourself for this lesson (y
 - [Part 2: Hardware architecture](https://www.youtube.com/watch?v=VQZTZsXk8sA) (12'15)
 - [Part 3: Python as a language](https://www.youtube.com/watch?v=LLzFNlCjTSo) (7'50)
 - [Part 4: What do we say?](https://www.youtube.com/watch?v=gsry2SYOFCw) (12'45)
-
-## What to remember?
-
-- all the terms in the [lesson](https://www.py4e.com/html3/01-intro)'s "Glossary" are useful to understand and remember.

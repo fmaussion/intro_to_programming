@@ -8,6 +8,7 @@ parts:
     chapters:
     - file: syllabus
     - file: learning_tips
+    - file: assignments
     - file: references
   - caption: Week 01 - Getting started
     chapters:
