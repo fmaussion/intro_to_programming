@@ -14,6 +14,12 @@ Enter your language: FR
 Bonjour Sophie!
 ```
 
+```none
+Enter your name: John
+Enter your language: CN
+你好 John!
+```
+
 The allowed languages are `EN` (English), `DE` (German), `FR` (French), and a fourth language of your choice. 
 If the language is not one of these three options, the program should print an error message and exit.
 
