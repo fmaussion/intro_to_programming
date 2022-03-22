@@ -36,7 +36,7 @@ The rules of fog formation are pretty simple:
     - in summer, the probability of fog is equal to the relative humidity divided by 10
     - in winter, the probability of fog is equal to the relative humidity divided by 2
 
-If the relative humidity is not between 0 and 100, or not a number, then the program should print a message and exit.
+If the relative humidity is not between 0 and 100, or not a number, then the program should print a message saying that it didn't work.
 
 Here are a few examples of program execution:
 
