@@ -19,7 +19,7 @@ A valid assignment is an assignment which shows me that you have tried, what you
 
 Each week, you will be asked to upload your assignments to OLAT. You will have to return either a python script (a `.py` file) or a Notebook (`.ipynb` file) depending on the assignment. 
 
-You should always upload your assignments before the class on Wednesday (08H15). Each one of you has an open "Homework folder" on OLAT to do so. 
+You should always upload your assignments before the class on Wednesday (**08H00**). Each one of you has an open "Homework folder" on OLAT to do so. 
 
 **Please follow the following convention to name your files:**
 

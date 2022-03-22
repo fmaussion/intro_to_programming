@@ -21,3 +21,8 @@ parts:
     - file: week_02/02-Intro-jupyter
     - file: week_02/03-Lessons
     - file: week_02/04-Assignment
+  - caption: Week 03 - Control flow
+    chapters:
+    - file: week_03/01-Intro-notebooks
+    - file: week_03/02-Lessons
+    - file: week_03/03-Assignment
