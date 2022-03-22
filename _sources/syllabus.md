@@ -81,20 +81,18 @@ You will notice that there are 12 weekly units for a 15 weeks long semester: thi
 - Week 02
     - [PY4E: Variables, expressions and statements](https://www.py4e.com/lessons/memory)
     - [PY4E: Conditional Execution](https://www.py4e.com/lessons/logic)
-    - Using ipython, using Spyder
+    - Using Jupyter
 - Week 03
     - [PY4E: Functions](https://www.py4e.com/lessons/functions)
     - [PY4E: Loops and Iterations](https://www.py4e.com/lessons/loops)
-    - Using the debugger
+    - Using Jupyter Notebooks
 - Week 04
     - [PY4E: Strings](https://www.py4e.com/lessons/strings)
     - [PY4E: Lists](https://www.py4e.com/lessons/lists)
     - [PY4E: Tuples](https://www.py4e.com/lessons/tuples)
-- Week 05
     - [PY4E: Dictionaries](https://www.py4e.com/lessons/dictionary)
-    - Formal testing: dosctrings, asserts, pytest
-    
 **Scientific python**
+- Week 05
 - Week 06
     - Here comes numpy
     - numpy array: vectorization of `for` operations on lists
