@@ -4,7 +4,7 @@
 ## Purpose
 
 **The weekly assignments are here to**:
-- help you to work regularly (programming can **ONLY** be learned by exercising, there is no exception to this rule)
+- help you to work regularly (programming can **ONLY** be learned by exercising. There is no exception to this rule)
 - help me to see where the understanding problems are, and whether or not I am going too fast
 - allow you to make mistakes
 

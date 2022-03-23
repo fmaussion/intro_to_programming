@@ -286,6 +286,34 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-write-two-temperature-conversion-functions">
+   Exercise 1: write two temperature conversion functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2-write-two-user-input-checking-functions">
+   Exercise 2: write two user input checking functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-3-write-a-temperature-conversion-program">
+   Exercise 3: write a temperature conversion program
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-4-optional-design-a-test-function">
+   Exercise 4 (optional): design a test function
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -298,6 +326,34 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-write-two-temperature-conversion-functions">
+   Exercise 1: write two temperature conversion functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2-write-two-user-input-checking-functions">
+   Exercise 2: write two user input checking functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-3-write-a-temperature-conversion-program">
+   Exercise 3: write a temperature conversion program
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-4-optional-design-a-test-function">
+   Exercise 4 (optional): design a test function
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -307,7 +363,110 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="assignment-03">
 <h1>Assignment 03<a class="headerlink" href="#assignment-03" title="Permalink to this headline">¶</a></h1>
 <p><em>Due date: 30.03.2022</em></p>
-<p>TBA 30.03</p>
+<p>This week’s assignment has to be returned in the form of one python script OR one jupyter notebook. Don’t forget the <a class="reference internal" href="../assignments.html"><span class="doc std std-doc">instructions</span></a>!</p>
+<div class="section" id="exercise-1-write-two-temperature-conversion-functions">
+<h2>Exercise 1: write two temperature conversion functions<a class="headerlink" href="#exercise-1-write-two-temperature-conversion-functions" title="Permalink to this headline">¶</a></h2>
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">celsius_to_fahrenheit</span></code>, which accepts a <code class="docutils literal notranslate"><span class="pre">float</span></code> or <code class="docutils literal notranslate"><span class="pre">int</span></code> as input parameter and returns the temperature value converted to fahrenheits. Here are some examples of the function’s execution:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="mf">37.77777777777778</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="mi">68</span><span class="p">))</span>
+<span class="mf">20.0</span>
+</pre></div>
+</div>
+<p>Now, write a second function called <code class="docutils literal notranslate"><span class="pre">fahrenheit_to_celsius</span></code>, which does the opposite. Here are some examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">celsius_to_fahrenheit</span><span class="p">(</span><span class="mi">38</span><span class="p">))</span>
+<span class="mf">100.4</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">celsius_to_fahrenheit</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="mf">32.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-2-write-two-user-input-checking-functions">
+<h2>Exercise 2: write two user input checking functions<a class="headerlink" href="#exercise-2-write-two-user-input-checking-functions" title="Permalink to this headline">¶</a></h2>
+<p>Write a new function with the following signature:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valid_temperature_input</span><span class="p">(</span><span class="n">min_value</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span>
+    <span class="k">return</span> <span class="n">number</span>
+</pre></div>
+</div>
+<p>This function uses python’s <code class="docutils literal notranslate"><span class="pre">input</span></code> to ask for the temperature value to convert, and then decides:</p>
+<ul class="simple">
+<li><p>if the value can be converted to a number and this number is above the parameter <code class="docutils literal notranslate"><span class="pre">min_value</span></code>, return this number</p></li>
+<li><p>if the value cannot be converted to a number or is below the specified limit print a message to the user and ask them to enter a new value.</p></li>
+</ul>
+<p>Examples:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_temperature_input(0))
+Please enter a temperature value: 10
+10
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_temperature_input(0))
+Please enter a temperature value: ups
+This value is not valid! Try again.
+Please enter a temperature value: -1
+This value is below the specified limit! Try again.
+Please enter a temperature value: 1
+1
+</pre></div>
+</div>
+<p>Now, write a second input function with the following signature:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valid_conversion_input</span><span class="p">():</span>
+    <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span>
+    <span class="k">return</span> <span class="n">number</span>
+</pre></div>
+</div>
+<p>This function asks the user what kind of conversion they want to do, and validates the input (if needed, asking again if the value is not correct). Examples:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_conversion_input())
+What conversion do you want to do? Type:
+1 for Celsius to Farenheit
+2 for Farenheit to Celsius
+3 for doing nothing
+Your input: 2
+2
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_conversion_input())
+What conversion do you want to do? Type:
+1 for Celsius to Farenheit
+2 for Farenheit to Celsius
+3 for doing nothing
+Your input: 4
+Not valid! Try again: ups
+Not valid! Try again: 3
+3
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-3-write-a-temperature-conversion-program">
+<h2>Exercise 3: write a temperature conversion program<a class="headerlink" href="#exercise-3-write-a-temperature-conversion-program" title="Permalink to this headline">¶</a></h2>
+<p>Now, rely on your hard work and the functions you just created to write a full program (in one python file or one notebook). The program:</p>
+<ul class="simple">
+<li><p>asks the user what they want to do (convert or do nothing)</p></li>
+<li><p>if convert, ask the user for the value to convert. The minimum acceptable value depends on the conversion function to use (indeed, the value in °C or °F cannot be below the absolute minimum, 0 Kelvin)</p></li>
+<li><p>convert the value to the other unit and print it on screen</p></li>
+</ul>
+<p>This program should make use of the functions you wrote, and therefore have only little code other than calling the functions.</p>
+<p>Example output for a °C to °F conversion:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0°C are converted to 32.0°F
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-4-optional-design-a-test-function">
+<h2>Exercise 4 (optional): design a test function<a class="headerlink" href="#exercise-4-optional-design-a-test-function" title="Permalink to this headline">¶</a></h2>
+<p>In addition to your program, write a function called <code class="docutils literal notranslate"><span class="pre">test_conversion()</span></code> with no arguments, and no output (a <em>void function</em> in the book).</p>
+<p>When run, this function checks that some given values are converted properly. You can pick a few examples from <a class="reference external" href="https://www.rapidtables.com/convert/temperature/celsius-to-fahrenheit.html">this table</a> here. If the value is not the expected one, print a message saying that there is a problem.</p>
+<p>Furthermore, the function should check that for <strong>10</strong> random numbers selected between 0 and 100, the following test is True:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mf">89.2</span>  <span class="c1"># or any random number</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">celsius_to_fahrenheit</span><span class="p">(</span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+<span class="n">value</span> <span class="o">==</span> <span class="n">output</span>  <span class="c1"># Should be true</span>
+</pre></div>
+</div>
+<p><strong>Important:</strong> if you run these tests often enough, you will see that they do not always pass!!! Actually, they fail quite often. Don’t panic and accept it: the reason for this problem (and how to overcome it) will be explained later.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
