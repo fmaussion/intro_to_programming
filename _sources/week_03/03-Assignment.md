@@ -6,7 +6,7 @@ This week's assignment has to be returned in the form of one python script OR on
 
 ## Exercise 1: write two temperature conversion functions
 
-Write a function called `celsius_to_fahrenheit`, which accepts a `float` or `int` as input parameter and returns the temperature value converted to fahrenheits. Here are some examples of the function's execution:
+Write a function called `fahrenheit_to_celsius`, which accepts a `float` or `int` as input parameter and returns the temperature value converted to degrees celsius. Here are some examples of the function's execution:
 
 ```python
 print(fahrenheit_to_celsius(100))
@@ -18,7 +18,7 @@ print(fahrenheit_to_celsius(68))
 20.0
 ```
 
-Now, write a second function called `fahrenheit_to_celsius`, which does the opposite. Here are some examples:
+Now, write a second function called `celsius_to_fahrenheit`, which does the opposite. Here are some examples:
 
 ```python
 print(celsius_to_fahrenheit(38))
@@ -97,7 +97,7 @@ Not valid! Try again: 3
 
 ## Exercise 3: write a temperature conversion program
 
-Now, rely on your hard work and the functions you just created to write a full program (in one python file or one notebook). The program:
+Now, rely on your hard work and the functions you just created to write a full program (in a python file or a notebook). The program:
 - asks the user what they want to do (convert or do nothing)
 - if convert, ask the user for the value to convert. The minimum acceptable value depends on the conversion function to use (indeed, the value in °C or °F cannot be below the absolute minimum, 0 Kelvin)
 - convert the value to the other unit and print it on screen
