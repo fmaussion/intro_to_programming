@@ -401,16 +401,16 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Examples:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_temperature_input(0))
 Please enter a temperature value: 10
-10
+10.0
 </pre></div>
 </div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_temperature_input(0))
 Please enter a temperature value: ups
 This value is not valid! Try again.
-Please enter a temperature value: -1
+Please enter a temperature value: -2
 This value is below the specified limit! Try again.
-Please enter a temperature value: 1
-1
+Please enter a temperature value: 12.3
+12.3
 </pre></div>
 </div>
 <p>Now, write a second input function with the following signature:</p>
@@ -425,8 +425,8 @@ What conversion do you want to do? Type:
 1 for Celsius to Farenheit
 2 for Farenheit to Celsius
 3 for doing nothing
-Your input: 2
-2
+Your input: 1
+1
 </pre></div>
 </div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_conversion_input())
@@ -434,22 +434,24 @@ What conversion do you want to do? Type:
 1 for Celsius to Farenheit
 2 for Farenheit to Celsius
 3 for doing nothing
+Your input: ups
+Not valid! Try again.
 Your input: 4
-Not valid! Try again: ups
-Not valid! Try again: 3
-3
+Not valid! Try again.
+Your input: 2
+2
 </pre></div>
 </div>
 </div>
 <div class="section" id="exercise-3-write-a-temperature-conversion-program">
 <h2>Exercise 3: write a temperature conversion program<a class="headerlink" href="#exercise-3-write-a-temperature-conversion-program" title="Permalink to this headline">¶</a></h2>
-<p>Now, rely on your hard work and the functions you just created to write a full program (in a python file or a notebook). The program:</p>
+<p>Now, <strong>rely on your hard work and the functions you just created to write a full program</strong> (in a python file or a notebook). The program:</p>
 <ul class="simple">
 <li><p>asks the user what they want to do (convert or do nothing)</p></li>
 <li><p>if convert, ask the user for the value to convert. The minimum acceptable value depends on the conversion function to use (indeed, the value in °C or °F cannot be below the absolute minimum, 0 Kelvin)</p></li>
 <li><p>convert the value to the other unit and print it on screen</p></li>
 </ul>
-<p>This program should make use of the functions you wrote, and therefore have only little code other than calling the functions.</p>
+<p><strong>This program should make use of the functions you wrote in exercise 1 and 2</strong>, and therefore have only little code other than calling the functions.</p>
 <p>Example output for a °C to °F conversion:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0°C are converted to 32.0°F
 </pre></div>
