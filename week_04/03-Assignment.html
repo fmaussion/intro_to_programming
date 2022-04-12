@@ -41,6 +41,8 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -51,6 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing python packages" href="../week_05/01-install-packages.html" />
     <link rel="prev" title="Lessons" href="02-Lessons.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -222,6 +225,33 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Assignment 04
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 05 - Scientific python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/01-install-packages.html">
+   Installing python packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/02-jupyter-dos.html">
+   Jupyter notebooks tips and tricks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/03-numpy.html">
+   Introduction to scientific python: numpy and matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/04-Assignment.html">
+   Assignment 05
   </a>
  </li>
 </ul>
@@ -412,15 +442,15 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; a = [1, 2.2, 3, 4]</span>
+<span class="sd">    &gt;&gt;&gt; a = [1, 3, 4, 2.2]</span>
 <span class="sd">    &gt;&gt;&gt; filter_list(a, min_value=2)</span>
-<span class="sd">    [2.2, 3, 4]</span>
+<span class="sd">    [3, 4, 2.2]</span>
 <span class="sd">    &gt;&gt;&gt; a  # a is unchanged</span>
-<span class="sd">    [1, 2.2, 3, 4]</span>
+<span class="sd">    [1, 3, 4, 2.2]</span>
 <span class="sd">    &gt;&gt;&gt; filter_list(a, max_value=3)</span>
-<span class="sd">    [1, 2.2, 3]</span>
+<span class="sd">    [1, 3, 2.2]</span>
 <span class="sd">    &gt;&gt;&gt; filter_list(a, min_value=2, max_value=3)</span>
-<span class="sd">    [2.2, 3]</span>
+<span class="sd">    [3, 2.2]</span>
 <span class="sd">    &gt;&gt;&gt; filter_list([1, 2, 3, 4])</span>
 <span class="sd">    Traceback (most recent call last):</span>
 <span class="sd">     ...</span>
@@ -524,6 +554,13 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Lessons</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../week_05/01-install-packages.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installing python packages</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

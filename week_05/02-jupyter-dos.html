@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lessons &#8212; Introduction to Programming</title>
+    <title>Jupyter notebooks tips and tricks &#8212; Introduction to Programming</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Assignment 04" href="03-Assignment.html" />
-    <link rel="prev" title="Documenting functions and testing their output" href="01-documenting-functions.html" />
+    <link rel="next" title="Introduction to scientific python: numpy and matplotlib" href="03-numpy.html" />
+    <link rel="prev" title="Installing python packages" href="01-install-packages.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -211,19 +211,19 @@ const thebe_selector_output = ".output, .cell_output"
   Week 04 - Strings, Files and Lists
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01-documenting-functions.html">
+  <a class="reference internal" href="../week_04/01-documenting-functions.html">
    Documenting functions and testing their output
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_04/02-Lessons.html">
    Lessons
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Assignment.html">
+  <a class="reference internal" href="../week_04/03-Assignment.html">
    Assignment 04
   </a>
  </li>
@@ -233,24 +233,24 @@ const thebe_selector_output = ".output, .cell_output"
   Week 05 - Scientific python
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_05/01-install-packages.html">
+  <a class="reference internal" href="01-install-packages.html">
    Installing python packages
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week_05/02-jupyter-dos.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Jupyter notebooks tips and tricks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_05/03-numpy.html">
+  <a class="reference internal" href="03-numpy.html">
    Introduction to scientific python: numpy and matplotlib
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_05/04-Assignment.html">
+  <a class="reference internal" href="04-Assignment.html">
    Assignment 05
   </a>
  </li>
@@ -295,9 +295,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/week_04/02-Lessons.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/week_05/02-jupyter-dos.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -315,10 +315,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_04/02-Lessons.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_05/02-jupyter-dos.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_04/02-Lessons.md"><button
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_05/02-jupyter-dos.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -333,6 +333,23 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_05/02-jupyter-dos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -345,7 +362,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lessons</h1>
+                <h1>Jupyter notebooks tips and tricks</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -356,16 +373,30 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lessons">
-<h1>Lessons<a class="headerlink" href="#lessons" title="Permalink to this headline">¶</a></h1>
-<p>This week, we will read the following lessons by PY4E entirely, starting with our own lesson first:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="jupyter-notebooks-tips-and-tricks">
+<h1>Jupyter notebooks tips and tricks<a class="headerlink" href="#jupyter-notebooks-tips-and-tricks" title="Permalink to this headline">¶</a></h1>
+<p>If you haven’t done so already, check out <a class="reference internal" href="../week_03/01-Intro-notebooks.html"><span class="doc std std-doc">the introduction about notebooks</span></a> first.
+Now is a good time to start learning about notebooks! They will become mandatory for most of your assignments from now on.</p>
+<p>In the following video, I will discuss the following points in more detail:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="01-documenting-functions.html"><span class="doc std std-doc">Own lesson: Documenting functions and testing their output</span></a></p></li>
-<li><p><a class="reference external" href="https://www.py4e.com/lessons/strings">Chapter 7: Strings</a> <strong>except the chapter on the “format operator”.</strong></p></li>
-<li><p><a class="reference external" href="https://www.py4e.com/lessons/files">Chapter 8: Files</a></p></li>
-<li><p><a class="reference external" href="https://www.py4e.com/lessons/lists">Chapter 9: Lists</a></p></li>
+<li><p>download a notebook from the website</p></li>
+<li><p>order of execution of jupyter cells - why is this important?</p></li>
+<li><p>what does “restart the kernel” mean?</p></li>
+<li><p>code cells, text cells</p></li>
 </ul>
-<p>Instead of the format operator, you should use the more modern <a class="reference external" href="https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals">f-strings</a> (Formatted String Literals).</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="900"
+    height="300"
+    src="https://player.vimeo.com/video/688896465"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -381,7 +412,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./week_04"
+            path: "./week_05"
         },
         predefinedOutput: true
     }
@@ -393,17 +424,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="01-documenting-functions.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="01-install-packages.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Documenting functions and testing their output</p>
+            <p class="prev-next-title">Installing python packages</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="03-Assignment.html" title="next page">
+    <a class='right-next' id="next-link" href="03-numpy.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Assignment 04</p>
+        <p class="prev-next-title">Introduction to scientific python: numpy and matplotlib</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

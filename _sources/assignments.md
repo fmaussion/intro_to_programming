@@ -36,6 +36,10 @@ Each week, I will pick two (or more) of your assignments at random as a starting
 print('Hello World')
 ```
 
+## Formatting Jupyter Notebooks
+
+Use jupyter notebooks for what they excel at: combining text, code, and figures. Use the markdown format to structure your assignments, and write text when asked to.
+
 ## Joker
 
 If for some reason you are unable to prepare for the homework, you can use one of your jokers. You have two of them per semester. If you want to use a Joker for this week, simply do not upload any file to OLAT. After two jokers are used, you won't be able to pass the exam anymore.
