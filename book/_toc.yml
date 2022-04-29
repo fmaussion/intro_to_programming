@@ -37,3 +37,8 @@ parts:
       - file: week_05/02-jupyter-dos
       - file: week_05/03-numpy
       - file: week_05/04-Assignment
+  - caption: Week 06 - Scientific python - continued
+    chapters:
+      - file: week_06/01-tuples
+      - file: week_06/02-computations
+      - file: week_06/03-Assignment
