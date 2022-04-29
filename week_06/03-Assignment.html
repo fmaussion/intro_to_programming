@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Installing Jupyter &#8212; Introduction to Programming</title>
+    <title>Assignment 06 &#8212; Introduction to Programming</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,10 +51,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to Jupyter" href="02-Intro-jupyter.html" />
-    <link rel="prev" title="Assignment 01" href="../week_01/03-Assignment.html" />
+    <link rel="prev" title="Computations with numpy" href="02-computations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -162,24 +163,24 @@ const thebe_selector_output = ".output, .cell_output"
   Week 02 - Gaining speed
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/01-Install-jupyter.html">
    Installing Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-Intro-jupyter.html">
+  <a class="reference internal" href="../week_02/02-Intro-jupyter.html">
    Introduction to Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Lessons.html">
+  <a class="reference internal" href="../week_02/03-Lessons.html">
    Lessons
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04-Assignment.html">
+  <a class="reference internal" href="../week_02/04-Assignment.html">
    Assignment 02
   </a>
  </li>
@@ -260,19 +261,19 @@ const thebe_selector_output = ".output, .cell_output"
   Week 06 - Scientific python - continued
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_06/01-tuples.html">
+  <a class="reference internal" href="01-tuples.html">
    Python tuples
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_06/02-computations.html">
+  <a class="reference internal" href="02-computations.html">
    Computations with numpy
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week_06/03-Assignment.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Assignment 06
   </a>
  </li>
@@ -317,7 +318,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/week_02/01-Install-jupyter.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/week_06/03-Assignment.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -337,10 +338,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_02/01-Install-jupyter.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_06/03-Assignment.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_02/01-Install-jupyter.ipynb"><button
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_06/03-Assignment.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -360,7 +361,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_02/01-Install-jupyter.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_06/03-Assignment.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -383,46 +384,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
+  <a class="reference internal nav-link" href="#linear-regression-function">
+   01 - Linear regression function
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#explanation-the-difference-between-the-command-prompt-the-miniforge-prompt-and-the-python-interpreter">
-   Explanation: the difference between the command prompt, the miniforge prompt, and the python interpreter
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-command-prompt-or-cmd-exe">
-     The command prompt (or
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cmd.exe
-      </span>
-     </code>
-     )
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-miniforge-prompt">
-     The miniforge prompt
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-python-interpreter">
-     The python interpreter
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-ipython-and-jupyterlab">
-   Install ipython and jupyterlab
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learning-summary">
-   Learning summary
+  <a class="reference internal nav-link" href="#instrument-calibration">
+   02 - Instrument calibration
   </a>
  </li>
 </ul>
@@ -435,7 +403,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Installing Jupyter</h1>
+                <h1>Assignment 06</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -446,46 +414,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
+  <a class="reference internal nav-link" href="#linear-regression-function">
+   01 - Linear regression function
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#explanation-the-difference-between-the-command-prompt-the-miniforge-prompt-and-the-python-interpreter">
-   Explanation: the difference between the command prompt, the miniforge prompt, and the python interpreter
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-command-prompt-or-cmd-exe">
-     The command prompt (or
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cmd.exe
-      </span>
-     </code>
-     )
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-miniforge-prompt">
-     The miniforge prompt
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-python-interpreter">
-     The python interpreter
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-ipython-and-jupyterlab">
-   Install ipython and jupyterlab
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learning-summary">
-   Learning summary
+  <a class="reference internal nav-link" href="#instrument-calibration">
+   02 - Instrument calibration
   </a>
  </li>
 </ul>
@@ -497,99 +432,154 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="installing-jupyter">
-<h1>Installing Jupyter<a class="headerlink" href="#installing-jupyter" title="Permalink to this headline">¶</a></h1>
-<p>This chapter contains some instructions about how to install additional useful tools which will enhance your python installation a great deal!</p>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>I’ll assume that the <a class="reference internal" href="../week_01/01-Installation.html"><span class="doc std std-doc">python installation instructions from last week</span></a> have worked for you, and that you:</p>
-<ul class="simple">
-<li><p>are able to start a miniforge prompt</p></li>
-<li><p>can type <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">list</span></code> successfully</p></li>
-<li><p>can type <code class="docutils literal notranslate"><span class="pre">python</span></code> and open an interpreter.</p></li>
-</ul>
-<div class="warning dropdown admonition">
-<p class="admonition-title">You already have anaconda installed but not mamba or conda-forge</p>
-<p>If you already have jupyterlab installed, you can use it for now. If not, please ask me in class what to do!</p>
-</div>
-</div>
-<div class="section" id="explanation-the-difference-between-the-command-prompt-the-miniforge-prompt-and-the-python-interpreter">
-<h2>Explanation: the difference between the command prompt, the miniforge prompt, and the python interpreter<a class="headerlink" href="#explanation-the-difference-between-the-command-prompt-the-miniforge-prompt-and-the-python-interpreter" title="Permalink to this headline">¶</a></h2>
-<p>Many of you have opened a prompt (a terminal) for the first time in this class. When I was a child and my parents bought our first computer, opening a terminal was very normal and even needed to play games!</p>
-<p><strong>There is nothing to be afraid of</strong>. You will use the prompt very often, but you won’t need it for anything else than starting python, jupyterlab, or any other python tool of your choice.</p>
-<div class="section" id="the-command-prompt-or-cmd-exe">
-<h3>The command prompt (or <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code>)<a class="headerlink" href="#the-command-prompt-or-cmd-exe" title="Permalink to this headline">¶</a></h3>
-<p>You will find it by typing cmd in the windows search bar:</p>
-<p><a class="reference internal" href="../_images/cmd.png"><img alt="../_images/cmd.png" src="../_images/cmd.png" style="width: 400px;" /></a> <br></p>
-<p>In the command prompt, you can do many things, but the one thing you’ll really need is to <strong>navigate</strong> to the folder of your choice. The name of the currently active folder is always indicated at the start of the command line.</p>
-<p>Only a few commands are necessary for this class:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">help</span></code>: seeing the list of commands available</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dir</span></code>: list the directories (folders) in the current location</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">FolderName</span></code>: navigate to the folder FolderName</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code>: navigate one folder up</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">TAB</span></code>: ask the command prompt to complete the name for you. For example, if you are lazy and type two letters of the desired folder only, typing <code class="docutils literal notranslate"><span class="pre">TAB</span></code> might complete it for you</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exit</span></code>: exit the prompt (you can also simply close the window)</p></li>
-</ul>
-<p>That’s it! The reason why you need to be able to navigate to a specific folder will be explained in the next lesson.</p>
-</div>
-<div class="section" id="the-miniforge-prompt">
-<h3>The miniforge prompt<a class="headerlink" href="#the-miniforge-prompt" title="Permalink to this headline">¶</a></h3>
-<p>You will find it by typing “miniforge” in the windows search bar:</p>
-<p><a class="reference internal" href="../_images/miniforge.png"><img alt="../_images/miniforge.png" src="../_images/miniforge.png" style="width: 400px;" /></a> <br></p>
-<p>You will recognize that you are in a miniforge prompt by the title of the window and the <code class="docutils literal notranslate"><span class="pre">(base)</span></code> text before the location:</p>
-<p><a class="reference internal" href="../_images/term.png"><img alt="../_images/term.png" src="../_images/term.png" style="width: 600px;" /></a> <br></p>
-<p><strong>The miniforge prompt is exactly like the command prompt, BUT it has python installed in it</strong>. All the commands explained above work in the miniforge prompt as well, but these new commands are now available to you:</p>
-<ul class="simple">
-<li><p>all the <code class="docutils literal notranslate"><span class="pre">mamba</span></code> commands (<code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">install</span></code>, …)</p></li>
-<li><p>opening a python interpreter (<code class="docutils literal notranslate"><span class="pre">python</span></code>, and later today also <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code>)</p></li>
-</ul>
-<p><strong>In practice, you will actually never open the command prompt, but always the miniforge prompt. You will use it to navigate to a folder and then start a python interpreter.</strong></p>
-</div>
-<div class="section" id="the-python-interpreter">
-<h3>The python interpreter<a class="headerlink" href="#the-python-interpreter" title="Permalink to this headline">¶</a></h3>
-<p>The python interpreter can be opened in many different ways, but the way you learn first is to start it from the miniforge prompt. The python interpreter is recognizable by the three “great than” sign at the beginning of the command line <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>. The python interpreter is where the python commands are valid.</p>
-<div class="important admonition">
-<p class="admonition-title">Be aware of the context</p>
-<p>Be aware of the interpreter your are using. To summarize:</p>
-<ul class="simple">
-<li><p>In the command prompt, you can navigate between folders (<code class="docutils literal notranslate"><span class="pre">cd</span></code>, <code class="docutils literal notranslate"><span class="pre">dir</span></code>, etc.)</p></li>
-<li><p>In the miniforge prompt, you can navigate between folders AND you can install python packages (<code class="docutils literal notranslate"><span class="pre">mamba</span></code>) and start python (<code class="docutils literal notranslate"><span class="pre">python</span></code> or <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code>)</p></li>
-<li><p>In the python interpreter, you can type python commands and much much more</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section" id="install-ipython-and-jupyterlab">
-<h2>Install ipython and jupyterlab<a class="headerlink" href="#install-ipython-and-jupyterlab" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://ipython.org">ipython</a> and <a class="reference external" href="https://jupyter.org">jupyter</a> are fundamental tools of a scientific python installation. We will use them a LOT during the semester and your studies. I will make a demonstration in class, but first you have to install it! <strong>From the miniforge prompt</strong>, type:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mamba install jupyterlab
-</pre></div>
-</div>
-<p>This will install both jupyter-lab and ipython at the same time. To check if it worked, type:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ipython
-</pre></div>
-</div>
-<p>Which should display something like:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Python 3.9.7 | packaged by conda-forge | (default, Sep 29 2021, 19:15:42) [MSC v.1916 64 bit (AMD64)]
-Type &#39;copyright&#39;, &#39;credits&#39; or &#39;license&#39; for more information
-IPython 8.1.1 -- An enhanced Interactive Python. Type &#39;?&#39; for help.
+  <div class="tex2jax_ignore mathjax_ignore section" id="assignment-06">
+<h1>Assignment 06<a class="headerlink" href="#assignment-06" title="Permalink to this headline">¶</a></h1>
+<p><em>Due date: 04.05.2022</em></p>
+<p>This week’s assignment has to be returned <strong>in the form a jupyter notebook</strong>.</p>
+<p>Don’t forget the <a class="reference internal" href="../assignments.html"><span class="doc std std-doc">instructions</span></a>!</p>
+<div class="section" id="linear-regression-function">
+<h2>01 - Linear regression function<a class="headerlink" href="#linear-regression-function" title="Permalink to this headline">¶</a></h2>
+<p><strong>Write a function that computes the parameters <span class="math notranslate nohighlight">\(a\)</span> und <span class="math notranslate nohighlight">\(b\)</span> from the <a class="reference external" href="https://en.wikipedia.org/wiki/Simple_linear_regression">simple linear regression</a> <span class="math notranslate nohighlight">\(\hat{y} = a + bx\)</span></strong>, where <span class="math notranslate nohighlight">\(x\)</span> is the explanatory variable and <span class="math notranslate nohighlight">\(y\)</span> the variable to approximate:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray}
+  b &amp; = &amp; \frac{n\sum_{i=1}^n x_iy_i - \sum_{i=1}^n x_i \sum_{i=1}^ny_i}
+               {n\sum_{i=1}^n (x_i)^2 - (\sum_{i=1}^n x_i)^2} \\
+  a &amp; = &amp; \overline{y} - b\overline{x}
+\end{eqnarray}
+\end{split}\]</div>
+<p>In the equation above, <span class="math notranslate nohighlight">\(x_i\)</span> is the i-th element of the vector <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(n\)</span> is the length (size) of the vectors <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(\overline{x}\)</span> is the average of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>The signature of the function you have to write is given below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">linear_regression</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate a linear least-squares regression for two sets of measurements.</span>
 
-In [1]:
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x, y: ndarray-like</span>
+<span class="sd">        Two sets of measurements. Both arrays should be 1-dimensional </span>
+<span class="sd">        and have the same length.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    (a, b): floats</span>
+<span class="sd">       Parameters a and b of the linear approximation y^ = a + b x</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; x = np.array([1, 2, 3, 4, 5])</span>
+<span class="sd">    &gt;&gt;&gt; y = np.array([-5.3, -2.6,  0.1,  2.8,  5.5])</span>
+<span class="sd">    &gt;&gt;&gt; a, b = linear_regression(x, y)</span>
+<span class="sd">    &gt;&gt;&gt; a</span>
+<span class="sd">    -8.000000000000002</span>
+<span class="sd">    &gt;&gt;&gt; b</span>
+<span class="sd">    2.7</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Make sure we manipulate ndarrays</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="c1"># Least squares equations</span>
+    <span class="o">&lt;</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">&gt;</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
 </pre></div>
 </div>
-<p>The only <em>visual</em> difference between the <code class="docutils literal notranslate"><span class="pre">ipython</span></code> and <code class="docutils literal notranslate"><span class="pre">python</span></code> interpreters is that <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> has been replaced by <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[1]:</span></code>. More on this later.</p>
-<p>Exit <code class="docutils literal notranslate"><span class="pre">ipython</span></code> (remember how? Use <code class="docutils literal notranslate"><span class="pre">exit()</span></code>), and then type:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jupyter-lab
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
 </pre></div>
 </div>
-<p>This should open a new window in your default web browser! If all of this worked properly, you are good to go for today.</p>
 </div>
-<div class="section" id="learning-summary">
-<h2>Learning summary<a class="headerlink" href="#learning-summary" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>you know how to install jupyter on your computer and start ipython and jupyter-lab</p></li>
-</ul>
+</div>
+<p>If you have written the function correctly, the tests should pass with <code class="docutils literal notranslate"><span class="pre">TestResults(failed=0,</span> <span class="pre">attempted=5)</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Testing</span>
+<span class="kn">import</span> <span class="nn">doctest</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=0)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="instrument-calibration">
+<h2>02 - Instrument calibration<a class="headerlink" href="#instrument-calibration" title="Permalink to this headline">¶</a></h2>
+<p>A temperature sensor was calibrated in a precise temperature chamber. The instrument provides an analog output signal of varying voltage in Volts (V) on a single pin that can be measured. The temperature in the chamber T is increased from -20°C to 40°C  in 2°C increments, and the sensor voltage is measured after the temperature in the chamber is stabilized.</p>
+<p>The data is stored in a comma-separated file <a class="reference external" href="https://raw.githubusercontent.com/fmaussion/intro_to_programming/master/book/week_06/calibration.csv">calibration.csv</a>. Download the data file (right click + “Save as…”) and put the file in the same folder as this notebook. <strong>Explore the csv file by opening it in JupyterLab</strong>.</p>
+<p>A few weeks ago, you wrote your own text file reader. This time, let me read the data for you using numpy:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">t</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;calibration.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skip_header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Something happened during the experiment, and unfortunately some of the values are invalid with the missing value indicator -999. Filter the data series so that both <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> are of the same length and still represent the correct value pairs.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Plot the voltage values <code class="docutils literal notranslate"><span class="pre">v</span></code> as a function of the temparature chamber <code class="docutils literal notranslate"><span class="pre">t</span></code> on a scatter plot. Label the x and y axis accordingly.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Using your linear regression function, find the sensor calibration parameters a and b, so that the temperature t can be reconstructed from the voltage measurements with <span class="math notranslate nohighlight">\(\hat{t} = a + b v\)</span>.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>The sensor and associated voltmeter are designed to output a voltage going from 0V to 12V. Based on your calibration values, what is the sensor’s valid temperature range?</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Compute the reconstructed temperature <code class="docutils literal notranslate"><span class="pre">tr</span></code></strong> (volts converted to temperature).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Plot the chamber temperature, the reconstructed temperature (volts converted to temperature) and the valid range in one plot.</strong> The plot should look somewhat similar to <a class="reference external" href="https://raw.githubusercontent.com/fmaussion/intro_to_programming/master/book/week_06/temp_calib_example.png">this example</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Compute the accuracy of the sensor assuming that the chamber temperature is truly exact. To evaluate the accuracy, compute the <a class="reference external" href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">root mean square deviation</a> as:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+RMSD = \sqrt{\overline{(\hat{t} - t)^2}}
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\hat{t}\)</span> is the reconstructed temperature, and the overline represents the average (mean) of the squared deviation <span class="math notranslate nohighlight">\((\hat{t} - t)^2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -606,7 +596,7 @@ In [1]:
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./week_02"
+            path: "./week_06"
         },
         predefinedOutput: true
     }
@@ -618,19 +608,12 @@ In [1]:
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../week_01/03-Assignment.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02-computations.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Assignment 01</p>
+            <p class="prev-next-title">Computations with numpy</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="02-Intro-jupyter.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to Jupyter</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
