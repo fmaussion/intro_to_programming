@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 06 &#8212; Introduction to Programming</title>
+    <title>Assignment 07 &#8212; Introduction to Programming</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Numpy as numerical solver" href="../week_07/01-numerics.html" />
-    <link rel="prev" title="Computations with numpy" href="02-computations.html" />
+    <link rel="prev" title="Numpy as numerical solver" href="01-numerics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -262,19 +261,19 @@ const thebe_selector_output = ".output, .cell_output"
   Week 06 - Scientific python - continued
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01-tuples.html">
+  <a class="reference internal" href="../week_06/01-tuples.html">
    Python tuples
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-computations.html">
+  <a class="reference internal" href="../week_06/02-computations.html">
    Computations with numpy
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_06/03-Assignment.html">
    Assignment 06
   </a>
  </li>
@@ -284,14 +283,14 @@ const thebe_selector_output = ".output, .cell_output"
   Week 07 - Numerics
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_07/01-numerics.html">
+  <a class="reference internal" href="01-numerics.html">
    Numpy as numerical solver
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week_07/02-Assignment.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Assignment 07
   </a>
  </li>
@@ -336,7 +335,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/week_06/03-Assignment.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/week_07/02-Assignment.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -356,10 +355,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_06/03-Assignment.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_07/02-Assignment.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_06/03-Assignment.ipynb"><button
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_07/02-Assignment.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -379,7 +378,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_06/03-Assignment.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_07/02-Assignment.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -402,13 +401,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-regression-function">
-   01 - Linear regression function
+  <a class="reference internal nav-link" href="#linear-equations">
+   01 - Linear equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instrument-calibration">
-   02 - Instrument calibration
+  <a class="reference internal nav-link" href="#a-simple-earth-energy-balance-model">
+   02 - A simple Earth Energy Balance model
   </a>
  </li>
 </ul>
@@ -421,7 +420,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Assignment 06</h1>
+                <h1>Assignment 07</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -432,13 +431,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-regression-function">
-   01 - Linear regression function
+  <a class="reference internal nav-link" href="#linear-equations">
+   01 - Linear equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instrument-calibration">
-   02 - Instrument calibration
+  <a class="reference internal nav-link" href="#a-simple-earth-energy-balance-model">
+   02 - A simple Earth Energy Balance model
   </a>
  </li>
 </ul>
@@ -450,57 +449,23 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="assignment-06">
-<h1>Assignment 06<a class="headerlink" href="#assignment-06" title="Permalink to this headline">¶</a></h1>
-<p><em>Due date: 04.05.2022</em></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="assignment-07">
+<h1>Assignment 07<a class="headerlink" href="#assignment-07" title="Permalink to this headline">¶</a></h1>
+<p><em>Due date: 11.05.2022</em></p>
 <p>This week’s assignment has to be returned <strong>in the form a jupyter notebook</strong>.</p>
 <p>Don’t forget the <a class="reference internal" href="../assignments.html"><span class="doc std std-doc">instructions</span></a>!</p>
-<div class="section" id="linear-regression-function">
-<h2>01 - Linear regression function<a class="headerlink" href="#linear-regression-function" title="Permalink to this headline">¶</a></h2>
-<p><strong>Write a function that computes the parameters <span class="math notranslate nohighlight">\(a\)</span> und <span class="math notranslate nohighlight">\(b\)</span> from the <a class="reference external" href="https://en.wikipedia.org/wiki/Simple_linear_regression">simple linear regression</a> <span class="math notranslate nohighlight">\(\hat{y} = a + bx\)</span></strong>, where <span class="math notranslate nohighlight">\(x\)</span> is the explanatory variable and <span class="math notranslate nohighlight">\(y\)</span> the variable to approximate:</p>
+<div class="section" id="linear-equations">
+<h2>01 - Linear equations<a class="headerlink" href="#linear-equations" title="Permalink to this headline">¶</a></h2>
+<p>Using numpy alone, solve the following system of linear equations:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{eqnarray}
-  b &amp; = &amp; \frac{n\sum_{i=1}^n x_iy_i - \sum_{i=1}^n x_i \sum_{i=1}^ny_i}
-               {n\sum_{i=1}^n (x_i)^2 - (\sum_{i=1}^n x_i)^2} \\
-  a &amp; = &amp; \overline{y} - b\overline{x}
-\end{eqnarray}
+\begin{aligned}
+3 x + 2 y - z &amp;= 10 \\
+- x + 3 y + 2 z &amp;= 5 \\
+x - y - z &amp;= -1
+\end{aligned}
 \end{split}\]</div>
-<p>In the equation above, <span class="math notranslate nohighlight">\(x_i\)</span> is the i-th element of the vector <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(n\)</span> is the length (size) of the vectors <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(\overline{x}\)</span> is the average of <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>The signature of the function you have to write is given below:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">linear_regression</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculate a linear least-squares regression for two sets of measurements.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    x, y: ndarray-like</span>
-<span class="sd">        Two sets of measurements. Both arrays should be 1-dimensional </span>
-<span class="sd">        and have the same length.</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    (a, b): floats</span>
-<span class="sd">       Parameters a and b of the linear approximation y^ = a + b x</span>
-
-<span class="sd">    Examples</span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; x = np.array([1, 2, 3, 4, 5])</span>
-<span class="sd">    &gt;&gt;&gt; y = np.array([-5.3, -2.6,  0.1,  2.8,  5.5])</span>
-<span class="sd">    &gt;&gt;&gt; a, b = linear_regression(x, y)</span>
-<span class="sd">    &gt;&gt;&gt; a</span>
-<span class="sd">    -8.000000000000002</span>
-<span class="sd">    &gt;&gt;&gt; b</span>
-<span class="sd">    2.7</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Make sure we manipulate ndarrays</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-    <span class="c1"># Least squares equations</span>
-    <span class="o">&lt;</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">&gt;</span>
-    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
-</pre></div>
-</div>
+<p>To solve it, remember that in matrix notation, <span class="math notranslate nohighlight">\(A x = y\)</span> can be refactored to <span class="math notranslate nohighlight">\(x = A^{-1} y\)</span>, if <span class="math notranslate nohighlight">\(A\)</span> is an invertible matrix, and <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are vectors. Use <code class="docutils literal notranslate"><span class="pre">numpy</span></code> to invert the matrix <span class="math notranslate nohighlight">\(A\)</span> and solve for <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
@@ -508,7 +473,40 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>If you have written the function correctly, the tests should pass with <code class="docutils literal notranslate"><span class="pre">TestResults(failed=0,</span> <span class="pre">attempted=5)</span></code>:</p>
+</div>
+<div class="section" id="a-simple-earth-energy-balance-model">
+<h2>02 - A simple Earth Energy Balance model<a class="headerlink" href="#a-simple-earth-energy-balance-model" title="Permalink to this headline">¶</a></h2>
+<p>Let’s imagine a simple 1-layer model of our planetary climate system. We will try to compute its energy balance.</p>
+<p>In space, the only source of incoming energy is that of the sun. The sun energy per unit area (<span class="math notranslate nohighlight">\(W m^{-2}\)</span>) reaching earth is the solar constant <span class="math notranslate nohighlight">\(S_0\)</span>: its value is approximately 1362 <span class="math notranslate nohighlight">\(W m^{-2}\)</span>. This energy is distributed from a circle to the sphere (cf. climate lecture), which implies that only a quarter of it is available on average over the globe. Part of this energy is reflected directly to space (mostly by clouds and ice) according to the planetary albedo <span class="math notranslate nohighlight">\(\alpha = 0.32\)</span>.</p>
+<p>Therefore, the total energy entering the climate system (the Absorbed Shortwave Radiation or ASR) is:</p>
+<div class="math notranslate nohighlight">
+\[
+ASR = (1 - \alpha) \frac{S_0}{4}
+\]</div>
+<p>At human time scales, <span class="math notranslate nohighlight">\(S_0\)</span> is a constant, while <span class="math notranslate nohighlight">\(\alpha\)</span> may change with time.</p>
+<p><strong>Define a function <code class="docutils literal notranslate"><span class="pre">asr</span></code> which takes one optional keyword argument <code class="docutils literal notranslate"><span class="pre">alpha</span></code> (which defaults to 0.3) and returns the ASR (<span class="math notranslate nohighlight">\(W m^{-2}\)</span>)</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">asr</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Absorbed Solar Radiation (W m-2).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    alpha : float, optional</span>
+<span class="sd">        the planetary albedo</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    the asr (float)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; asr()</span>
+<span class="sd">    238.35</span>
+<span class="sd">    &gt;&gt;&gt; asr(alpha=0.32)</span>
+<span class="sd">    231.54</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">&lt;</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">&gt;</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Testing</span>
@@ -523,21 +521,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="instrument-calibration">
-<h2>02 - Instrument calibration<a class="headerlink" href="#instrument-calibration" title="Permalink to this headline">¶</a></h2>
-<p>A temperature sensor was calibrated in a precise temperature chamber. The instrument provides an analog output signal of varying voltage in Volts (V) on a single pin that can be measured. The temperature in the chamber T is increased from -20°C to 40°C  in 2°C increments, and the sensor voltage is measured after the temperature in the chamber is stabilized.</p>
-<p>The data is stored in a comma-separated file <a class="reference external" href="https://raw.githubusercontent.com/fmaussion/intro_to_programming/master/book/week_06/calibration.csv">calibration.csv</a>. Download the data file (right click + “Save as…”) and put the file in the same folder as this notebook. <strong>Explore the csv file by opening it in JupyterLab</strong>.</p>
-<p>A few weeks ago, you wrote your own text file reader. This time, let me read the data for you using numpy:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">t</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;calibration.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skip_header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Something happened during the experiment, and unfortunately some of the values are invalid with the missing value indicator -999. Filter the data series so that both <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> are of the same length and still represent the correct value pairs.</strong></p>
+<p><strong>Plot the ASR as a function of albedo, for the range [0.2, 0.7]:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
@@ -545,52 +529,166 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p><strong>Plot the voltage values <code class="docutils literal notranslate"><span class="pre">v</span></code> as a function of the temparature chamber <code class="docutils literal notranslate"><span class="pre">t</span></code> on a scatter plot. Label the x and y axis accordingly.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Using your linear regression function, find the sensor calibration parameters a and b, so that the temperature t can be reconstructed from the voltage measurements with <span class="math notranslate nohighlight">\(\hat{t} = a + b v\)</span>.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>The sensor and associated voltmeter are designed to output a voltage going from 0V to 12V. Based on your calibration values, what is the sensor’s valid temperature range?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Compute the reconstructed temperature <code class="docutils literal notranslate"><span class="pre">tr</span></code></strong> (volts converted to temperature).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Plot the chamber temperature, the reconstructed temperature (volts converted to temperature) and the valid range in one plot.</strong> The plot should look somewhat similar to <a class="reference external" href="https://raw.githubusercontent.com/fmaussion/intro_to_programming/master/book/week_06/temp_calib_example.png">this example</a>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Compute the accuracy of the sensor assuming that the chamber temperature is truly exact. To evaluate the accuracy, compute the <a class="reference external" href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">root mean square deviation</a> as:</strong></p>
+<p>This incoming solar energy is warming up the climate system which, in turn, emits longwave radiation. Using Stefan Boltzmann’s law, the Outgoing Longwave Radiation (OLR) is therefore:</p>
 <div class="math notranslate nohighlight">
 \[
-RMSD = \sqrt{\overline{(\hat{t} - t)^2}}
+OLR = \tau \sigma T^4
 \]</div>
-<p>Where <span class="math notranslate nohighlight">\(\hat{t}\)</span> is the reconstructed temperature, and the overline represents the average (mean) of the squared deviation <span class="math notranslate nohighlight">\((\hat{t} - t)^2\)</span>.</p>
+<p>with <span class="math notranslate nohighlight">\(T\)</span> the atmosphere temperature in Kelvin, <span class="math notranslate nohighlight">\(\sigma\)</span> the Stefan Boltzmann constant (<span class="math notranslate nohighlight">\(5.67 \times 10^{-8}\)</span>) and <span class="math notranslate nohighlight">\(\tau\)</span> the transmissivity of the atmosphere (let’s say it is 0.611 - a value I tuned to match the observed OLR).</p>
+<p><strong>Define a function <code class="docutils literal notranslate"><span class="pre">olr</span></code> which takes one positional argument <code class="docutils literal notranslate"><span class="pre">t</span></code> and one optional keyword argument <code class="docutils literal notranslate"><span class="pre">tau</span></code> (which defaults to 0.611) and which returns the OLR (<span class="math notranslate nohighlight">\(W m^{-2}\)</span>)</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">olr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">0.611</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Outgoing Longwave Radiation (W m-2).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    t : float</span>
+<span class="sd">        the atmosphere temperature (K)</span>
+<span class="sd">    tau : float, optional</span>
+<span class="sd">        the atmosphere transmissivity (-)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    the olr (float)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; olr(288)</span>
+<span class="sd">    238.3385101074432</span>
+<span class="sd">    &gt;&gt;&gt; olr(288, tau=0.63)</span>
+<span class="sd">    245.750018605056</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">&lt;</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Testing</span>
+<span class="kn">import</span> <span class="nn">doctest</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=0)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Plot the OLR as a function of temperature, for the range [270 300]. Repeat with tau=0.5 and tau=0.7 (three lines on the same plot, with a legend).</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Verify that with the default parameters and an atmosphere temperature of 288K, the climate system is approximately in energy balance (ASR == OLR, <span class="math notranslate nohighlight">\(\pm 0.01 W m^{-2}\)</span>).</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Humans started to emit greenhouse gases to the atmosphere. Since greenhouse gases are trapping heat, this has the consequence to <em>reduce</em> the transmissivity of the atmosphere.</p>
+<p><strong>Compute the energy imbalance of the climate system (<span class="math notranslate nohighlight">\(\Delta E = ASR -OLR\)</span>) if <span class="math notranslate nohighlight">\(\tau\)</span> is reduced to 0.59 but the temperature stays constant at 288.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Written mathematically:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dE}{dt} = ASR - OLR
+\]</div>
+<p>The change of energy over time is equal to the energy imbalance. If ASR is equal to OLR the rate of change is zero. With our emissions however we have an energy excess, which will warm um the atmosphere. The rate at which temperature increases depends on the energy imbalance and the thermal capacity of the climate system. If we suppose that:</p>
+<div class="math notranslate nohighlight">
+\[
+E = C T
+\]</div>
+<p>With E the total energy of the climate system, T the temperature and C the effective heat capacity of the climate system (earth + land + ocean, assumed to be constant).</p>
+<p>We can now write:</p>
+<div class="math notranslate nohighlight">
+\[
+C \frac{dT}{dt} = ASR - OLR(T)
+\]</div>
+<p>which is a ordinary differential equation (ODE). Let’s use <a class="reference external" href="https://en.wikipedia.org/wiki/Finite_difference">forward finite differences</a> to approximate our equation numerically:</p>
+<div class="math notranslate nohighlight">
+\[
+C \frac{\Delta T}{\Delta t} = C \frac{T_{i+1} - T_{i}}{\Delta t} = ASR - OLR(T_i)
+\]</div>
+<p>Which we can rearrange to to solve for future temperature (<span class="math notranslate nohighlight">\(T_{i+1}\)</span> at time <span class="math notranslate nohighlight">\(t + \Delta t\)</span>) knowing present-day temperature (<span class="math notranslate nohighlight">\(T_{i}\)</span> ad time t):</p>
+<div class="math notranslate nohighlight">
+\[
+T_{i+1} = T_{i}  + \frac{\Delta t}{C} (ASR - OLR(T_i))
+\]</div>
+<p>Assuming that <span class="math notranslate nohighlight">\(C = 4 \times 10^8 J m^2 K^{-1}\)</span> and taking a time step of <span class="math notranslate nohighlight">\(\Delta t = 31536000 s\)</span> (1 year), <strong>compute <span class="math notranslate nohighlight">\(T_1\)</span> if <span class="math notranslate nohighlight">\(T_0\)</span> = 288K:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="mf">4.0e+08</span>
+<span class="n">t_0</span> <span class="o">=</span> <span class="mi">288</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Now, use the strategies you learned in the lecture to write a function which computes the temperature change over time:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">temperature_change</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">n_years</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">0.611</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Temperature change scenario after change of transmissivity.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    t0 : float</span>
+<span class="sd">        the starting temperature (K)</span>
+<span class="sd">    n_years : int</span>
+<span class="sd">        the number of simulation years</span>
+<span class="sd">    tau : float, optional</span>
+<span class="sd">        the atmosphere transmissivity (-)</span>
+<span class="sd">    alpha : float, optional</span>
+<span class="sd">        the planetary albedo</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    (time, temperature) : ndarrays of size n_years + 1</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; y, t = temperature_change(288, 2, tau=0.59)</span>
+<span class="sd">    &gt;&gt;&gt; y</span>
+<span class="sd">    array([0, 1, 2])</span>
+<span class="sd">    &gt;&gt;&gt; t</span>
+<span class="sd">    array([288.        , 288.64673691, 289.12993932])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">&lt;</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Plot the temperature change scenarios with <span class="math notranslate nohighlight">\(\tau\)</span> values of 0.6, 0.59, 0.58. The result should look something like <a class="reference external" href="https://raw.githubusercontent.com/fmaussion/intro_to_programming/master/book/week_07/example_temp_change.png">this plot</a>.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Now plot the temperature change scenarios with <span class="math notranslate nohighlight">\(\tau\)</span> = 0.6 and starting temperatures of [288, 293].</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Compute the e-folding response time (in years) of this simple climate model for the scenario T=288K, <span class="math notranslate nohighlight">\(\tau\)</span>=0.6</strong> (the e-folding response time is the time it takes for the system to reach 1 - 1 / e <span class="math notranslate nohighlight">\(\approx\)</span> 63% of the final <span class="math notranslate nohighlight">\(\Delta T\)</span>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
@@ -614,7 +712,7 @@ RMSD = \sqrt{\overline{(\hat{t} - t)^2}}
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./week_06"
+            path: "./week_07"
         },
         predefinedOutput: true
     }
@@ -626,19 +724,12 @@ RMSD = \sqrt{\overline{(\hat{t} - t)^2}}
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="02-computations.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="01-numerics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Computations with numpy</p>
+            <p class="prev-next-title">Numpy as numerical solver</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="../week_07/01-numerics.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Numpy as numerical solver</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

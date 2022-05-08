@@ -1,0 +1,1197 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numpy as numerical solver &#8212; Introduction to Programming</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Assignment 07" href="02-Assignment.html" />
+    <link rel="prev" title="Assignment 06" href="../week_06/03-Assignment.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-88391345-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learning_tips.html">
+   Learning tips
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments.html">
+   Homework instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   External resources
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 01 - Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_01/01-Installation.html">
+   Installing Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_01/02-Why-Program.html">
+   Why program?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_01/03-Assignment.html">
+   Assignment 01
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 02 - Gaining speed
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/01-Install-jupyter.html">
+   Installing Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/02-Intro-jupyter.html">
+   Introduction to Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/03-Lessons.html">
+   Lessons
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/04-Assignment.html">
+   Assignment 02
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 03 - Control flow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_03/01-Intro-notebooks.html">
+   Introduction to Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_03/02-Lessons.html">
+   Lessons
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_03/03-Assignment.html">
+   Assignment 03
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 04 - Strings, Files and Lists
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_04/01-documenting-functions.html">
+   Documenting functions and testing their output
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_04/02-Lessons.html">
+   Lessons
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_04/03-Assignment.html">
+   Assignment 04
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 05 - Scientific python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/01-install-packages.html">
+   Installing python packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/02-jupyter-dos.html">
+   Jupyter notebooks tips and tricks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/03-numpy.html">
+   Introduction to scientific python: numpy and matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/04-Assignment.html">
+   Assignment 05
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 06 - Scientific python - continued
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_06/01-tuples.html">
+   Python tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_06/02-computations.html">
+   Computations with numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_06/03-Assignment.html">
+   Assignment 06
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 07 - Numerics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Numpy as numerical solver
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-Assignment.html">
+   Assignment 07
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/week_07/01-numerics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/fmaussion/intro_to_programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_07/01-numerics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_07/01-numerics.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_07/01-numerics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#number-representation-in-computers">
+   Number representation in computers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discretization">
+   Discretization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#find-occurences-of-values-in-numpy-arrays">
+   Find occurences of values in numpy arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#difference-equations">
+   Difference equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-algebra-with-numpy">
+   Linear algebra with numpy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-checklist">
+   Learning checklist
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Numpy as numerical solver</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#number-representation-in-computers">
+   Number representation in computers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discretization">
+   Discretization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#find-occurences-of-values-in-numpy-arrays">
+   Find occurences of values in numpy arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#difference-equations">
+   Difference equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-algebra-with-numpy">
+   Linear algebra with numpy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-checklist">
+   Learning checklist
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="numpy-as-numerical-solver">
+<h1>Numpy as numerical solver<a class="headerlink" href="#numpy-as-numerical-solver" title="Permalink to this headline">¶</a></h1>
+<p>This week, we will continue to work with <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. This week, we will learn about new tools to solve problems and equations!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="number-representation-in-computers">
+<h2>Number representation in computers<a class="headerlink" href="#number-representation-in-computers" title="Permalink to this headline">¶</a></h2>
+<p>Numbers are represented in memory as a series of bits (0s and 1s). Therefore, <strong>given a fixed number of bits, only a finite count of possible numbers can be stored in memory.</strong> With 8 bits (a byte), for example, only <span class="math notranslate nohighlight">\(2^8\)</span> different combinations are possible: therefore, 8-bits can store only 256 different numbers. With 32 bits, <span class="math notranslate nohighlight">\(2^{32}\)</span> combinations are possible: that’s a much larger number (4294967296), but still - it is a finite number.</p>
+<p>Clever strategies have been developed to deal with this limitation. If you want to know more, visit the <a class="reference external" href="https://fabienmaussion.info/scientific_programming/week_04/02-Numbers.html">master lecture</a> on the topic. For now, let me convey the most important messages to remember.</p>
+<p><strong>⯈ Integer datatypes in numpy have a validity range:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>iinfo(min=-2147483648, max=2147483647, dtype=int32)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The range of validity is easy to understand. Indeed, the first bit is used to store the sign information(“1” for “+”, “0” for “-“), which leaves us with <span class="math notranslate nohighlight">\(2^{31} = 2147483648\)</span> possibilities.</p>
+<p>Concretely, this means that the following can happen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2147483647</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-2147483648], dtype=int32)
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is called an <strong>overflow</strong>.</p>
+<p><strong>⯈ Integer datatypes are always exact</strong> (when they don’t overflow)</p>
+<p>Unlike floats, when entering a number as integer in numpy, you can be sure that the number is exact:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">-</span> <span class="mi">24</span> <span class="o">//</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is <em>really</em> a 0 of type integer (and not an approximation of it).</p>
+<p><strong>⯈ Float datatypes are almost always inexact</strong></p>
+<p>Numbers in the real coordinate space are infinite, and yet in computers we have to represent them in a finite space. Therefore, numpy (and the vast majority of scientific software) use a standard called <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> for floating-point arithmetic.</p>
+<p>With the floating-point standard, “real” numbers are thereby converted to the closest possible “floating point” number. Most of the time we don’t see it, unless we ask very insistingly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># print a</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s1">.9f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># print a with 9 decimal places</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s1">.18f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># print a with 18 decimal places</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1
+0.100000000
+0.100000000000000006
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sometimes, we don’t even have to ask politely to see it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">/</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.30000000000000004
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>⯈ Float datatypes have a relative precision model</strong></p>
+<p>This is one of the most clever idea of the IEEE 754 standard: in absolute values, small number are more precise than large numbers. This can lead to the following confusing behavior:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">.99</span> <span class="o">==</span> <span class="mf">.98</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is expected: <code class="docutils literal notranslate"><span class="pre">0.99</span></code> is not the same number as <code class="docutils literal notranslate"><span class="pre">0.98</span></code>. But what about these two:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">999999999999999.99</span> <span class="o">==</span> <span class="mf">999999999999999.98</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also <strong>not</strong> the same numbers, yet the computer thinks they are! This is because <code class="docutils literal notranslate"><span class="pre">0.01</span></code> is below the accuracy of large floating point numbers.</p>
+<p><strong>⯈ There are ways to deal with this problem</strong></p>
+<p>Let’s say you would like to compare numbers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="mi">10</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.1, 0.2, 0.3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+<span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.1, 0.2, 0.3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True,  True, False])
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s bad, right? Instead, use:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True,  True,  True])
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are many other things to learn about floating point numbers, but we will get back to this in the master lecture. You can have a <a class="reference external" href="https://fabienmaussion.info/scientific_programming/week_04/02-Numbers.html#number-representation-in-computers">look at it</a> if you are interested!</p>
+<p><strong>For now, remember about these pitfalls when you want to compare numbers between each other.</strong></p>
+</div>
+<div class="section" id="discretization">
+<h2>Discretization<a class="headerlink" href="#discretization" title="Permalink to this headline">¶</a></h2>
+<p>Because of the limitations explained above, computers cannot represent continuous functions. Instead, we have to rely on <strong>discrete domains</strong> which have a finite number of elements.  See the following example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Domain size: 51&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x2</span><span class="p">),</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Domain size: 5&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x3</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x3</span><span class="p">),</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Domain size: 2&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/01-numerics_35_0.png" src="../_images/01-numerics_35_0.png" />
+</div>
+</div>
+<p>Same mathematical function (<code class="docutils literal notranslate"><span class="pre">sin</span></code>), different discretizations. When solving math or physics problems, its the task of the programmer to decide the correct coordinates depending on the question to address or other considerations (e.g. performance). Numpy has two main functions to create discrete coordinates:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html">np.arange</a> when you know the start, end, and step size but not the domain size</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html">np.linspace</a> when you know the start, end, and domain size but not the step size</p></li>
+</ul>
+</div>
+<div class="section" id="find-occurences-of-values-in-numpy-arrays">
+<h2>Find occurences of values in numpy arrays<a class="headerlink" href="#find-occurences-of-values-in-numpy-arrays" title="Permalink to this headline">¶</a></h2>
+<p>Let’s stick with our sinus function example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.00000000e+00,  6.27905195e-02,  1.25333234e-01,  1.87381315e-01,
+        2.48689887e-01,  3.09016994e-01,  3.68124553e-01,  4.25779292e-01,
+        4.81753674e-01,  5.35826795e-01,  5.87785252e-01,  6.37423990e-01,
+        6.84547106e-01,  7.28968627e-01,  7.70513243e-01,  8.09016994e-01,
+        8.44327926e-01,  8.76306680e-01,  9.04827052e-01,  9.29776486e-01,
+        9.51056516e-01,  9.68583161e-01,  9.82287251e-01,  9.92114701e-01,
+        9.98026728e-01,  1.00000000e+00,  9.98026728e-01,  9.92114701e-01,
+        9.82287251e-01,  9.68583161e-01,  9.51056516e-01,  9.29776486e-01,
+        9.04827052e-01,  8.76306680e-01,  8.44327926e-01,  8.09016994e-01,
+        7.70513243e-01,  7.28968627e-01,  6.84547106e-01,  6.37423990e-01,
+        5.87785252e-01,  5.35826795e-01,  4.81753674e-01,  4.25779292e-01,
+        3.68124553e-01,  3.09016994e-01,  2.48689887e-01,  1.87381315e-01,
+        1.25333234e-01,  6.27905195e-02, -3.21624530e-16, -6.27905195e-02,
+       -1.25333234e-01, -1.87381315e-01, -2.48689887e-01, -3.09016994e-01,
+       -3.68124553e-01, -4.25779292e-01, -4.81753674e-01, -5.35826795e-01,
+       -5.87785252e-01, -6.37423990e-01, -6.84547106e-01, -7.28968627e-01,
+       -7.70513243e-01, -8.09016994e-01, -8.44327926e-01, -8.76306680e-01,
+       -9.04827052e-01, -9.29776486e-01, -9.51056516e-01, -9.68583161e-01,
+       -9.82287251e-01, -9.92114701e-01, -9.98026728e-01, -1.00000000e+00,
+       -9.98026728e-01, -9.92114701e-01, -9.82287251e-01, -9.68583161e-01,
+       -9.51056516e-01, -9.29776486e-01, -9.04827052e-01, -8.76306680e-01,
+       -8.44327926e-01, -8.09016994e-01, -7.70513243e-01, -7.28968627e-01,
+       -6.84547106e-01, -6.37423990e-01, -5.87785252e-01, -5.35826795e-01,
+       -4.81753674e-01, -4.25779292e-01, -3.68124553e-01, -3.09016994e-01,
+       -2.48689887e-01, -1.87381315e-01, -1.25333234e-01, -6.27905195e-02,
+       -2.44929360e-16])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s say we would like to know the maximum value of our data. We do this with:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we would like to know <em>where</em> this happens, i.e. the associated coordinate where this happens. There are several ways to achieve this (can you think of one?), but the best is to use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argmax.html">np.argmax()</a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+</pre></div>
+</div>
+</div>
+</div>
+<p>What is this number? This is the index at which the maximum is reached - you can verify this easily with:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">am</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">am</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">am</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0 1.5707963267948968
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly, there are the functions <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.nanargmax.html">nanargmax</a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argmin.html">argmin</a>, etc.</p>
+<p>Now, let’s say we would like to know where (at which indices) the values of <code class="docutils literal notranslate"><span class="pre">y</span></code> are below a certain threshold (e.g. 0). You already know how to fetch them:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">below_zero</span> <span class="o">=</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">below_zero</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">below_zero</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">below_zero</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False False False False False False False False False False False
+ False False  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True  True  True  True  True  True  True  True
+  True  True  True  True  True]
+</pre></div>
+</div>
+<img alt="../_images/01-numerics_47_1.png" src="../_images/01-numerics_47_1.png" />
+</div>
+</div>
+<p>But this does not really answer the question of <em>at which indices</em> this occurs. For this, we have to use the function <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.nonzero.html">np.nonzero()</a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ok</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">below_zero</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">ok</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ok</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ok</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(tuple, 1, 51)
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code> always returns a tuple of size <code class="docutils literal notranslate"><span class="pre">ndim</span></code> (here 1), and the n-th element of the tuple returns a list of the indices in the array where the condition is true (non zero):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ok</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 50,  51,  52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,
+        63,  64,  65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,
+        76,  77,  78,  79,  80,  81,  82,  83,  84,  85,  86,  87,  88,
+        89,  90,  91,  92,  93,  94,  95,  96,  97,  98,  99, 100])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Therefore, this here is equivalent to the plot above (albeit a bit slower):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">ok</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">ok</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/01-numerics_53_0.png" src="../_images/01-numerics_53_0.png" />
+</div>
+</div>
+<p>This information can be useful in certain situations, for example when you want to know when a value is reached for the first time:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The first time at which y becomes negative occurs at x = </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="n">ok</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The first time at which y becomes negative occurs at x = 3.1415926535897936
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="difference-equations">
+<h2>Difference equations<a class="headerlink" href="#difference-equations" title="Permalink to this headline">¶</a></h2>
+<p>Difference equations are equations involving the differences between successive values of a function of a discrete variable.</p>
+<p>Let’s start with a trivial example (source: <a class="reference external" href="https://sundnes.github.io/solving_odes_in_python/ode_book.pdf">Joakim Sundnes</a>).</p>
+<p>Consider the problem of computing how an invested sum of money grows over time. In its simplest form, this problem can be written as putting
+<span class="math notranslate nohighlight">\(x_0\)</span> money in a bank at year 0, with interest rate <span class="math notranslate nohighlight">\(p\)</span> percent per year. What is then the value after n years?</p>
+<p>You may recall from high school mathematics that the solution to this problem is given by the formula <span class="math notranslate nohighlight">\(x_n = x_0 (1 + p / 100)^n\)</span> so there is really no need to formulate and solve the problem as a difference equation. However, very simple generalizations, such as a non-constant interest rate, makes this formula difficult to apply, while a formulation based on a difference equation will still be applicable.</p>
+<p>To formulate the problem as a difference equation, we use the fact that the amount <span class="math notranslate nohighlight">\(x_n\)</span> at year <span class="math notranslate nohighlight">\(n\)</span> is simply the amount at year <span class="math notranslate nohighlight">\(n - 1\)</span> plus the interest for year <span class="math notranslate nohighlight">\(n - 1\)</span>. This gives the following relation between <span class="math notranslate nohighlight">\(x_n\)</span> and <span class="math notranslate nohighlight">\(x_{n-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x_n = x_{n-1} + \frac{p}{100} x_{n-1}\]</div>
+<p>Let’s solve this problem numerically:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># initial amount</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># interest rate</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># number of years</span>
+
+<span class="c1"># Data containter</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Initial state</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x0</span>
+
+<span class="c1"># Iterative solving</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">p</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;years&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;amount&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/01-numerics_58_0.png" src="../_images/01-numerics_58_0.png" />
+</div>
+</div>
+<p>This is a simple example. But <strong>iterative solving</strong> (where a future state depends on past states) <strong>is at the core of a wide range of modern numerical models</strong> (including weather forecasting and climate models).</p>
+<p>To continue the illustration, let’s take an other example: logistic growth. Logistic growth often happens in ecology when a population grows exponentially until a limiting factor is reached: for example limited resources, that can only support a finite number <span class="math notranslate nohighlight">\(R\)</span> of individuals. Initially, when resources are abundant, the growth is exponential. According to the difference equation introduced above:</p>
+<div class="math notranslate nohighlight">
+\[x_n = x_{n-1} + \frac{r}{100} x_{n-1}\]</div>
+<p>With <span class="math notranslate nohighlight">\(r\)</span> the growth rate per year in %. To enforce the growth limit as <span class="math notranslate nohighlight">\(x_n \rightarrow R\)</span>, <span class="math notranslate nohighlight">\(r\)</span> must decay to zero as <span class="math notranslate nohighlight">\(x_n\)</span> approaches <span class="math notranslate nohighlight">\(R\)</span>. The simplest variation of <span class="math notranslate nohighlight">\(r(n)\)</span> is linear:</p>
+<div class="math notranslate nohighlight">
+\[r(n) = \rho \left(1 - \frac{x_n}{R} \right)\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\rho\)</span> is the initial growth rate and <span class="math notranslate nohighlight">\(R\)</span> the limit of individuals. This formulation translates into the following difference equation:</p>
+<div class="math notranslate nohighlight">
+\[x_n = x_{n-1} + \frac{\rho}{100} x_{n-1} \left(1 - \frac{x_{n-1}}{R} \right)\]</div>
+<p>Let’s convert this to code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># initial population</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># growth rate in %</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># max population (carrying capacity)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">400</span>  <span class="c1"># number of years</span>
+
+<span class="c1"># Data container</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Initial state</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x0</span>
+
+<span class="c1"># Iterative solving</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">time</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">rho</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">r</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;years&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;amount&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/01-numerics_60_0.png" src="../_images/01-numerics_60_0.png" />
+</div>
+</div>
+<p>Nice! Now, sometimes, one wants to stop the simulation when it has <em>converged</em>, i.e. when the data does not change much with anymore. In this case, the number of years that the simulation will take is unknown since we cannot predict when this will happen. We have to use other strategies:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># initial population</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># growth rate in %</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># max population (carrying capacity)</span>
+<span class="n">threshold_growth_rate</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># stop the simulation when growth rate is below 0.01%</span>
+<span class="n">max_years</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># safegard: stop the simulation anyways at this date</span>
+
+<span class="c1"># Data ontainers - size will grow with time</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x0</span><span class="p">]</span>
+
+<span class="n">growth_rate</span> <span class="o">=</span> <span class="n">rho</span>  <span class="c1"># initial growth rate (will be updated)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># counter (will be updated)</span>
+
+<span class="c1"># Iterative solving</span>
+<span class="k">while</span> <span class="n">growth_rate</span> <span class="o">&gt;</span> <span class="n">threshold_growth_rate</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">max_years</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">rho</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">r</span><span class="p">))</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+    <span class="c1"># Compute actual growth rate from data to see if we have to stop</span>
+    <span class="n">growth_rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;years&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;amount&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/01-numerics_62_0.png" src="../_images/01-numerics_62_0.png" />
+</div>
+</div>
+<p>We made use of three main strategies:</p>
+<ul class="simple">
+<li><p>instead of a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, we use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop and stop the simulation when a threshold is reached</p></li>
+<li><p>in order to avoid infinite loops, we make sure we have an iteration limit we won’t exceed</p></li>
+<li><p>instead of generating data container of predefined length that we fill up, we use <code class="docutils literal notranslate"><span class="pre">np.append</span></code> to extend the array as time advances</p></li>
+</ul>
+<p><strong>Exercise: note that you can achieve the same result with a for loop and a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement - would you like to try coding it?</strong></p>
+</div>
+<div class="section" id="linear-algebra-with-numpy">
+<h2>Linear algebra with numpy<a class="headerlink" href="#linear-algebra-with-numpy" title="Permalink to this headline">¶</a></h2>
+<p>You already know that you can create <code class="docutils literal notranslate"><span class="pre">ndarrays</span></code> of any dimensions in numpy. For example, an <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> of dimensions 2:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Like for vectors, arithmetic operations are occurring element-wise:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[2, 3, 4],
+       [5, 6, 7]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>When doing arithmetics on two arrays the rules of <a class="reference external" href="https://numpy.org/doc/stable/user/basics.broadcasting.html">broadcasting</a> apply. For now, you need to remember that if the arrays are of the same dimension, operations will also be applies element-wise:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 2,  6, 12],
+       [20, 30, 42]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Therefore, <code class="docutils literal notranslate"><span class="pre">ndarrays</span></code> aren’t really “vectors” or “matrices” in the sense you have learned in math class. In my work for example I almost never think in terms of matrices, but I think of <code class="docutils literal notranslate"><span class="pre">ndarrays</span></code> much more in terms of “data containers” or “images” (for example when I plot meteorological data on a map).</p>
+<p>This doesn’t mean that numpy cannot be used for linear algebra. In fact, <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.linalg.html">an entire module</a> of numpy deals with linear algebra. In this class we will learn only the very basics of it.</p>
+<p>To compute <a class="reference external" href="https://en.wikipedia.org/wiki/Matrix_multiplication">matrix multiplications</a> in numpy (as opposed to element-wise multiplication), we can use the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> (matmul) operator:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">@</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>  <span class="c1"># matrix multiplication</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14, 32])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercise: on a sheet of paper, verify that the result is correct.</strong></p>
+<p>With matrix multiplication, the dimensions matter. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># 1 rows, 3 columns</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 3 rows, 1 column</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">@</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 1 row, 1 column</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2 3]]
+@
+[[1]
+ [2]
+ [3]]
+=
+[[14]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 3 rows, 1 column</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># 1 row, 3 columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">@</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 3 rows, 3 columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1]
+ [2]
+ [3]]
+@
+[[1 2 3]]
+=
+[[1 2 3]
+ [2 4 6]
+ [3 6 9]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Matrices can be transposed with the <code class="docutils literal notranslate"><span class="pre">.T</span></code> attribute:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">a</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 3],
+       [2, 4]])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercise: with two arbitrary quadratic matrices <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> of the same size, verify that <span class="math notranslate nohighlight">\((A B)^T = B^T A^T\)</span></strong></p>
+<p>If a matrix is invertible, you can compute its inverse with:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a_inv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-2. ,  1. ],
+       [ 1.5, -0.5]])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercise: with the help of a python interpreter or a piece of paper, verify that <code class="docutils literal notranslate"><span class="pre">a_inv</span></code> is indeed the inverse of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</strong></p>
+</div>
+<div class="section" id="learning-checklist">
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">¶</a></h2>
+<p><label><input type="checkbox" id="week05_01" class="box"> I understand that floating point numbers in computers are almost always inexact. I know that their accuracy depends on their type and the numbers themselves.</input></label><br>
+<label><input type="checkbox" id="week05_01" class="box"> I am aware of the function <code class="docutils literal notranslate"><span class="pre">np.isclose()</span></code> to help me deal with floating point accuracy.</input></label><br>
+<label><input type="checkbox" id="week05_01" class="box"> I can solve simple iterative problems with numpy: either we containers of predefined size or with containers growing with time.</input></label><br>
+<label><input type="checkbox" id="week05_01" class="box"> I know how to compute simple linear algebra operations on matrices with numpy: matrix multiplication, transpose, inversion.</input></label><br></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./week_07"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../week_06/03-Assignment.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Assignment 06</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="02-Assignment.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assignment 07</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Fabien Maussion<br/>
+    
+      <div class="extra_footer">
+        <p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+  <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
+</a>
+These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
+<br>
+&copy; Copyright 2021-2022.
+</p>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
