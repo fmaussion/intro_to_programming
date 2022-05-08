@@ -73,47 +73,48 @@ The first half of the class will be heavily based on the "[Python for Everybody 
 You will notice that there are 12 weekly units for a 15 weeks long semester: this is expected since (i) some weeks contain holidays, and (ii) I expect some changes to the schedule as we all learn to adapt to this new class and curriculum.
 
 **Fundamentals**
-- Week 01
-    - Welcome and motivation
-    - Syllabus
-    - Installing Python
+- Week 01 
+    - Welcome! Motivation & syllabus
+    - [Installing Python](week_01/01-Installation)
     - [PY4E: Why program](https://www.py4e.com/lessons/intro)
 - Week 02
     - [PY4E: Variables, expressions and statements](https://www.py4e.com/lessons/memory)
     - [PY4E: Conditional Execution](https://www.py4e.com/lessons/logic)
-    - Using Jupyter
+    - [Using Jupyter](week_02/02-Intro-jupyter)
 - Week 03
+    - [Using Jupyter Notebooks](week_03/01-Intro-notebooks)
     - [PY4E: Functions](https://www.py4e.com/lessons/functions)
     - [PY4E: Loops and Iterations](https://www.py4e.com/lessons/loops)
-    - Using Jupyter Notebooks
 - Week 04
+    - [Python functions and doctests](week_04/01-documenting-functions)
     - [PY4E: Strings](https://www.py4e.com/lessons/strings)
+    - [PY4E: Files](https://www.py4e.com/lessons/files)
     - [PY4E: Lists](https://www.py4e.com/lessons/lists)
-    - [PY4E: Tuples](https://www.py4e.com/lessons/tuples)
-    - [PY4E: Dictionaries](https://www.py4e.com/lessons/dictionary)
 **Scientific python**
 - Week 05
+    - [Installing Packages](week_05/01-install-packages)
+    - [More on jupyter notebooks](week_05/02-jupyter-dos)
+    - [Introduction to numpy and matplotlib](week_05/03-numpy)
 - Week 06
-    - Here comes numpy
-    - numpy array: vectorization of `for` operations on lists
-    - numpy data types
+    - [Python tuples](week_06/01-tuples)
+    - [numpy - continued: computations](week_06/02-computations)
 - Week 07
-    - More on datatypes (date formats)
-    - reading CSV files
-    - plotting lines and scatter with matplotlib
+    - [numpy - continued: numerics](week_07/01-numerics)
 - Week 08
-    - reading netcdf files
-    - numpy array dimensions and array operations (indexing, broadcasting)
+    - Dictionaries
+    - numpy multi dimensional arrays (incl. broadcasting)
     - plotting gridded data as images and contours with matplotlib
     - **Project start**
+**Scientific packages**
 - Week 09
     - the powerhouse for tabular data: Pandas
 - Week 10
-    - the powerhouse for gridded data: Xarray
+    - the powerhouse for gridded data: xarray
 - Week 11
     - plotting georeferenced data
     - reading geotiff files
 - Week 12
-    - useful software and libraries: Jupyter, SciPy, MetPy ...
+    - Useful software and libraries: Jupyter, SciPy, MetPy ...
 
+**Project returns**
 **Exam**
