@@ -691,6 +691,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html">np.arange</a> when you know the start, end, and step size but not the domain size</p></li>
 <li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html">np.linspace</a> when you know the start, end, and domain size but not the step size</p></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The default integer type on Windows machines is <code class="docutils literal notranslate"><span class="pre">np.int32</span></code> (<a class="reference external" href="https://github.com/numpy/numpy/issues/9464">link</a>). This means that the default <code class="docutils literal notranslate"><span class="pre">dtype</span></code> for arrays created with <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> or <code class="docutils literal notranslate"><span class="pre">np.array</span></code> with integers as input will be <code class="docutils literal notranslate"><span class="pre">np.int32</span></code>!</p>
+<p>i.e., on Windows, the following behavior is very likely to occur:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">212</span><span class="p">,</span> <span class="mi">219</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">array([212, 214, 216, 218], dtype=int32)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">**</span> <span class="mi">4</span>
+<span class="go">array([ 2019963136,  2097273616, -2118184960, -2036436720], dtype=int32)</span>
+</pre></div>
+</div>
+<p><strong>A silent overflow</strong>!!! Always remember this when using <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> on Windows, and prefer to explicitly set the dtype to <code class="docutils literal notranslate"><span class="pre">int64</span></code> or <code class="docutils literal notranslate"><span class="pre">float64</span></code>.</p>
+</div>
 </div>
 <div class="section" id="find-occurences-of-values-in-numpy-arrays">
 <h2>Find occurences of values in numpy arrays<a class="headerlink" href="#find-occurences-of-values-in-numpy-arrays" title="Permalink to this headline">¶</a></h2>
@@ -796,7 +809,7 @@ const thebe_selector_output = ".output, .cell_output"
   True  True  True  True  True]
 </pre></div>
 </div>
-<img alt="../_images/01-numerics_47_1.png" src="../_images/01-numerics_47_1.png" />
+<img alt="../_images/01-numerics_48_1.png" src="../_images/01-numerics_48_1.png" />
 </div>
 </div>
 <p>But this does not really answer the question of <em>at which indices</em> this occurs. For this, we have to use the function <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.nonzero.html">np.nonzero()</a>:</p>
@@ -837,7 +850,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/01-numerics_53_0.png" src="../_images/01-numerics_53_0.png" />
+<img alt="../_images/01-numerics_54_0.png" src="../_images/01-numerics_54_0.png" />
 </div>
 </div>
 <p>This information can be useful in certain situations, for example when you want to know when a value is reached for the first time:</p>
@@ -887,7 +900,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/01-numerics_58_0.png" src="../_images/01-numerics_58_0.png" />
+<img alt="../_images/01-numerics_59_0.png" src="../_images/01-numerics_59_0.png" />
 </div>
 </div>
 <p>This is a simple example. But <strong>iterative solving</strong> (where a future state depends on past states) <strong>is at the core of a wide range of modern numerical models</strong> (including weather forecasting and climate models).</p>
@@ -925,7 +938,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/01-numerics_60_0.png" src="../_images/01-numerics_60_0.png" />
+<img alt="../_images/01-numerics_61_0.png" src="../_images/01-numerics_61_0.png" />
 </div>
 </div>
 <p>Nice! Now, sometimes, one wants to stop the simulation when it has <em>converged</em>, i.e. when the data does not change much with anymore. In this case, the number of years that the simulation will take is unknown since we cannot predict when this will happen. We have to use other strategies:</p>
@@ -959,7 +972,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/01-numerics_62_0.png" src="../_images/01-numerics_62_0.png" />
+<img alt="../_images/01-numerics_63_0.png" src="../_images/01-numerics_63_0.png" />
 </div>
 </div>
 <p>We made use of three main strategies:</p>
