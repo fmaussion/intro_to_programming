@@ -102,19 +102,20 @@ You will notice that there are 12 weekly units for a 15 weeks long semester: thi
     - [numpy - continued: numerics](week_07/01-numerics)
 - Week 08
     - Dictionaries
+    - Pandas
+- Week 09
+    - **Project starts**
+    - **Project time**
+- Week 10
     - numpy multi dimensional arrays (incl. broadcasting)
     - plotting gridded data as images and contours with matplotlib
-    - **Project start**
-**Scientific packages**
-- Week 09
-    - the powerhouse for tabular data: Pandas
-- Week 10
-    - the powerhouse for gridded data: xarray
 - Week 11
+    - xarray
+- Week 12
     - plotting georeferenced data
     - reading geotiff files
-- Week 12
-    - Useful software and libraries: Jupyter, SciPy, MetPy ...
+- Week 13
+    - Useful software and libraries: SciPy, MetPy ...
 
 **Project returns**
 **Exam**

@@ -46,3 +46,8 @@ parts:
     chapters:
       - file: week_07/01-numerics
       - file: week_07/02-Assignment
+  - caption: Week 08 - Pandas 
+    chapters:
+      - file: week_08/01-dictionaries
+      - file: week_08/02-pandas
+      - file: week_08/03-Assignment
