@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 05 &#8212; Introduction to Programming</title>
+    <title>Assignment 08 &#8212; Introduction to Programming</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python tuples" href="../week_06/01-tuples.html" />
-    <link rel="prev" title="Introduction to scientific python: numpy and matplotlib" href="03-numpy.html" />
+    <link rel="prev" title="Pandas: working with tabular data" href="02-pandas.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -233,24 +232,24 @@ const thebe_selector_output = ".output, .cell_output"
   Week 05 - Scientific python
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01-install-packages.html">
+  <a class="reference internal" href="../week_05/01-install-packages.html">
    Installing python packages
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-jupyter-dos.html">
+  <a class="reference internal" href="../week_05/02-jupyter-dos.html">
    Jupyter notebooks tips and tricks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-numpy.html">
+  <a class="reference internal" href="../week_05/03-numpy.html">
    Introduction to scientific python: numpy and matplotlib
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/04-Assignment.html">
    Assignment 05
   </a>
  </li>
@@ -299,19 +298,19 @@ const thebe_selector_output = ".output, .cell_output"
   Week 08 - Pandas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_08/01-dictionaries.html">
+  <a class="reference internal" href="01-dictionaries.html">
    Python dictionaries
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_08/02-pandas.html">
+  <a class="reference internal" href="02-pandas.html">
    Pandas: working with tabular data
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week_08/03-Assignment.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Assignment 08
   </a>
  </li>
@@ -356,7 +355,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/week_05/04-Assignment.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/week_08/03-Assignment.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -376,10 +375,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_05/04-Assignment.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_08/03-Assignment.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_05/04-Assignment.ipynb"><button
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_08/03-Assignment.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -399,7 +398,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_05/04-Assignment.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_08/03-Assignment.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -422,28 +421,18 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-live-meteorological-data">
-   Introduction: live meteorological data
+  <a class="reference internal nav-link" href="#data-preparation">
+   01 - Data preparation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-1-data-exploration">
-   Exercise 1: data exploration
+  <a class="reference internal nav-link" href="#wind">
+   02 - Wind
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-2-plotting">
-   Exercise 2: plotting
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-3-statistics">
-   Exercise 3: statistics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-average-wind-direction">
-   Bonus: average wind direction
+  <a class="reference internal nav-link" href="#station-comparison">
+   03 - Station comparison
   </a>
  </li>
 </ul>
@@ -456,7 +445,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Assignment 05</h1>
+                <h1>Assignment 08</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -467,28 +456,18 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-live-meteorological-data">
-   Introduction: live meteorological data
+  <a class="reference internal nav-link" href="#data-preparation">
+   01 - Data preparation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-1-data-exploration">
-   Exercise 1: data exploration
+  <a class="reference internal nav-link" href="#wind">
+   02 - Wind
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-2-plotting">
-   Exercise 2: plotting
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-3-statistics">
-   Exercise 3: statistics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bonus-average-wind-direction">
-   Bonus: average wind direction
+  <a class="reference internal nav-link" href="#station-comparison">
+   03 - Station comparison
   </a>
  </li>
 </ul>
@@ -500,37 +479,30 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="assignment-05">
-<h1>Assignment 05<a class="headerlink" href="#assignment-05" title="Permalink to this headline">¶</a></h1>
-<p><em>Due date: 27.04.2022</em></p>
-<p>This week’s assignment has to be returned <strong>in the form a jupyter notebook</strong>.
-Use jupyter notebooks for what they excel at: combining text, code, and figures. Use the markdown format to structure your assignments, and write text when asked to.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="assignment-08">
+<h1>Assignment 08<a class="headerlink" href="#assignment-08" title="Permalink to this headline">¶</a></h1>
+<p><em>Due date: 18.05.2022</em></p>
+<p>This week’s assignment has to be returned <strong>in the form a jupyter notebook</strong>.</p>
 <p>Don’t forget the <a class="reference internal" href="../assignments.html"><span class="doc std std-doc">instructions</span></a>!</p>
-<p><em>Note for next year’s Fabien: this data can have missing values, therefore this exercise should come after the explanation of missing values.</em></p>
-<div class="section" id="introduction-live-meteorological-data">
-<h2>Introduction: live meteorological data<a class="headerlink" href="#introduction-live-meteorological-data" title="Permalink to this headline">¶</a></h2>
-<p>The institute website provides raw data from several stations around Innsbruck using a live feed at the following addresses:</p>
+<div class="section" id="data-preparation">
+<h2>01 - Data preparation<a class="headerlink" href="#data-preparation" title="Permalink to this headline">¶</a></h2>
+<p>Rewrite the <code class="docutils literal notranslate"><span class="pre">acinn_meteo_data</span></code> function we used in <a class="reference internal" href="../week_05/04-Assignment.html"><span class="doc std std-doc">week 05</span></a> to return a pandas dataframe instead of individual arrays. When creating the dataframe, rename the column as follows:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://acinn-data.uibk.ac.at/innsbruck/3">https://acinn-data.uibk.ac.at/innsbruck/3</a> for the three days data</p></li>
-<li><p><a class="reference external" href="https://acinn-data.uibk.ac.at/innsbruck/7">https://acinn-data.uibk.ac.at/innsbruck/7</a> for the seven days data</p></li>
+<li><p>“rr” -&gt; “rainfall” (invalid: &lt; 0)</p></li>
+<li><p>“dd” -&gt; “wind_dir” (invalid: &lt; 0)</p></li>
+<li><p>“ff” -&gt; “wind_speed” (invalid: &lt; 0)</p></li>
+<li><p>“tp” -&gt; “dewpoint” (invalid: &lt; -50)</p></li>
+<li><p>“p” -&gt; “pressure” (invalid: &lt; 500)</p></li>
+<li><p>“tl” -&gt; “temperature” (invalid: &lt; -50)</p></li>
+<li><p>“so” -&gt; “sunshine_min” (invalid: &lt; 0)</p></li>
+<li><p>“rf” -&gt; “relative_humidity” (invalid: &lt; 0)</p></li>
 </ul>
-<p>The datasets for other stations are available, per analogy:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://acinn-data.uibk.ac.at/obergurgl/3">https://acinn-data.uibk.ac.at/obergurgl/3</a></p></li>
-<li><p>two other stations are available but we’ll have a look at them next time</p></li>
-</ul>
-<p>The data is shared by ACINN under a <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
-  <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/>
-</a>
-<p>The data is provided in the <a class="reference external" href="https://www.json.org/">json</a> format, often used for web applications. Fortunately, this is very easy to read in python. To make your life easier, I have prepared a reading function below.</p>
-<p>It is not important that you understand how it works exactly, but you should understand how to call the function as explained in the examples below.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">acinn_meteo_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s2">&quot;innsbruck&quot;</span><span class="p">,</span> <span class="n">ndays</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<p>You should ignore the <code class="docutils literal notranslate"><span class="pre">datumsec</span></code> key and instead use the converted time as <code class="docutils literal notranslate"><span class="pre">index</span></code> for the dataframe you’ll create.</p>
+<p>Filter for missing data before placing the data in the pandas dafaframe: replace all values below -80 (arbitrary threshold) with <code class="docutils literal notranslate"><span class="pre">np.nan</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">acinn_meteo_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s2">&quot;innsbruck&quot;</span><span class="p">,</span> <span class="n">ndays</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Parse live meteorological data from the ACINN servers.</span>
 
-<span class="sd">    Requires an internet connection!</span>
+<span class="sd">    Requires an internet connection and the pandas library!</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -541,20 +513,20 @@ Use jupyter notebooks for what they excel at: combining text, code, and figures.
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    (time, air_temp, wind_speed, wind_dir) :</span>
-<span class="sd">        the meteorological data (python lists)</span>
+<span class="sd">    df : pd.DataFrame</span>
+<span class="sd">        the meteorological data in a pandas dataframe</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; time, air_temp, wind_speed, wind_dir = acinn_meteo_data()</span>
-<span class="sd">    &gt;&gt;&gt; type(time)</span>
-<span class="sd">    &lt;class &#39;list&#39;&gt;</span>
-<span class="sd">    &gt;&gt;&gt; len(time) &gt; 0</span>
-<span class="sd">    True</span>
-<span class="sd">    &gt;&gt;&gt; type(time[0])</span>
-<span class="sd">    &lt;class &#39;datetime.datetime&#39;&gt;</span>
-<span class="sd">    &gt;&gt;&gt; type(air_temp[0])</span>
-<span class="sd">    &lt;class &#39;float&#39;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; df = acinn_meteo_data()</span>
+<span class="sd">    &gt;&gt;&gt; type(df)</span>
+<span class="sd">    &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; type(df.index)</span>
+<span class="sd">    &lt;class &#39;pandas.core.indexes.datetimes.DatetimeIndex&#39;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; len(df.columns)</span>
+<span class="sd">    7</span>
+<span class="sd">    &gt;&gt;&gt; df[&#39;temperature&#39;].dtype</span>
+<span class="sd">    dtype(&#39;float64&#39;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
     <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
@@ -567,144 +539,181 @@ Use jupyter notebooks for what they excel at: combining text, code, and figures.
 
     <span class="c1"># Convert the time</span>
     <span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">milliseconds</span><span class="o">=</span><span class="n">ds</span><span class="p">)</span> <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;datumsec&#39;</span><span class="p">]]</span>
+    
+    <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=0)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="wind">
+<h2>02 - Wind<a class="headerlink" href="#wind" title="Permalink to this headline">¶</a></h2>
+<p><strong>1. write a new function called <code class="docutils literal notranslate"><span class="pre">sd_to_uv</span></code> which accept two arrays as input (or equivalent): wind speed and wind direction, and which converts the values into u and v, the vector components of the wind</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sd_to_uv</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Converts wind speed and direction to (u, v) vector components.</span>
 
-    <span class="c1"># Read the data</span>
-    <span class="n">wind_speed</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ff&#39;</span><span class="p">]</span>
-    <span class="n">wind_dir</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;dd&#39;</span><span class="p">]</span>
-    <span class="n">air_temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;tl&#39;</span><span class="p">]</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    speed : ndarray-like</span>
+<span class="sd">        wind speed in m/s</span>
+<span class="sd">    direction : ndarray-like</span>
+<span class="sd">        wind direction in degrees, meteorological convention (0° = North)</span>
 
-    <span class="c1"># Return the data</span>
-    <span class="k">return</span> <span class="n">time</span><span class="p">,</span> <span class="n">air_temp</span><span class="p">,</span> <span class="n">wind_speed</span><span class="p">,</span> <span class="n">wind_dir</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    (u, v) : wind u and v vector components (unit: m/s)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; sd_to_uv(1, 90)</span>
+<span class="sd">    (-1.0, 1.2246467991473532e-16)</span>
+<span class="sd">    &gt;&gt;&gt; sd_to_uv(0, 234)</span>
+<span class="sd">    (0.0, 0.0)</span>
+<span class="sd">    &gt;&gt;&gt; u, v = sd_to_uv([1, 1], [0, 90])</span>
+<span class="sd">    &gt;&gt;&gt; u</span>
+<span class="sd">    array([-1.8369702e-16, -1.0000000e+00])</span>
+<span class="sd">    &gt;&gt;&gt; v</span>
+<span class="sd">    array([-1.0000000e+00,  1.2246468e-16])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>2. write another function called <code class="docutils literal notranslate"><span class="pre">uv_to_sd</span></code> which does the conversion in the other direction</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">uv_to_sd</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Converts (u, v) wind vector components to wind speed and direction.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    u : ndarray-like</span>
+<span class="sd">        u-component of the wind speed in m/s</span>
+<span class="sd">    v : ndarray-like</span>
+<span class="sd">        v-component of the wind speed in m/s</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    (speed, direction) : wind speed (unit: m/s) and direction (° in the meterological convention)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; uv_to_sd(1, 1)</span>
+<span class="sd">    (1.4142135623730951, 225.0)</span>
+<span class="sd">    &gt;&gt;&gt; uv_to_sd(-1, -1)</span>
+<span class="sd">    (1.4142135623730951, 45.0)</span>
+<span class="sd">    &gt;&gt;&gt; uv_to_sd(0, 0)</span>
+<span class="sd">    (0.0, 270.0)</span>
+<span class="sd">    &gt;&gt;&gt; u, v = sd_to_uv([1, 2], [90, 235])</span>
+<span class="sd">    &gt;&gt;&gt; uv_to_sd(u, v)</span>
+<span class="sd">    (array([1., 2.]), array([ 90., 235.]))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://colaweb.gmu.edu/dev/clim301/lectures/wind/wind-uv">This webpage</a> contains all the info you need to compute this conversion. Don’t forget to run the tests!</p>
+<p>In order to help you out with one particular aspect, here is a useful function that I recommend to apply in your code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_wind_dir</span><span class="p">(</span><span class="n">direction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Makes sure that a wind direction value is comprised between 0 and 360°.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    direction : ndarray-like</span>
+<span class="sd">        wind direction in degrees, between [-360; +720]</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    direction : the direction, mapped to the [0; 360[ range.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; check_wind_dir(0)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; check_wind_dir(360)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; check_wind_dir([-180, 90, 420])</span>
+<span class="sd">    array([180,  90,  60])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">direction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">direction</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">360</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid wind direction value&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">fmod</span><span class="p">(</span><span class="n">direction</span> <span class="o">+</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
 
 
-<span class="c1"># Testing </span>
 <span class="kn">import</span> <span class="nn">doctest</span>
 <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=5)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=3)
 </pre></div>
 </div>
 </div>
-</div>
-<p>The function can be called as follows:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span><span class="p">,</span> <span class="n">air_temp</span><span class="p">,</span> <span class="n">wind_speed</span><span class="p">,</span> <span class="n">wind_dir</span> <span class="o">=</span> <span class="n">acinn_meteo_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s1">&#39;innsbruck&#39;</span><span class="p">,</span> <span class="n">ndays</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exercise-1-data-exploration">
-<h2>Exercise 1: data exploration<a class="headerlink" href="#exercise-1-data-exploration" title="Permalink to this headline">¶</a></h2>
-<p>Please answer the questions one by one in the cells below.</p>
-<p><strong>Start by converting all four python lists to numpy arrays. The variable names should stay the same.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>What is the dtype of the data stored in the <code class="docutils literal notranslate"><span class="pre">air_temp</span></code>, <code class="docutils literal notranslate"><span class="pre">wind_speed</span></code>, <code class="docutils literal notranslate"><span class="pre">wind_dir</span></code> arrays? And their size? And their shape?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>What is the dtype of the data stored in the time array? Try to ask the following questions:</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-</pre></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>What is the time resolution of the data? To answer this question, you can print the two first elements of the time array.</strong></p>
+<p><strong>3. use the <code class="docutils literal notranslate"><span class="pre">sd_to_uv</span></code> functions to add two columns to the Innsbruck dataframe: <code class="docutils literal notranslate"><span class="pre">u_wind</span></code> and <code class="docutils literal notranslate"><span class="pre">v_wind</span></code></strong>.</p>
+<p><strong>4. now compute the average statistics of wind for the 3 days period (average speed, average direction), by noting that wind speed is best averaged from the original data, and that wind direction is best averaged in vector space and converted back to trigonometry space. Compare the differences between the “naive” average and the “more correct” one.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="exercise-2-plotting">
-<h2>Exercise 2: plotting<a class="headerlink" href="#exercise-2-plotting" title="Permalink to this headline">¶</a></h2>
-<p><strong>Create a graph of the temperature and wind in Innsbruck over the last 3 days</strong>. Start by noticing that matplotlib understands datetime objects very well, and create a graph which looks approximately like this: <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/week_05/innsbruck_wind_example.png">example image</a> (note that your plot can be different with respect to dates, colors, etc. But be careful with the axis labels and legends).</p>
+<div class="section" id="station-comparison">
+<h2>03 - Station comparison<a class="headerlink" href="#station-comparison" title="Permalink to this headline">¶</a></h2>
+<p><strong>For the three stations <code class="docutils literal notranslate"><span class="pre">'innsbruck',</span> <span class="pre">'ellboegen',</span> <span class="pre">'sattelberg'</span></code>, parse the data and put all temperature variables in a single merged dataframe looking like this</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                     <span class="n">innsbruck</span>  <span class="n">ellboegen</span>  <span class="n">sattelberg</span>
+<span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">05</span> <span class="mi">15</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">19.7</span>      <span class="mf">15.00</span>        <span class="mf">4.90</span>
+<span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">05</span> <span class="mi">15</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">19.6</span>      <span class="mf">14.93</span>        <span class="mf">4.90</span>
+<span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">05</span> <span class="mi">15</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">19.4</span>      <span class="mf">14.88</span>        <span class="mf">4.82</span>
+<span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">05</span> <span class="mi">15</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">19.2</span>      <span class="mf">14.84</span>        <span class="mf">4.54</span>
+<span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">05</span> <span class="mi">15</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">19.1</span>      <span class="mf">14.79</span>        <span class="mf">4.32</span>
+</pre></div>
+</div>
+<p>Then, <strong>plot them all together in a single plot with legend</strong>.</p>
+<p>Which station recorded the warmest temperature over the period? How do their standard deviations compare with each other?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><em>Note: date formatting on axes is something which is very difficult to do automatically. If you feel like it you can try things like shown on the example below (optional).</em></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the date format</span>
-<span class="kn">from</span> <span class="nn">matplotlib.dates</span> <span class="kn">import</span> <span class="n">DateFormatter</span><span class="p">,</span> <span class="n">HourLocator</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">HourLocator</span><span class="p">(</span><span class="n">byhour</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">]))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">HourLocator</span><span class="p">())</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;%b </span><span class="si">%d</span><span class="s2">, %HH&quot;</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
-</pre></div>
-</div>
-<p><strong>Now create a graph of the temperature at Innsbruck and Obergurgl over the last 7 days</strong>. The graph should look approximately like this: <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/week_05/temp_example.png">example image</a> (note that your plot can be different with respect to dates, colors, etc. But be careful with the axis labels and legends).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exercise-3-statistics">
-<h2>Exercise 3: statistics<a class="headerlink" href="#exercise-3-statistics" title="Permalink to this headline">¶</a></h2>
-<p><strong>Compute the average, maximum and minimum temperature in Innsbruck over the past 7 days.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Compute the average, maximum and minimum temperature in Innsbruck over the past 24H. For this, assume that the data has no missing timestamp and that the time resolution is constant.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Compute the number of times that the 10m wind speed in Innsbruck was above 5 m/s over the past 7 days. Now convert this number to a percentage over the past 7 days.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Compute the number of times that the air temperature in Innsbruck was between 0°C and 10°C over the past 7 days. Now convert this number to a percentage over the past 7 days.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="bonus-average-wind-direction">
-<h2>Bonus: average wind direction<a class="headerlink" href="#bonus-average-wind-direction" title="Permalink to this headline">¶</a></h2>
-<p>Look at the plot you made about wind direction. Can you think of what problem would occur if you try to compute the average of the wind direction?</p>
-<p>Next week, we will address this problem together - so if you are bored you can start to think about how to solve it already ;-)</p>
 </div>
 </div>
 
@@ -721,7 +730,7 @@ Use jupyter notebooks for what they excel at: combining text, code, and figures.
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./week_05"
+            path: "./week_08"
         },
         predefinedOutput: true
     }
@@ -733,19 +742,12 @@ Use jupyter notebooks for what they excel at: combining text, code, and figures.
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="03-numpy.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02-pandas.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction to scientific python: numpy and matplotlib</p>
+            <p class="prev-next-title">Pandas: working with tabular data</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="../week_06/01-tuples.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python tuples</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

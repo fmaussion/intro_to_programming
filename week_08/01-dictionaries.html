@@ -1,0 +1,1018 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python dictionaries &#8212; Introduction to Programming</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pandas: working with tabular data" href="02-pandas.html" />
+    <link rel="prev" title="Assignment 07" href="../week_07/02-Assignment.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-88391345-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../learning_tips.html">
+   Learning tips
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments.html">
+   Homework instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   External resources
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 01 - Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_01/01-Installation.html">
+   Installing Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_01/02-Why-Program.html">
+   Why program?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_01/03-Assignment.html">
+   Assignment 01
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 02 - Gaining speed
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/01-Install-jupyter.html">
+   Installing Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/02-Intro-jupyter.html">
+   Introduction to Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/03-Lessons.html">
+   Lessons
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_02/04-Assignment.html">
+   Assignment 02
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 03 - Control flow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_03/01-Intro-notebooks.html">
+   Introduction to Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_03/02-Lessons.html">
+   Lessons
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_03/03-Assignment.html">
+   Assignment 03
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 04 - Strings, Files and Lists
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_04/01-documenting-functions.html">
+   Documenting functions and testing their output
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_04/02-Lessons.html">
+   Lessons
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_04/03-Assignment.html">
+   Assignment 04
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 05 - Scientific python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/01-install-packages.html">
+   Installing python packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/02-jupyter-dos.html">
+   Jupyter notebooks tips and tricks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/03-numpy.html">
+   Introduction to scientific python: numpy and matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_05/04-Assignment.html">
+   Assignment 05
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 06 - Scientific python - continued
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_06/01-tuples.html">
+   Python tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_06/02-computations.html">
+   Computations with numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_06/03-Assignment.html">
+   Assignment 06
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 07 - Numerics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_07/01-numerics.html">
+   Numpy as numerical solver
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_07/02-Assignment.html">
+   Assignment 07
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 08 - Pandas
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Python dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-pandas.html">
+   Pandas: working with tabular data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-Assignment.html">
+   Assignment 08
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/week_08/01-dictionaries.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/fmaussion/intro_to_programming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_08/01-dictionaries.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_08/01-dictionaries.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_08/01-dictionaries.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-dictionary">
+   What is a dictionary?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-dictionaries">
+   Why dictionaries?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionary-as-translators">
+     Dictionary as “translators”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionary-as-a-set-of-counters">
+     Dictionary as a set of counters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries-as-very-efficient-search-tools">
+     Dictionaries as very efficient “search” tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries-as-structured-containers">
+     Dictionaries as structured containers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-checklist">
+   Learning checklist
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Python dictionaries</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-dictionary">
+   What is a dictionary?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-dictionaries">
+   Why dictionaries?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionary-as-translators">
+     Dictionary as “translators”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionary-as-a-set-of-counters">
+     Dictionary as a set of counters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries-as-very-efficient-search-tools">
+     Dictionaries as very efficient “search” tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries-as-structured-containers">
+     Dictionaries as structured containers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-checklist">
+   Learning checklist
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="python-dictionaries">
+<h1>Python dictionaries<a class="headerlink" href="#python-dictionaries" title="Permalink to this headline">¶</a></h1>
+<p>You’ve already learned about a few important datatypes which are built into the python language: <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">int</span></code> (for numbers), <code class="docutils literal notranslate"><span class="pre">str</span></code> (for text), <code class="docutils literal notranslate"><span class="pre">list</span></code> (for mutable sequences), <code class="docutils literal notranslate"><span class="pre">tuple</span></code> (for immutable sequences), <code class="docutils literal notranslate"><span class="pre">func</span></code> (for functions)…</p>
+<p>Today, you will learn about the a further important built-in datatype in the python language: dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<p><em>Copyright notice: this lecture is inspired from the <a class="reference external" href="https://www.py4e.com/html3/09-dictionaries">py4e lecture on dictionaries</a> (CC-BY - Charles R. Severance).</em></p>
+<div class="section" id="what-is-a-dictionary">
+<h2>What is a dictionary?<a class="headerlink" href="#what-is-a-dictionary" title="Permalink to this headline">¶</a></h2>
+<p>You can think of a <strong>dictionary</strong> as a <em>mapping</em> between a set of indices (which are called <strong>keys</strong>) and a set of <strong>values</strong>. Each key maps to a value. The association of a key and a value is called a <strong>key-value pair</strong> or sometimes an item.</p>
+<p>As an example, we’ll build a dictionary that maps from English to German words, so the keys and the values are all strings.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">dict</span></code> creates a new dictionary with no items. Because <code class="docutils literal notranslate"><span class="pre">dict</span></code> is the name of a built-in function, you should avoid using it as a variable name:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">en2de</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">en2de</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The curly brackets, <code class="docutils literal notranslate"><span class="pre">{}</span></code>, represent an empty dictionary. To add items to the dictionary, you can use square brackets:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">en2de</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;eins&#39;</span>
+<span class="n">en2de</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;one&#39;: &#39;eins&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>This output format is also an input format. For example, you can create a new dictionary with three items:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">en2de</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="s1">&#39;eins&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="s1">&#39;zwei&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="s1">&#39;drei&#39;</span><span class="p">}</span>
+<span class="n">en2de</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;one&#39;: &#39;eins&#39;, &#39;two&#39;: &#39;zwei&#39;, &#39;three&#39;: &#39;drei&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In earlier versions of Python (pre 3.7, i.e. pre 2018), dictionaries where not guaranteed to be “ordered”, i.e. the order at which the key-value pairs are entered were not guaranteed to be preserved when printing the <code class="docutils literal notranslate"><span class="pre">dict</span></code>. As of now, this has become a feature of the language; but you will find many tutorials online (including PY4E) who warn you about this behavior. They are not “wrong”, they are just a little outdated.</p>
+</div>
+<p>In any case, the strength of dictionaries does not reside in their order (the previous behavior was OK in a large majority of the cases), but in the way one can access the values in them:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">en2de</span><span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">]</span>  <span class="c1"># Acces the value stored at the key &quot;three&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;drei&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is what dictionaries are <em>very</em> good at: finding stuff, quickly (we’ll get back to that).</p>
+<p>If the key isn’t in the dictionary, you get an exception:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">en2de</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipykernel_70037/90977062.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">en2de</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;four&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">len</span></code> function works on dictionaries; it returns the number of key-value pairs:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">en2de</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator works on dictionaries; it tells you whether something appears as a key in the dictionary (<strong>appearing as a value is not good enough</strong>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;one&#39;</span> <span class="ow">in</span> <span class="n">en2de</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;eins&#39;</span> <span class="ow">in</span> <span class="n">en2de</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>To see whether something appears as a value in a dictionary, you can use the method <code class="docutils literal notranslate"><span class="pre">.values()</span></code>, which returns the values as a type that can be converted to a <code class="docutils literal notranslate"><span class="pre">list</span></code>, and then use the in operator:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">en2de</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="s1">&#39;eins&#39;</span> <span class="ow">in</span> <span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>This type of usage is rare for dictionaries though.</p>
+</div>
+<div class="section" id="why-dictionaries">
+<h2>Why dictionaries?<a class="headerlink" href="#why-dictionaries" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">dict</span></code> is the last built-in (“standard”) python datatype you will learn from me in this class. But is is not any less important than the other ones. Dictionaries are used in plenty of situations! Let me show you a few “real world” examples.</p>
+<div class="section" id="dictionary-as-translators">
+<h3>Dictionary as “translators”<a class="headerlink" href="#dictionary-as-translators" title="Permalink to this headline">¶</a></h3>
+<p>Similar to the example above, dictionaries are good to store data (values) sorted by entries (keys). We use this feature to provide several language on our <a class="reference external" href="https://edu.oggm.org/en/latest/explorer.html">world glacier explorer app</a>. The translation algorithm looks a lot like this simplified code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;en&#39;</span><span class="p">:</span> <span class="s1">&#39;Hello </span><span class="si">{}</span><span class="s1">! &#39;</span><span class="p">,</span>
+    <span class="s1">&#39;fr&#39;</span><span class="p">:</span> <span class="s1">&#39;Bonjour </span><span class="si">{}</span><span class="s1">! &#39;</span><span class="p">,</span>
+    <span class="s1">&#39;de&#39;</span><span class="p">:</span> <span class="s1">&#39;Hallo </span><span class="si">{}</span><span class="s1">! &#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">s2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;en&#39;</span><span class="p">:</span> <span class="s1">&#39;How are you?&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;fr&#39;</span><span class="p">:</span> <span class="s1">&#39;Comment ça va?&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;de&#39;</span><span class="p">:</span> <span class="s1">&#39;Wie geht es dir?&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># Pick a language and print the sentence</span>
+<span class="c1"># Note that we are looping over the keys with this simple syntax</span>
+<span class="k">for</span> <span class="n">lan</span> <span class="ow">in</span> <span class="n">s1</span><span class="p">:</span>
+    <span class="c1"># Print the sentence</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">[</span><span class="n">lan</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Émilie&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">s2</span><span class="p">[</span><span class="n">lan</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Émilie! How are you?
+Bonjour Émilie! Comment ça va?
+Hallo Émilie! Wie geht es dir?
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/OGGM/world-glacier-explorer/blob/master/international.py">Here</a> is the translation file for the glacier explorer app if you are interested.</p>
+</div>
+<div class="section" id="dictionary-as-a-set-of-counters">
+<h3>Dictionary as a set of counters<a class="headerlink" href="#dictionary-as-a-set-of-counters" title="Permalink to this headline">¶</a></h3>
+<p>Suppose you are given a string and you want to count how many times each letter appears. There are several ways you could do it, but one good way is to use a <code class="docutils literal notranslate"><span class="pre">dict</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;brontosaurus&#39;</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;b&#39;: 1, &#39;r&#39;: 2, &#39;o&#39;: 2, &#39;n&#39;: 1, &#39;t&#39;: 1, &#39;s&#39;: 2, &#39;a&#39;: 1, &#39;u&#39;: 2}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We are effectively computing a <strong>histogram</strong>, which is a statistical term for a set of counters (or frequencies).</p>
+<p>The for loop traverses the string. Each time through the loop, if the character <code class="docutils literal notranslate"><span class="pre">c</span></code> is not in the dictionary, we create a new item with key <code class="docutils literal notranslate"><span class="pre">c</span></code> and the initial value <code class="docutils literal notranslate"><span class="pre">1</span></code>
+(since we have seen this letter once). If <code class="docutils literal notranslate"><span class="pre">c</span></code> is already in the dictionary we increment <code class="docutils literal notranslate"><span class="pre">d[c]</span></code> by 1.</p>
+<p>Dictionaries have a method called <code class="docutils literal notranslate"><span class="pre">.get()</span></code> that takes a key and a default value. If the key appears in the dictionary, get returns the corresponding value; otherwise it returns the default value. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;chuck&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;annie&#39;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;jan&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;jan&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tim&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+0
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">.get()</span></code> to write our histogram loop more concisely. Because the get method automatically handles the case where a key is not in a dictionary, we can reduce four lines down to one and eliminate the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;brontosaurus&#39;</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+    <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;b&#39;: 1, &#39;r&#39;: 2, &#39;o&#39;: 2, &#39;n&#39;: 1, &#39;t&#39;: 1, &#39;s&#39;: 2, &#39;a&#39;: 1, &#39;u&#39;: 2}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The use of the <code class="docutils literal notranslate"><span class="pre">.get()</span></code> method to simplify this counting loop ends up being a very commonly used “idiom” (strategy) in Python. So you should take a moment and compare the loop using the if statement and in operator with the loop using the get method. They do exactly the same thing, but one is more succinct.</p>
+</div>
+<div class="section" id="dictionaries-as-very-efficient-search-tools">
+<h3>Dictionaries as very efficient “search” tools<a class="headerlink" href="#dictionaries-as-very-efficient-search-tools" title="Permalink to this headline">¶</a></h3>
+<p>Lists and dictionaries have a few things in common:</p>
+<ul class="simple">
+<li><p>they both contain data (they are “containers”)</p></li>
+<li><p>they have a length</p></li>
+<li><p>they can be indexed</p></li>
+<li><p>…</p></li>
+</ul>
+<p>Lists are indexed by integer (location), while dicts are indexed by key. This makes the reading and structuring of data much easier (see “Dictionary as containers” section below).</p>
+<p>One of the things that dictionaries excel at is to check whether or not a key is available or not. Check the following examples</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">l</span></code> is a list of 1000 numbers (from 0 to 999). You can check if a value is in the list with:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="ow">in</span> <span class="n">l</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>It turns out that the time needed for this check is much longer if the value is at the end of the list or at the beginning:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> 2 in l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>54.6 ns ± 1.57 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> 998 in l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.2 µs ± 286 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<p>So almost a factor 200 slower!!!</p>
+<p><strong>Exercise: can you explain why this is the case?</strong></p>
+<p>Now lets repeat this exercise with a dict:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">l</span><span class="p">))</span>  <span class="c1"># you can forget about this command for now</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">d</span></code> is now a dict with 999 key-value pairs:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="mi">999</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1 999
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s see the performance of our search:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> 2 in d
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38.6 ns ± 0.806 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<p>So more or less the performance of a list search when the value is at the beginning. What about the end?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">timeit</span> 998 in d
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>54.4 ns ± 3.48 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<p>So almost the same performance!!! This feature is possible thanks to a very clever algorithm (hash-tables) which is not part of this lecture.</p>
+<p>OK, so why is this useful? See for example this <a class="reference external" href="https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json">list of English words I downloaded from the internet</a>. If you click on the link you will see that the author decided to store it as a <code class="docutils literal notranslate"><span class="pre">json</span></code> file (a dictionary) with the words as keys and only ones as values. But why? Let’s find out:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;words_dictionary.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">wf</span><span class="p">:</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">wf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>370101
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span><span class="p">[</span><span class="s1">&#39;computer&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>This looks a bit silly (the “1s” are truly useless), but with this we can take advantage of the dictionaries efficient hash-table search algorithm. Checking if “ambivalent” exists is as fast as checking for “zoo”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;zoo&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">,</span> <span class="s1">&#39;spätzle&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">w</span><span class="si">}</span><span class="s1"> is an english word&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">w</span><span class="si">}</span><span class="s1"> is not an english word&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zoo is an english word
+bird is an english word
+spätzle is not an english word
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Another python datatype (<a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#sets">sets</a>) would be even better than dicts (same speed, no need for “1s”), but we won’t talk about is today.</p>
+</div>
+</div>
+<div class="section" id="dictionaries-as-structured-containers">
+<h3>Dictionaries as structured containers<a class="headerlink" href="#dictionaries-as-structured-containers" title="Permalink to this headline">¶</a></h3>
+<p>This is probably the main use of dictionaries. They allow to share information in a structured and human readable form. For example, the <a class="reference external" href="https://acinn-data.uibk.ac.at/innsbruck/3">ACINN weather data</a> shared online comes in the <a class="reference external" href="https://en.wikipedia.org/wiki/JSON#Syntax">JSON</a> format (which is read as a dictionary in python): the keys are the variable names and the values are the timeseries.</p>
+<p>The dictionary syntax (<code class="docutils literal notranslate"><span class="pre">d['key']</span> <span class="pre">=</span> <span class="pre">value</span></code>) is also used extensively by high-level data structures such as <a class="reference external" href="https://pandas.pydata.org">pandas</a> dataframes. This will be the topic of our next unit.</p>
+</div>
+</div>
+<div class="section" id="learning-checklist">
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">¶</a></h2>
+<p><label><input type="checkbox" id="week05_01" class="box"> I understand the differences between a dictionary and a list.</input></label><br>
+<label><input type="checkbox" id="week05_01" class="box"> I know what a “key-value pair” is.</input></label><br>
+<label><input type="checkbox" id="week05_01" class="box"> I know how to check if a dictionary contains a key, and if not return a default value.</input></label><br>
+<label><input type="checkbox" id="week05_01" class="box"> I am aware that dictionaries are very fast at searching for keys.</input></label><br>
+<label><input type="checkbox" id="week05_01" class="box"> I am aware of the potential of dictionaries as structured data containers.</input></label><br></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./week_08"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../week_07/02-Assignment.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Assignment 07</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="02-pandas.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pandas: working with tabular data</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Fabien Maussion<br/>
+    
+      <div class="extra_footer">
+        <p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+  <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
+</a>
+These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
+<br>
+&copy; Copyright 2021-2022.
+</p>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

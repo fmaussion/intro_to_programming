@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lessons &#8212; Introduction to Programming</title>
+    <title>Pandas: working with tabular data &#8212; Introduction to Programming</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Assignment 03" href="03-Assignment.html" />
-    <link rel="prev" title="Introduction to Jupyter Notebooks" href="01-Intro-notebooks.html" />
+    <link rel="next" title="Assignment 08" href="03-Assignment.html" />
+    <link rel="prev" title="Python dictionaries" href="01-dictionaries.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -189,19 +189,19 @@ const thebe_selector_output = ".output, .cell_output"
   Week 03 - Control flow
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Intro-notebooks.html">
+  <a class="reference internal" href="../week_03/01-Intro-notebooks.html">
    Introduction to Jupyter Notebooks
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_03/02-Lessons.html">
    Lessons
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-Assignment.html">
+  <a class="reference internal" href="../week_03/03-Assignment.html">
    Assignment 03
   </a>
  </li>
@@ -299,19 +299,19 @@ const thebe_selector_output = ".output, .cell_output"
   Week 08 - Pandas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_08/01-dictionaries.html">
+  <a class="reference internal" href="01-dictionaries.html">
    Python dictionaries
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week_08/02-pandas.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Pandas: working with tabular data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week_08/03-Assignment.html">
+  <a class="reference internal" href="03-Assignment.html">
    Assignment 08
   </a>
  </li>
@@ -356,9 +356,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/week_03/02-Lessons.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/week_08/02-pandas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -376,10 +376,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_03/02-Lessons.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_08/02-pandas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_03/02-Lessons.md"><button
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_08/02-pandas.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -394,11 +394,56 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_08/02-pandas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-pandas">
+   Installing pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-pandas">
+   Importing pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started-with-pandas">
+   Getting started with pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-checklist">
+   Learning checklist
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -406,25 +451,84 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lessons</h1>
+                <h1>Pandas: working with tabular data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-pandas">
+   Installing pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-pandas">
+   Importing pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started-with-pandas">
+   Getting started with pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-checklist">
+   Learning checklist
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lessons">
-<h1>Lessons<a class="headerlink" href="#lessons" title="Permalink to this headline">¶</a></h1>
-<p>This week, we will follow the second and third lectures by PY4E entirely.</p>
-<p><strong>Lessons</strong>:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="pandas-working-with-tabular-data">
+<h1>Pandas: working with tabular data<a class="headerlink" href="#pandas-working-with-tabular-data" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://pandas.pydata.org/docs/index.html">Pandas</a> is one of the most famous python libraries for science, data science, and machine learning. It excels at manipulating tabular data, i.e. the kind of data you would have in a spreadsheet, a csv file, or weather station data.</p>
+<div class="section" id="installing-pandas">
+<h2>Installing pandas<a class="headerlink" href="#installing-pandas" title="Permalink to this headline">¶</a></h2>
+<p>If you need to refresh your memory about installing python packages, revisit the <a class="reference internal" href="../week_05/01-install-packages.html"><span class="doc std std-doc">unit on the subject</span></a>.</p>
+<p>To install pandas, open the condaforge prompt, activate the environment you want to install pandas into, and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="n">pandas</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="importing-pandas">
+<h2>Importing pandas<a class="headerlink" href="#importing-pandas" title="Permalink to this headline">¶</a></h2>
+<p>Like numpy, we can access all of pandas functionalities with a simple <code class="docutils literal notranslate"><span class="pre">import</span></code> command. The convention is to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="getting-started-with-pandas">
+<h2>Getting started with pandas<a class="headerlink" href="#getting-started-with-pandas" title="Permalink to this headline">¶</a></h2>
+<p>Pandas is a fantastic library: it will take you minutes to grasp the fundamentals, and years to master it: this is what I like most about it ;-).</p>
+<p>For today, I strongly recommend to follow the various tutorials on the <a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html">getting started</a> page of the pandas documentation. If you are short on time, focus on:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.py4e.com/lessons/functions">Chapter 5: Functions</a></p></li>
-<li><p><a class="reference external" href="https://www.py4e.com/lessons/loops">Chapter 6: Loops and Iterations</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/01_table_oriented.html">What kind of data does pandas handle?</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html">How to create new columns derived from existing columns?</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html">How to create plots in pandas?</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html">How to calculate summary statistics?</a></p></li>
 </ul>
+<p>The other tutorials are very useful as well and should be read sooner or later for the end of semester project. Start now if you have time!</p>
+</div>
+<div class="section" id="learning-checklist">
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">¶</a></h2>
+<p><label><input type="checkbox" id="week05_01" class="box"> I am able to install and use pandas in the notebook.</input></label><br>
+<label><input type="checkbox" id="week05_01" class="box"> I have followed the “getting started” tutorials listed above.</input></label><br></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -440,7 +544,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./week_03"
+            path: "./week_08"
         },
         predefinedOutput: true
     }
@@ -452,17 +556,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="01-Intro-notebooks.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="01-dictionaries.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction to Jupyter Notebooks</p>
+            <p class="prev-next-title">Python dictionaries</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="03-Assignment.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Assignment 03</p>
+        <p class="prev-next-title">Assignment 08</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -294,6 +294,28 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 08 - Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_08/01-dictionaries.html">
+   Python dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_08/02-pandas.html">
+   Pandas: working with tabular data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_08/03-Assignment.html">
+   Assignment 08
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -1002,7 +1024,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 4, 12, 14,  1, 11,  6,  8, 13,  9,  2, 10,  7,  3,  5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2, 14,  9,  4, 13, 11,  7,  5,  3, 10,  6,  1, 12,  8])
 </pre></div>
 </div>
 </div>
@@ -1016,7 +1038,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 1, 2, 3, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 4, 5, 3, 1])
 </pre></div>
 </div>
 </div>
@@ -1037,8 +1059,8 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False, False,  True, False, False, False, False, False,
-        True, False, False,  True,  True])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False, False,  True, False, False, False,  True,  True,
+       False, False,  True, False, False])
 </pre></div>
 </div>
 </div>
@@ -1052,7 +1074,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 1, 2, 3, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 4, 5, 3, 1])
 </pre></div>
 </div>
 </div>
@@ -1066,7 +1088,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 1, 2, 3, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 4, 5, 3, 1])
 </pre></div>
 </div>
 </div>
@@ -1081,7 +1103,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 4,  6,  8,  9, 10,  7,  3,  5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 9,  4,  7,  5,  3, 10,  6,  8])
 </pre></div>
 </div>
 </div>
@@ -1101,7 +1123,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_132639/1830006926.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">/tmp/ipykernel_69856/1830006926.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># These two are equivalent with boolean scalars</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">((</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">))</span>  <span class="c1"># On numpy arrays, the second one will raise an error</span>
 
