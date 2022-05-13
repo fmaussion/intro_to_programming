@@ -497,8 +497,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>“so” -&gt; “sunshine_min” (invalid: &lt; 0)</p></li>
 <li><p>“rf” -&gt; “relative_humidity” (invalid: &lt; 0)</p></li>
 </ul>
-<p>You should ignore the <code class="docutils literal notranslate"><span class="pre">datumsec</span></code> key and instead use the converted time as <code class="docutils literal notranslate"><span class="pre">index</span></code> for the dataframe you’ll create.</p>
-<p>Filter for missing data before placing the data in the pandas dafaframe: replace all values below -80 (arbitrary threshold) with <code class="docutils literal notranslate"><span class="pre">np.nan</span></code>.</p>
+<p>You should ignore the <code class="docutils literal notranslate"><span class="pre">datumsec</span></code> key and instead use the converted time as <code class="docutils literal notranslate"><span class="pre">index</span></code> for the dataframe you’ll create. Not all stations have all the variables! Your algorithm should work regardless of if the variable is available or not.</p>
+<p>Filter for missing data before placing the data in the pandas dafaframe: replace <strong>all values which are below the invalid threshold in the list above with <code class="docutils literal notranslate"><span class="pre">np.nan</span></code></strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">acinn_meteo_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s2">&quot;innsbruck&quot;</span><span class="p">,</span> <span class="n">ndays</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Parse live meteorological data from the ACINN servers.</span>
 
