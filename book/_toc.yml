@@ -51,3 +51,7 @@ parts:
       - file: week_08/01-dictionaries
       - file: week_08/02-pandas
       - file: week_08/03-Assignment
+  - caption: Homework cookbook
+    chapters:
+      - file: cookbook/intro
+      - file: cookbook/reading_mat_files
