@@ -57,6 +57,7 @@ parts:
   - caption: Week 09 - Multidimensional arrays 
     chapters:
       - file: week_09/01-multidim-numpy
+      - file: week_09/02-Assignment
   - caption: Homework cookbook
     chapters:
       - file: cookbook/intro
