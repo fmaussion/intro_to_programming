@@ -54,6 +54,9 @@ parts:
   - caption: Project
     chapters:
       - file: project/project_instructions
+  - caption: Week 09 - Multidimensional arrays 
+    chapters:
+      - file: week_09/01-multidim-numpy
   - caption: Homework cookbook
     chapters:
       - file: cookbook/intro
