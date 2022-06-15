@@ -62,3 +62,4 @@ parts:
     chapters:
       - file: cookbook/intro
       - file: cookbook/reading_mat_files
+      - file: cookbook/reading_txt_files
