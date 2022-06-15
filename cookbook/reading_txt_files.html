@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reading MATLAB .mat files &#8212; Introduction to Programming</title>
+    <title>Reading space-separated files &#8212; Introduction to Programming</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reading space-separated files" href="reading_txt_files.html" />
-    <link rel="prev" title="Introduction" href="intro.html" />
+    <link rel="prev" title="Reading MATLAB .mat files" href="reading_mat_files.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -356,8 +355,8 @@ const thebe_selector_output = ".output, .cell_output"
    Introduction
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="reading_mat_files.html">
    Reading MATLAB
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -367,8 +366,8 @@ const thebe_selector_output = ".output, .cell_output"
    files
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="reading_txt_files.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Reading space-separated files
   </a>
  </li>
@@ -413,7 +412,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/cookbook/reading_mat_files.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/cookbook/reading_txt_files.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -433,10 +432,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fcookbook/reading_mat_files.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fcookbook/reading_txt_files.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/cookbook/reading_mat_files.ipynb"><button
+        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/cookbook/reading_txt_files.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -456,7 +455,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/cookbook/reading_mat_files.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/cookbook/reading_txt_files.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -479,18 +478,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-mat-files">
-   Reading mat files
+  <a class="reference internal nav-link" href="#read-the-metadata">
+   Read the metadata
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plots">
-   Plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#merge-several-days-into-one-dataframe">
-   Merge several days into one dataframe
+  <a class="reference internal nav-link" href="#read-the-data">
+   Read the data
   </a>
  </li>
 </ul>
@@ -503,7 +497,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Reading MATLAB .mat files</h1>
+                <h1>Reading space-separated files</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -514,18 +508,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reading-mat-files">
-   Reading mat files
+  <a class="reference internal nav-link" href="#read-the-metadata">
+   Read the metadata
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plots">
-   Plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#merge-several-days-into-one-dataframe">
-   Merge several days into one dataframe
+  <a class="reference internal nav-link" href="#read-the-data">
+   Read the data
   </a>
  </li>
 </ul>
@@ -537,30 +526,133 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="reading-matlab-mat-files">
-<h1>Reading MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files<a class="headerlink" href="#reading-matlab-mat-files" title="Permalink to this headline">¶</a></h1>
-<p>In one of the radiation lecture, you are asked to read files in the MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files (one file per day with vectors of <code class="docutils literal notranslate"><span class="pre">I</span></code> measured at
-the surface at 450 nm, along with the sun elevation angle for each measurement <code class="docutils literal notranslate"><span class="pre">SNH</span></code>). There seem to be no time attached to these measurements. Here is an example of how to read one of the file into a pandas dataframe with help of the <a class="reference external" href="https://docs.scipy.org">scipy</a> library:</p>
-<div class="section" id="reading-mat-files">
-<h2>Reading mat files<a class="headerlink" href="#reading-mat-files" title="Permalink to this headline">¶</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="reading-space-separated-files">
+<h1>Reading space-separated files<a class="headerlink" href="#reading-space-separated-files" title="Permalink to this headline">¶</a></h1>
+<p>In one of the radiation lecture, you are asked to read files in <code class="docutils literal notranslate"><span class="pre">.txt</span></code> format in which the header contains metadata, followed by the data in columns, separated by spaces. The file looks like <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/cookbook/SCIA_GSFC_NO2.txt">this</a>.</p>
+<p>Let’s read it with pandas.</p>
+<div class="section" id="read-the-metadata">
+<h2>Read the metadata<a class="headerlink" href="#read-the-metadata" title="Permalink to this headline">¶</a></h2>
+<p>This has to be done in pure python, line by line:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">loadmat</span>  <span class="c1"># this is the SciPy module that loads mat-files</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">mat</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="s1">&#39;I_and_SNH_20111003.mat&#39;</span><span class="p">)</span>
-
-<span class="c1"># Put all columns which are not weird MATLAB ones into a dataframe</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s1">&#39;__&#39;</span> <span class="ow">in</span> <span class="n">k</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-
-<span class="c1"># Name it &quot;day1&quot; for clarity</span>
-<span class="n">df_day1</span> <span class="o">=</span> <span class="n">df</span>
-<span class="n">df_day1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_meta</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;SCIA_GSFC_NO2.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Column&#39;</span><span class="p">):</span>
+            <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+            <span class="n">df_meta</span><span class="p">[</span><span class="n">k</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="c1"># Stop after 30 lines</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
+            <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SCIAMACHY retrievals of total NO2 vertical column amounts
+Pixel footprint overlaps Pandora location GSFC, Lat 38.9926, Long -76.8396
+Climatological footprint correction is based on 0.05 grid resolution and the effective Pandora location.
+----------------------------------------------------------------
+Column 1: UT date and time for center of measurement, yyyymmddThhmmssZ (ISO 8601)
+Column 2: Solar zenith angle at the center-time of the measurement in degree
+Column 3: Footprint pixel center latitude
+Column 4: Footprint pixel center longitude
+Column 5: Footprint pixel latitude corner 1
+Column 6: Footprint pixel latitude corner 2
+Column 7: Footprint pixel latitude corner 3
+Column 8: Footprint pixel latitude corner 4
+Column 9: Footprint pixel longitude corner 1
+Column 10: Footprint pixel longitude corner 2
+Column 11: Footprint pixel longitude corner 3
+Column 12: Footprint pixel longitude corner 4
+Column 13: NO2 vertical column amount [Dobson Units]
+Column 14: Uncertainty of NO2 vertical column amount [Dobson Units]
+Column 15: Climatological footprint correction of NO2 vertical column amount [Dobson Units]
+Column 16: Uncertainty climatological footprint correction of NO2 vertical column amount [Dobson Units]
+Column 17: Cloud fraction
+Column 18: Footprint pixel area [deg^2]
+Column 19: Effective Pandora location latitudinal correction [deg]
+Column 20: Effective Pandora location longitudinal correction [deg]
+----------------------------------------------------------------
+20090505T154440Z 28.4650 39.0214 -76.7878 39.0695 38.8444 39.1940 38.9728 -76.4204 -76.5029 -77.0681 -77.1471 1.5182e-01 8.2979e-03 5.4211e-04 7.7206e-04 0.9796 0.1544 -1.7804e-03 3.3307e-03
+20090509T151909Z 31.2893 39.0146 -77.0317 39.0811 38.8425 39.1922 38.9447 -76.6278 -76.6920 -77.3865 -77.4505 1.4768e-01 7.5719e-03 3.3673e-03 7.7109e-04 0.1864 0.1912 -1.6040e-03 4.4252e-03
+20090509T151910Z 31.2880 38.9243 -76.6652 39.3051 39.0468 38.7999 38.5739 -78.1856 -78.2494 -75.2876 -75.3527 1.3956e-01 7.2270e-03 1.2312e-02 7.6775e-04 0.1858 0.7330 -1.6040e-03 4.4248e-03
+20090518T153611Z 27.0193 38.9538 -76.6282 39.0085 38.7916 39.1146 38.8982 -76.2898 -76.3627 -76.8938 -76.9647 2.3173e-01 1.1801e-02 8.9077e-04 7.7275e-04 0.0000 0.1383 -1.4539e-03 3.5464e-03
+20090524T154731Z 24.4820 39.0604 -76.7830 39.1051 38.8745 39.2404 39.0153 -76.3954 -76.4825 -77.0766 -77.1595 1.2280e-01 7.5891e-03 8.6057e-04 7.7163e-04 0.2446 0.1665 -1.3754e-03 3.0335e-03
+20090525T151619Z 29.2774 39.0623 -77.1074 39.1328 38.8852 39.2461 38.9878 -76.6839 -76.7478 -77.4854 -77.5491 1.4499e-01 7.7248e-03 5.2112e-03 7.7081e-04 0.2241 0.2096 -1.2583e-03 4.3692e-03
+20090525T151619Z 29.2767 38.8651 -75.9646 39.2461 38.9878 38.7406 38.5146 -77.4854 -77.5491 -74.5870 -74.6520 1.3296e-01 7.9510e-03 1.1861e-02 7.6768e-04 0.2433 0.7332 -1.2583e-03 4.3690e-03
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_meta</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Column 1&#39;: &#39;UT date and time for center of measurement, yyyymmddThhmmssZ (ISO 8601)&#39;,
+ &#39;Column 2&#39;: &#39;Solar zenith angle at the center-time of the measurement in degree&#39;,
+ &#39;Column 3&#39;: &#39;Footprint pixel center latitude&#39;,
+ &#39;Column 4&#39;: &#39;Footprint pixel center longitude&#39;,
+ &#39;Column 5&#39;: &#39;Footprint pixel latitude corner 1&#39;,
+ &#39;Column 6&#39;: &#39;Footprint pixel latitude corner 2&#39;,
+ &#39;Column 7&#39;: &#39;Footprint pixel latitude corner 3&#39;,
+ &#39;Column 8&#39;: &#39;Footprint pixel latitude corner 4&#39;,
+ &#39;Column 9&#39;: &#39;Footprint pixel longitude corner 1&#39;,
+ &#39;Column 10&#39;: &#39;Footprint pixel longitude corner 2&#39;,
+ &#39;Column 11&#39;: &#39;Footprint pixel longitude corner 3&#39;,
+ &#39;Column 12&#39;: &#39;Footprint pixel longitude corner 4&#39;,
+ &#39;Column 13&#39;: &#39;NO2 vertical column amount [Dobson Units]&#39;,
+ &#39;Column 14&#39;: &#39;Uncertainty of NO2 vertical column amount [Dobson Units]&#39;,
+ &#39;Column 15&#39;: &#39;Climatological footprint correction of NO2 vertical column amount [Dobson Units]&#39;,
+ &#39;Column 16&#39;: &#39;Uncertainty climatological footprint correction of NO2 vertical column amount [Dobson Units]&#39;,
+ &#39;Column 17&#39;: &#39;Cloud fraction&#39;,
+ &#39;Column 18&#39;: &#39;Footprint pixel area [deg^2]&#39;,
+ &#39;Column 19&#39;: &#39;Effective Pandora location latitudinal correction [deg]&#39;,
+ &#39;Column 20&#39;: &#39;Effective Pandora location longitudinal correction [deg]&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>I think that at this point it would be best to rename the columns to better variable names. Also, the exact line at which the data starts could also be inferred programmatically. This exercise is left to the reader.</p>
+</div>
+<div class="section" id="read-the-data">
+<h2>Read the data<a class="headerlink" href="#read-the-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;SCIA_GSFC_NO2.txt&#39;</span><span class="p">,</span>
+                 <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># There is no proper header in the file</span>
+                 <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span>  <span class="c1"># The separator is spaces</span>
+                 <span class="n">skiprows</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>  <span class="c1"># The first rows are not organized (25 could be fetched automatically)</span>
+                 <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>  <span class="c1"># The first column is the time index</span>
+                 <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Parse the time automatically</span>
+                <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give &quot;nicer&quot; names to columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Time (UTC)&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_meta</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -583,240 +675,305 @@ the surface at 450 nm, along with the sun elevation angle for each measurement <
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>SNH</th>
-      <th>I_450</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>10.028338</td>
-      <td>0.238662</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>10.838524</td>
-      <td>0.282054</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>11.646388</td>
-      <td>0.321627</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>12.446173</td>
-      <td>0.361128</td>
+      <th>Column 2</th>
+      <th>Column 3</th>
+      <th>Column 4</th>
+      <th>Column 5</th>
+      <th>Column 6</th>
+      <th>Column 7</th>
+      <th>Column 8</th>
+      <th>Column 9</th>
+      <th>Column 10</th>
+      <th>Column 11</th>
+      <th>Column 12</th>
+      <th>Column 13</th>
+      <th>Column 14</th>
+      <th>Column 15</th>
+      <th>Column 16</th>
+      <th>Column 17</th>
+      <th>Column 18</th>
+      <th>Column 19</th>
+      <th>Column 20</th>
     </tr>
     <tr>
-      <th>4</th>
-      <td>13.246367</td>
-      <td>0.398293</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>109</th>
-      <td>13.503050</td>
-      <td>0.485676</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>12.684507</td>
-      <td>0.442991</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>11.890372</td>
-      <td>0.395319</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>11.071531</td>
-      <td>0.343366</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>10.293703</td>
-      <td>0.302224</td>
-    </tr>
-  </tbody>
-</table>
-<p>114 rows × 2 columns</p>
-</div></div></div>
-</div>
-</div>
-<div class="section" id="plots">
-<h2>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_day1</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/reading_mat_files_5_0.png" src="../_images/reading_mat_files_5_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_day1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;SNH&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;I_450&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/reading_mat_files_6_0.png" src="../_images/reading_mat_files_6_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_day1_morning</span> <span class="o">=</span> <span class="n">df_day1</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="n">df_day1</span><span class="p">[</span><span class="s1">&#39;SNH&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">argmax</span><span class="p">()]</span>
-<span class="n">df_day1_afternoon</span> <span class="o">=</span> <span class="n">df_day1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_day1</span><span class="p">[</span><span class="s1">&#39;SNH&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
-
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">df_day1_morning</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;SNH&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;I_450&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Morning&#39;</span><span class="p">);</span>
-<span class="n">df_day1_afternoon</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;SNH&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;I_450&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Afternoon&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/reading_mat_files_7_0.png" src="../_images/reading_mat_files_7_0.png" />
-</div>
-</div>
-</div>
-<div class="section" id="merge-several-days-into-one-dataframe">
-<h2>Merge several days into one dataframe<a class="headerlink" href="#merge-several-days-into-one-dataframe" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
-
-<span class="n">all_df</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.mat&#39;</span><span class="p">)):</span>
-
-    <span class="n">mat</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-
-    <span class="c1"># Put all columns which are not weird MATLAB ones into a dataframe</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
-        <span class="k">if</span> <span class="s1">&#39;__&#39;</span> <span class="ow">in</span> <span class="n">k</span><span class="p">:</span>
-            <span class="k">continue</span>
-        <span class="n">df</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-
-    <span class="n">all_df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-
-<span class="n">all_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">all_df</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">all_df</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
+      <th>Time (UTC)</th>
       <th></th>
-      <th>SNH</th>
-      <th>I_450</th>
-      <th>date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>10.028338</td>
-      <td>0.238662</td>
-      <td>20111003</td>
+      <th>2009-05-05 15:44:40+00:00</th>
+      <td>28.4650</td>
+      <td>39.0214</td>
+      <td>-76.7878</td>
+      <td>39.0695</td>
+      <td>38.8444</td>
+      <td>39.1940</td>
+      <td>38.9728</td>
+      <td>-76.4204</td>
+      <td>-76.5029</td>
+      <td>-77.0681</td>
+      <td>-77.1471</td>
+      <td>0.15182</td>
+      <td>0.008298</td>
+      <td>0.000542</td>
+      <td>0.000772</td>
+      <td>0.9796</td>
+      <td>0.1544</td>
+      <td>-0.001780</td>
+      <td>0.003331</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>10.838524</td>
-      <td>0.282054</td>
-      <td>20111003</td>
+      <th>2009-05-09 15:19:09+00:00</th>
+      <td>31.2893</td>
+      <td>39.0146</td>
+      <td>-77.0317</td>
+      <td>39.0811</td>
+      <td>38.8425</td>
+      <td>39.1922</td>
+      <td>38.9447</td>
+      <td>-76.6278</td>
+      <td>-76.6920</td>
+      <td>-77.3865</td>
+      <td>-77.4505</td>
+      <td>0.14768</td>
+      <td>0.007572</td>
+      <td>0.003367</td>
+      <td>0.000771</td>
+      <td>0.1864</td>
+      <td>0.1912</td>
+      <td>-0.001604</td>
+      <td>0.004425</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>11.646388</td>
-      <td>0.321627</td>
-      <td>20111003</td>
+      <th>2009-05-09 15:19:10+00:00</th>
+      <td>31.2880</td>
+      <td>38.9243</td>
+      <td>-76.6652</td>
+      <td>39.3051</td>
+      <td>39.0468</td>
+      <td>38.7999</td>
+      <td>38.5739</td>
+      <td>-78.1856</td>
+      <td>-78.2494</td>
+      <td>-75.2876</td>
+      <td>-75.3527</td>
+      <td>0.13956</td>
+      <td>0.007227</td>
+      <td>0.012312</td>
+      <td>0.000768</td>
+      <td>0.1858</td>
+      <td>0.7330</td>
+      <td>-0.001604</td>
+      <td>0.004425</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>12.446173</td>
-      <td>0.361128</td>
-      <td>20111003</td>
+      <th>2009-05-18 15:36:11+00:00</th>
+      <td>27.0193</td>
+      <td>38.9538</td>
+      <td>-76.6282</td>
+      <td>39.0085</td>
+      <td>38.7916</td>
+      <td>39.1146</td>
+      <td>38.8982</td>
+      <td>-76.2898</td>
+      <td>-76.3627</td>
+      <td>-76.8938</td>
+      <td>-76.9647</td>
+      <td>0.23173</td>
+      <td>0.011801</td>
+      <td>0.000891</td>
+      <td>0.000773</td>
+      <td>0.0000</td>
+      <td>0.1383</td>
+      <td>-0.001454</td>
+      <td>0.003546</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>13.246367</td>
-      <td>0.398293</td>
-      <td>20111003</td>
+      <th>2009-05-24 15:47:31+00:00</th>
+      <td>24.4820</td>
+      <td>39.0604</td>
+      <td>-76.7830</td>
+      <td>39.1051</td>
+      <td>38.8745</td>
+      <td>39.2404</td>
+      <td>39.0153</td>
+      <td>-76.3954</td>
+      <td>-76.4825</td>
+      <td>-77.0766</td>
+      <td>-77.1595</td>
+      <td>0.12280</td>
+      <td>0.007589</td>
+      <td>0.000861</td>
+      <td>0.000772</td>
+      <td>0.2446</td>
+      <td>0.1665</td>
+      <td>-0.001375</td>
+      <td>0.003034</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>450</th>
-      <td>16.725457</td>
-      <td>0.630984</td>
-      <td>20120514</td>
+      <th>2012-03-18 15:36:11+00:00</th>
+      <td>45.6646</td>
+      <td>38.8337</td>
+      <td>-76.5165</td>
+      <td>39.1740</td>
+      <td>38.9530</td>
+      <td>38.7062</td>
+      <td>38.4945</td>
+      <td>-77.7083</td>
+      <td>-77.7721</td>
+      <td>-75.3132</td>
+      <td>-75.3815</td>
+      <td>0.10088</td>
+      <td>0.009215</td>
+      <td>0.010842</td>
+      <td>0.000768</td>
+      <td>0.5504</td>
+      <td>0.5484</td>
+      <td>-0.003730</td>
+      <td>0.005392</td>
     </tr>
     <tr>
-      <th>451</th>
-      <td>15.535872</td>
-      <td>0.577296</td>
-      <td>20120514</td>
+      <th>2012-03-23 15:52:37+00:00</th>
+      <td>41.9500</td>
+      <td>39.3591</td>
+      <td>-78.0177</td>
+      <td>39.7136</td>
+      <td>39.5019</td>
+      <td>39.1953</td>
+      <td>38.9750</td>
+      <td>-79.1681</td>
+      <td>-79.2379</td>
+      <td>-76.7408</td>
+      <td>-76.8210</td>
+      <td>0.15875</td>
+      <td>0.010232</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>0.5623</td>
+      <td>-0.003456</td>
+      <td>0.004192</td>
     </tr>
     <tr>
-      <th>452</th>
-      <td>14.617152</td>
-      <td>0.532635</td>
-      <td>20120514</td>
+      <th>2012-03-23 15:52:39+00:00</th>
+      <td>41.9475</td>
+      <td>39.0725</td>
+      <td>-77.1190</td>
+      <td>39.1203</td>
+      <td>38.9000</td>
+      <td>39.2407</td>
+      <td>39.0243</td>
+      <td>-76.7593</td>
+      <td>-76.8395</td>
+      <td>-77.3939</td>
+      <td>-77.4707</td>
+      <td>0.21058</td>
+      <td>0.010698</td>
+      <td>0.004900</td>
+      <td>0.000773</td>
+      <td>0.0000</td>
+      <td>0.1478</td>
+      <td>-0.003456</td>
+      <td>0.004190</td>
     </tr>
     <tr>
-      <th>453</th>
-      <td>13.705881</td>
-      <td>0.487820</td>
-      <td>20120514</td>
+      <th>2012-04-06 15:39:29+00:00</th>
+      <td>38.0911</td>
+      <td>39.0904</td>
+      <td>-76.9473</td>
+      <td>39.1477</td>
+      <td>38.9354</td>
+      <td>39.2458</td>
+      <td>39.0318</td>
+      <td>-76.6175</td>
+      <td>-76.6847</td>
+      <td>-77.2129</td>
+      <td>-77.2788</td>
+      <td>0.18388</td>
+      <td>0.010499</td>
+      <td>0.002880</td>
+      <td>0.000773</td>
+      <td>0.0000</td>
+      <td>0.1333</td>
+      <td>-0.002774</td>
+      <td>0.004349</td>
     </tr>
     <tr>
-      <th>454</th>
-      <td>12.807493</td>
-      <td>0.449735</td>
-      <td>20120514</td>
+      <th>2012-04-06 15:39:31+00:00</th>
+      <td>38.0871</td>
+      <td>39.0305</td>
+      <td>-77.2920</td>
+      <td>39.3710</td>
+      <td>39.1500</td>
+      <td>38.9027</td>
+      <td>38.6910</td>
+      <td>-78.4871</td>
+      <td>-78.5511</td>
+      <td>-76.0853</td>
+      <td>-76.1538</td>
+      <td>0.15921</td>
+      <td>0.011494</td>
+      <td>0.012565</td>
+      <td>0.000768</td>
+      <td>0.0000</td>
+      <td>0.5500</td>
+      <td>-0.002774</td>
+      <td>0.004348</td>
     </tr>
   </tbody>
 </table>
-<p>455 rows × 3 columns</p>
+<p>271 rows × 19 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;SNH&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;I_450&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Column 2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/reading_mat_files_10_0.png" src="../_images/reading_mat_files_10_0.png" />
+<img alt="../_images/reading_txt_files_12_0.png" src="../_images/reading_txt_files_12_0.png" />
 </div>
 </div>
 </div>
@@ -847,19 +1004,12 @@ the surface at 450 nm, along with the sun elevation angle for each measurement <
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="reading_mat_files.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction</p>
+            <p class="prev-next-title">Reading MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="reading_txt_files.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Reading space-separated files</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
