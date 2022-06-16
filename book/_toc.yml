@@ -58,8 +58,14 @@ parts:
     chapters:
       - file: week_09/01-multidim-numpy
       - file: week_09/02-Assignment
+  - caption: Week 10 - Scientific python
+    chapters:
+      - file: week_10/01-scientific-python
+      - file: week_10/02-Assignment
   - caption: Homework cookbook
     chapters:
       - file: cookbook/intro
       - file: cookbook/reading_mat_files
       - file: cookbook/reading_txt_files
+      - file: cookbook/reading_netcdf_files
+      - file: cookbook/reading_geotiff_files
