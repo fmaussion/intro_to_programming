@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Programming project &#8212; Introduction to Programming</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,33 +20,33 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/save_state.js"></script>
     <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -74,7 +76,21 @@ const thebe_selector_output = ".output, .cell_output"
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -83,9 +99,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -103,14 +120,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -349,6 +367,23 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Week 10 - Scientific python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_10/01-scientific-python.html">
+   Scientific python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_10/02-Assignment.html">
+   Assignment 10
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Homework cookbook
  </span>
 </p>
@@ -374,112 +409,239 @@ const thebe_selector_output = ".output, .cell_output"
    Reading space-separated files
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/reading_netcdf_files.html">
+   Reading geotiff files with rasterio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/reading_geotiff_files.html">
+   Reading netCDF files with xarray
+  </a>
+ </li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/project/project_instructions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/fmaussion/intro_to_programming"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fproject/project_instructions.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/project/project_instructions.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/project/project_instructions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/project/project_instructions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/fmaussion/intro_to_programming"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fproject/project_instructions.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/fmaussion/intro_to_programming/edit/master/book/project/project_instructions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/project/project_instructions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#instructions">
    Instructions
@@ -517,12 +679,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Programming project</h1>
@@ -576,13 +737,14 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="programming-project">
-<h1>Programming project<a class="headerlink" href="#programming-project" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="instructions">
-<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="programming-project">
+<h1>Programming project<a class="headerlink" href="#programming-project" title="Permalink to this headline">#</a></h1>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
 <p>The programming tasks described below have to be done <strong>individually</strong>. It’s totally okay to ask for help or advice (also to me!), but copy-pasting from your classmates is strictly forbidden. You will see that some tasks require internet searches that go beyond what you’ve learned in my class notes. This is expected: my goal is for you to be able to solve new problems more or less independently.</p>
 <p>Project due date: <strong>Sunday 12.06.2022, 23:59</strong> (the return folders on OLAT will close at precisely this time - no exceptions!)</p>
 <p>Please return three files:</p>
@@ -600,16 +762,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>originality (for the open project)</p></li>
 </ul>
 <p>You can download this notebook to get started. Delete this “Instructions” section, add your name and Matrikelnummer and start coding! For the tasks that ask for a written answer (e.g. some values, answers, etc.), please <strong>use the notebook’s markdown format to write them down</strong>!</p>
-</div>
-<div class="section" id="preamble">
-<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><strong>Name</strong>:</p></li>
 <li><p><strong>Matrikelnummer</strong>:</p></li>
 </ul>
-</div>
-<div class="section" id="an-energy-balance-model-with-hysteresis">
-<h2>01 - An energy balance model with hysteresis<a class="headerlink" href="#an-energy-balance-model-with-hysteresis" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="an-energy-balance-model-with-hysteresis">
+<h2>01 - An energy balance model with hysteresis<a class="headerlink" href="#an-energy-balance-model-with-hysteresis" title="Permalink to this headline">#</a></h2>
 <p>Based on the code we wrote in <a class="reference internal" href="../week_07/02-Assignment.html"><span class="doc std std-doc">week 07</span></a>, code the following extension. For this exercise it’s OK to copy-paste my solutions and start from there. Only copy the necessary (no useless code)!</p>
 <p>The planetary albedo <span class="math notranslate nohighlight">\(\alpha\)</span> is in fact changing with climate change. As the temperature drops, sea-ice and ice sheets are extending (increasing the albedo). Inversely, the albedo decreases as temperature rises. The planetary albedo of our simple energy balance model follows the following equation:</p>
 <div class="math notranslate nohighlight">
@@ -630,9 +792,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p><strong>01-04</strong>: Realize a total of N simulations with starting temperatures regularly spaced between <code class="docutils literal notranslate"><span class="pre">t0</span></code>=206K, and <code class="docutils literal notranslate"><span class="pre">t0</span></code>=318K and plot them on a single plot for <code class="docutils literal notranslate"><span class="pre">n_years</span></code>=50. The plot should look somewhat similar to <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/project/hysteresis_bw.png">this example</a> for <code class="docutils literal notranslate"><span class="pre">N=21</span></code>.</p>
 <p><strong>Bonus</strong>: only if you want (and if time permits), you can try to increase N and add colors to your plot to create a graph similar to <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/project/hysteresis_bonus.png">this one</a>.</p>
-</div>
-<div class="section" id="weather-station-data-files">
-<h2>02 - Weather station data files<a class="headerlink" href="#weather-station-data-files" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="weather-station-data-files">
+<h2>02 - Weather station data files<a class="headerlink" href="#weather-station-data-files" title="Permalink to this headline">#</a></h2>
 <p>I downloaded 10 min data from the recently launched <a class="reference external" href="https://data.hub.zamg.ac.at/dataset/klima-v1-10min">ZAMG data hub</a>. The data file contains selected parameters from the “INNSBRUCK-FLUGPLATZ (ID: 11804)” weather station.</p>
 <p>You can download the data from the following links (right-click + “Save as…”):</p>
 <ul class="simple">
@@ -790,9 +952,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>From now on, we will use the hourly data only</strong> (and further aggregations when necessary). The 10 mins data are great but require a little bit more of pandas kung fu (the chinese term, not the sport) to be used efficiently.</p>
 <p>Spend some time exploring the <code class="docutils literal notranslate"><span class="pre">dfh</span></code> dataframe we just created. What time period does it cover? What variables does it contain?</p>
 <p><strong>Note on pandas:</strong> all the exercises below can be done with or without pandas. Each question can be answered with very few lines of code (often one or two) with pandas, and I recommend to use it as much as possible. If you want, you can always use numpy in case of doubt: you can access the data as a numpy array with: <code class="docutils literal notranslate"><span class="pre">df[column_name].values</span></code>.</p>
-</div>
-<div class="section" id="precipitation">
-<h2>03 - Precipitation<a class="headerlink" href="#precipitation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="precipitation">
+<h2>03 - Precipitation<a class="headerlink" href="#precipitation" title="Permalink to this headline">#</a></h2>
 <p>In this section, we will focus on precipitation only.</p>
 <p><strong>03-01</strong>: Compute the average annual precipitation (m/year) over the 7-year period.</p>
 <p><strong>03-02</strong>: What is the smallest non-zero precipitation measured at the station? What is the maximum hourly precipitation measured at the station? When did this occur?</p>
@@ -801,16 +963,16 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>03-05</strong>: Now select (subset) the <em>daily</em> dataframe to keep only only daily data in the months of December, January, February (DFJ). To do this, note that <code class="docutils literal notranslate"><span class="pre">dfh.index.month</span></code> exists and can be used to subset the data efficiently. Compute the average precipitation in DJF (mm / d), and the average number of rainy days in DJF. Repeat with the months of June, July, August (JJA).</p>
 <p><strong>03-06</strong>: Repeat the DJF and JJA subsetting, but this time with hourly data. Count the total number of times that hourly precipitation in DJF is above the 99th percentile computed in exercise 03-03. Repeat with JJA.</p>
 <p><strong>03-07</strong>: Compute and plot the average daily cycle of hourly precipitation in DFJ and JJA. I expect a plot similar to <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/project/precip_dailycycle.png">this example</a>. To compute the daily cycle, I recommend to combine two very useful tools. First, start by noticing that <code class="docutils literal notranslate"><span class="pre">ds.index.hour</span></code> exists and can be used to categorize data. Then, note that <code class="docutils literal notranslate"><span class="pre">df.groupby</span></code> exists and can be used exactly for that (<a class="reference external" href="https://pandas.pydata.org/docs/user_guide/groupby.html#aggregation">documentation</a>).</p>
-</div>
-<div class="section" id="a-few-other-variables">
-<h2>04 - A few other variables<a class="headerlink" href="#a-few-other-variables" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="a-few-other-variables">
+<h2>04 - A few other variables<a class="headerlink" href="#a-few-other-variables" title="Permalink to this headline">#</a></h2>
 <p>In this section, we will continue to analyze the weather station data.</p>
 <p><strong>04-01</strong>: Verify that the three soil temperatures have approximately the same average value over the entire period. Now plot the three soil temperature timeseries in hourly resolution over the course of the year of 2020 (<a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/project/tsoil.png">example</a>). Repeat the plot with the month of may 2020.</p>
 <p><strong>04-02</strong>: Plot the average daily cycle of all three soil temperatures.</p>
 <p><strong>04-03</strong>: Compute the difference (in °C) between the air temperature and the dewpoint temperature. Now plot this difference on a scatter plot (x-axis: relative humidity, y-axis: temperature difference).</p>
-</div>
-<div class="section" id="free-coding-project">
-<h2>05 - Free coding project<a class="headerlink" href="#free-coding-project" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="free-coding-project">
+<h2>05 - Free coding project<a class="headerlink" href="#free-coding-project" title="Permalink to this headline">#</a></h2>
 <p>The last part of this semester project is up to you! You are free to explore whatever interests you. <strong>I however add three requirements</strong>:</p>
 <ol class="simple">
 <li><p>This section should have at least 5 original plots in it. They are the output of your analysis.</p></li>
@@ -834,8 +996,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p>If you have your own idea but are unsure about whether this is too much or not enough, come to see me in class! In general, the three requirements above should be enough.</p>
 <p><strong>My goal with this section is to let you formulate a programming goal and implement it.</strong></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -859,9 +1021,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../week_08/03-Assignment.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -877,16 +1041,16 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      By Fabien Maussion<br/>
-    
-      <div class="extra_footer">
-        <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Fabien Maussion<br/>
+  
+    <div class="extra_footer">
+      <p>
 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
   <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
 </a>
@@ -895,16 +1059,20 @@ These lecture notes and exercises are licensed under a <a href="https://creative
 &copy; Copyright 2021-2022.
 </p>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

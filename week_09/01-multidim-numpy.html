@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Multi-dimensional numpy arrays &#8212; Introduction to Programming</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,33 +20,33 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/save_state.js"></script>
     <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -72,7 +74,21 @@ const thebe_selector_output = ".output, .cell_output"
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -81,9 +97,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -101,14 +118,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -347,6 +365,23 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Week 10 - Scientific python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_10/01-scientific-python.html">
+   Scientific python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week_10/02-Assignment.html">
+   Assignment 10
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Homework cookbook
  </span>
 </p>
@@ -372,112 +407,239 @@ const thebe_selector_output = ".output, .cell_output"
    Reading space-separated files
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/reading_netcdf_files.html">
+   Reading geotiff files with rasterio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/reading_geotiff_files.html">
+   Reading netCDF files with xarray
+  </a>
+ </li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/week_09/01-multidim-numpy.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/fmaussion/intro_to_programming"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_09/01-multidim-numpy.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_09/01-multidim-numpy.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_09/01-multidim-numpy.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_09/01-multidim-numpy.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/fmaussion/intro_to_programming"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_09/01-multidim-numpy.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_09/01-multidim-numpy.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/week_09/01-multidim-numpy.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#when-are-multidimensional-arrays-useful">
    When are multidimensional arrays useful?
@@ -608,12 +770,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Multi-dimensional numpy arrays</h1>
@@ -760,11 +921,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="multi-dimensional-numpy-arrays">
-<h1>Multi-dimensional numpy arrays<a class="headerlink" href="#multi-dimensional-numpy-arrays" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="multi-dimensional-numpy-arrays">
+<h1>Multi-dimensional numpy arrays<a class="headerlink" href="#multi-dimensional-numpy-arrays" title="Permalink to this headline">#</a></h1>
 <p>You have now learned how to read and analyze 1-dimensional data with numpy (and with pandas as an additional “layer” of tools on top of the core numpy arrays).</p>
 <p>For the final two weeks of the semester, you will learn to manipulate multi-dimensional arrays (<a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.ndarray.html">ndarrays</a>) which are very common in meteorology, climatology, and geosciences in general.</p>
 <div class="cell docutils container">
@@ -775,11 +937,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="when-are-multidimensional-arrays-useful">
-<h2>When are multidimensional arrays useful?<a class="headerlink" href="#when-are-multidimensional-arrays-useful" title="Permalink to this headline">¶</a></h2>
+<section id="when-are-multidimensional-arrays-useful">
+<h2>When are multidimensional arrays useful?<a class="headerlink" href="#when-are-multidimensional-arrays-useful" title="Permalink to this headline">#</a></h2>
 <p>For numpy, all data in any multi-dimensional array is actually stored in memory as a long 1D array (we will get back to this in the master lecture). The number of dimensions and shape of an array is actually only used to structure the data access in a certain way. But why is it useful to store data in multiple dimensions?</p>
-<div class="section" id="nd-arrays-as-matrices">
-<h3>nD arrays as matrices<a class="headerlink" href="#nd-arrays-as-matrices" title="Permalink to this headline">¶</a></h3>
+<section id="nd-arrays-as-matrices">
+<h3>nD arrays as matrices<a class="headerlink" href="#nd-arrays-as-matrices" title="Permalink to this headline">#</a></h3>
 <p>The first time we learned about arrays as matrices was during <a class="reference internal" href="../week_07/01-numerics.html#numpy-algebra"><span class="std std-ref">week 07</span></a>, when we learned about matrix multiplication and other <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.linalg.html">linear algebra</a> numpy functions. To use nD arrays as matrices, you have to use matrix specific operators (such as <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>) or functions (such at <code class="docutils literal notranslate"><span class="pre">np.linalg.inv</span></code>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -797,9 +959,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Linear algebra is a very common use case for nD arrays, yet it is (by far) not the only one. I, for example, use linear algebra only sporadically in my daily work (or it is hidden behind other tools).</p>
-</div>
-<div class="section" id="nd-arrays-as-images">
-<h3>nD arrays as images<a class="headerlink" href="#nd-arrays-as-images" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nd-arrays-as-images">
+<h3>nD arrays as images<a class="headerlink" href="#nd-arrays-as-images" title="Permalink to this headline">#</a></h3>
 <p>Another common use case for nD arrays is to store images:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -858,9 +1020,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Some of the things explained above might be a bit overwhelming right now. Don’t worry! We will get back to these concepts later in this unit.</p>
-</div>
-<div class="section" id="nd-arrays-as-structured-data">
-<h3>nD arrays as structured data<a class="headerlink" href="#nd-arrays-as-structured-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="nd-arrays-as-structured-data">
+<h3>nD arrays as structured data<a class="headerlink" href="#nd-arrays-as-structured-data" title="Permalink to this headline">#</a></h3>
 <p>Nearly all other use cases for nD arrays fall in this category. Multidimensional arrays allow to store data in the shape which is most meaningful for its analysis, display, and storage. For example:</p>
 <ul class="simple">
 <li><p>a map of temperature of shape (Y, X) where Y are the latitudes and X the longitudes</p></li>
@@ -868,10 +1030,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>a series of series of temperature maps of shape (T, Z, Y, X) where T are the time steps, Z are the vertical pressure levels, Y are the latitudes and X the longitudes</p></li>
 </ul>
 <p>That’s the most common use case in meteorology, and the one you will have to deal with in this week’s homework. But in the course of your studies you will find many more interesting use cases, for example involving model parameters, physical quantities, time / space considerations, and more!</p>
-</div>
-</div>
-<div class="section" id="working-with-nd-arrays">
-<h2>Working with nD arrays<a class="headerlink" href="#working-with-nd-arrays" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="working-with-nd-arrays">
+<h2>Working with nD arrays<a class="headerlink" href="#working-with-nd-arrays" title="Permalink to this headline">#</a></h2>
 <p><em>Copyright notice: parts of these examples are taken from the <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html">numpy tutorial for beginners</a>.</em></p>
 <p>Multidimensional arrays are not different from 1 dimensional arrays. In fact, it is rather the 1 dimensional array which is a special case of the multidimensional one. All methods which work on 1D arrays also apply to nD arrays.</p>
 <p>Let’s create a 2D array:</p>
@@ -891,8 +1053,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p><img alt="" src="https://numpy.org/doc/stable/_images/np_create_matrix.png" /></p>
-<div class="section" id="selecting-parts-of-an-array-with-slicing">
-<h3>Selecting parts of an array with slicing<a class="headerlink" href="#selecting-parts-of-an-array-with-slicing" title="Permalink to this headline">¶</a></h3>
+<section id="selecting-parts-of-an-array-with-slicing">
+<h3>Selecting parts of an array with slicing<a class="headerlink" href="#selecting-parts-of-an-array-with-slicing" title="Permalink to this headline">#</a></h3>
 <p><strong>Slicing</strong> operations also work on nD arrays:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -951,9 +1113,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Which does the same but explicitly states “take all columns”.</p>
 <p><strong>Q: what do you think will be the output of data[:, :]?</strong></p>
 <p><strong>Q: based on the example above and maybe a web search, formulate for yourself what is mean by “slicing” in numpy.</strong></p>
-</div>
-<div class="section" id="selecting-parts-of-an-array-with-positional-indexing">
-<h3>Selecting parts of an array with positional indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-positional-indexing" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="selecting-parts-of-an-array-with-positional-indexing">
+<h3>Selecting parts of an array with positional indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-positional-indexing" title="Permalink to this headline">#</a></h3>
 <p><strong>Slicing</strong> is one way to <strong>index</strong> parts of a numpy array. It is useful when the area you want to select is structured, e.g. to select only one point or a range of an array as in the example above. Sometimes however you may want to select parts of an array based on other considerations, such as the location of multiple points or based on a condition. Let’s get back to our previous example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1006,7 +1168,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_340372/340510348.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_32614</span><span class="o">/</span><span class="mf">340510348.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>  <span class="c1"># won&#39;t work</span>
 
 <span class="ne">IndexError</span>: shape mismatch: indexing arrays could not be broadcast together with shapes (2,) (3,) 
@@ -1027,9 +1189,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="selecting-parts-of-an-array-with-boolean-indexing">
-<h3>Selecting parts of an array with boolean indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-boolean-indexing" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="selecting-parts-of-an-array-with-boolean-indexing">
+<h3>Selecting parts of an array with boolean indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-boolean-indexing" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://numpy.org/doc/stable/user/basics.indexing.html#boolean-array-indexing">Boolean indexing</a> allows to select parts on an array according to a condition of your choice. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1058,9 +1220,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>This is called <strong>boolean indexing</strong> because what actually matters is the type of <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">&gt;</span> <span class="pre">2</span></code>.</p>
-</div>
-<div class="section" id="np-nonzero-and-indexing">
-<h3><code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code> and indexing<a class="headerlink" href="#np-nonzero-and-indexing" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="np-nonzero-and-indexing">
+<h3><code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code> and indexing<a class="headerlink" href="#np-nonzero-and-indexing" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.nonzero.html">np.nonzero</a> is another way to do indexing based on a condition, but with a slightly different workflow and use cases:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1089,9 +1251,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Which is the equivalent of <code class="docutils literal notranslate"><span class="pre">data[data</span> <span class="pre">&gt;</span> <span class="pre">2]</span></code>! If you have the choice between the two, boolean indexing (<code class="docutils literal notranslate"><span class="pre">data[data</span> <span class="pre">&gt;</span> <span class="pre">2]</span></code>) is faster and better than using <code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code>, but sometimes <code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code> is useful as well (see homework).</p>
-</div>
-<div class="section" id="replacing-data-in-ndarrays">
-<h3>Replacing data in ndarrays<a class="headerlink" href="#replacing-data-in-ndarrays" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="replacing-data-in-ndarrays">
+<h3>Replacing data in ndarrays<a class="headerlink" href="#replacing-data-in-ndarrays" title="Permalink to this headline">#</a></h3>
 <p>To replace elements in a <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, indexing has to be applied on the left-hand side of the assignment operator. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1219,9 +1381,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="array-statistics-aggregation">
-<h3>Array statistics (aggregation)<a class="headerlink" href="#array-statistics-aggregation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="array-statistics-aggregation">
+<h3>Array statistics (aggregation)<a class="headerlink" href="#array-statistics-aggregation" title="Permalink to this headline">#</a></h3>
 <p>You can aggregate nD arrays the same way you aggregated 1D arrays:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1316,9 +1478,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p><img alt="" src="https://numpy.org/doc/stable/_images/np_matrix_aggregation_row.png" /></p>
-</div>
-<div class="section" id="np-meshgrid">
-<h3><code class="docutils literal notranslate"><span class="pre">np.meshgrid</span></code><a class="headerlink" href="#np-meshgrid" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="np-meshgrid">
+<h3><code class="docutils literal notranslate"><span class="pre">np.meshgrid</span></code><a class="headerlink" href="#np-meshgrid" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html">np.meshgrid</a> is a very useful numpy function for grids and gridded data which are so common in physics and geosciences. It allows to create coordinate matrices from coordinate vectors:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1358,22 +1520,22 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>This is useful to generate 2D fields, but also for plotting, selection by coordinates, and more.</p>
-</div>
-<div class="section" id="how-to-save-and-load-numpy-objects">
-<h3>How to save and load NumPy objects<a class="headerlink" href="#how-to-save-and-load-numpy-objects" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="how-to-save-and-load-numpy-objects">
+<h3>How to save and load NumPy objects<a class="headerlink" href="#how-to-save-and-load-numpy-objects" title="Permalink to this headline">#</a></h3>
 <p>You will learn about several data formats used commonly in the geosciences next week, and especially next semester in the climate lecture. In the meantime, have a look at <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html#how-to-save-and-load-numpy-objects">this short section</a> in the numpy tutorial. You will need to read <code class="docutils literal notranslate"><span class="pre">.npy</span></code> files for your homework.</p>
-</div>
-</div>
-<div class="section" id="numpy-continued">
-<h2>numpy - continued<a class="headerlink" href="#numpy-continued" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="numpy-continued">
+<h2>numpy - continued<a class="headerlink" href="#numpy-continued" title="Permalink to this headline">#</a></h2>
 <p>I highly recommend to learn the details of numpy at your own pace. The documentation is truly excellent:</p>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html">numpy tutorials for beginners</a> to revisit many of the concepts (and learn a few new ones)</p></li>
 <li><p>The <a class="reference external" href="https://numpy.org/doc/stable/user/basics.html">numpy fundamentals</a> are excellent as well. At this stage, I recommend the tutorials “array creation” to “broadcasting”</p></li>
 </ul>
-</div>
-<div class="section" id="plotting-2d-arrays">
-<h2>Plotting 2D arrays<a class="headerlink" href="#plotting-2d-arrays" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="plotting-2d-arrays">
+<h2>Plotting 2D arrays<a class="headerlink" href="#plotting-2d-arrays" title="Permalink to this headline">#</a></h2>
 <p>3D arrays (or more) cannot be plotted on a static flat image easily. 2D data, however, is plotted all the time. Here are a few recipes for you to start with. Plotting with matplotlib offers a very wide range of options and possibilities, sometimes confusing. I can’t teach you all of it now: you will learn the details during the course of your studies and practice!</p>
 <p>I recommend to quickly scroll through the following documentation pages, which will give you an overview of matplotlib’s capabilities:</p>
 <ul class="simple">
@@ -1381,8 +1543,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">https://matplotlib.org/stable/gallery/index.html</a></p></li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html">https://matplotlib.org/stable/tutorials/index.html</a></p></li>
 </ul>
-<div class="section" id="imshow">
-<h3><code class="docutils literal notranslate"><span class="pre">imshow</span></code><a class="headerlink" href="#imshow" title="Permalink to this headline">¶</a></h3>
+<section id="imshow">
+<h3><code class="docutils literal notranslate"><span class="pre">imshow</span></code><a class="headerlink" href="#imshow" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">plt.imshow</span></code> is the simplest way to display an RGB image or assign a color to a value in a 2D array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1438,9 +1600,9 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../_images/01-multidim-numpy_103_0.png" src="../_images/01-multidim-numpy_103_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="pcolormesh">
-<h3><code class="docutils literal notranslate"><span class="pre">pcolormesh</span></code><a class="headerlink" href="#pcolormesh" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="pcolormesh">
+<h3><code class="docutils literal notranslate"><span class="pre">pcolormesh</span></code><a class="headerlink" href="#pcolormesh" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.pcolormesh.html#matplotlib.axes.Axes.pcolormesh">pcolormesh</a> is a slower, more flexible solution to the problem of displaying 2D data on screen. Unlike <code class="docutils literal notranslate"><span class="pre">imshow</span></code>, it allows coordinates as input, and these coordinates do not have to be regularly spaced:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1502,9 +1664,9 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../_images/01-multidim-numpy_111_0.png" src="../_images/01-multidim-numpy_111_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="contour-and-contourf">
-<h3><code class="docutils literal notranslate"><span class="pre">contour</span></code> and <code class="docutils literal notranslate"><span class="pre">contourf</span></code><a class="headerlink" href="#contour-and-contourf" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="contour-and-contourf">
+<h3><code class="docutils literal notranslate"><span class="pre">contour</span></code> and <code class="docutils literal notranslate"><span class="pre">contourf</span></code><a class="headerlink" href="#contour-and-contourf" title="Permalink to this headline">#</a></h3>
 <p>Contours are leaving the “pixel space” to make smooth contour fields around the data points.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1531,16 +1693,16 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../_images/01-multidim-numpy_116_0.png" src="../_images/01-multidim-numpy_116_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="learning-checklist">
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">#</a></h2>
 <p><label><input type="checkbox" id="week05_01" class="box"> I am able to subset multidimensional arrays according to location and according to a condition.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I understand the concepts of slicing, positional indexing, and boolean indexing.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I am aware of the pitfalls of assigning the same array to two different variable names. I am aware that a similar behavior occurs when slicing arrays.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I have a broad overview of the various ways to plot 2D arrays. I will however have to use my web-search and documentation reading sills to do my own plots later on.</input></label><br></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1564,9 +1726,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../project/project_instructions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1582,16 +1746,16 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      By Fabien Maussion<br/>
-    
-      <div class="extra_footer">
-        <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Fabien Maussion<br/>
+  
+    <div class="extra_footer">
+      <p>
 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
   <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
 </a>
@@ -1600,16 +1764,20 @@ These lecture notes and exercises are licensed under a <a href="https://creative
 &copy; Copyright 2021-2022.
 </p>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
