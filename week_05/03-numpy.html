@@ -1243,7 +1243,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 9, 10,  3,  6,  1,  2,  4, 11,  8,  7, 13,  5, 14, 12])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10,  6,  7, 12,  5,  8,  4, 13,  2, 11,  3,  9, 14,  1])
 </pre></div>
 </div>
 </div>
@@ -1257,7 +1257,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 1, 2, 4, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 4, 2, 3, 1])
 </pre></div>
 </div>
 </div>
@@ -1278,8 +1278,8 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True, False,  True,  True,  True, False, False,
-       False, False,  True, False, False])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False, False,  True, False,  True, False,  True,
+       False,  True, False, False,  True])
 </pre></div>
 </div>
 </div>
@@ -1293,7 +1293,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 1, 2, 4, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 4, 2, 3, 1])
 </pre></div>
 </div>
 </div>
@@ -1307,7 +1307,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 1, 2, 4, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 4, 2, 3, 1])
 </pre></div>
 </div>
 </div>
@@ -1322,7 +1322,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 9, 10,  3,  6,  4,  8,  7,  5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10,  6,  7,  5,  8,  4,  3,  9])
 </pre></div>
 </div>
 </div>
@@ -1342,7 +1342,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_32330</span><span class="o">/</span><span class="mf">1830006926.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_47038</span><span class="o">/</span><span class="mf">1830006926.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># These two are equivalent with boolean scalars</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">((</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">))</span>  <span class="c1"># On numpy arrays, the second one will raise an error</span>
 
