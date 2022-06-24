@@ -90,6 +90,7 @@ You will notice that there are 12 weekly units for a 15 weeks long semester: thi
     - [PY4E: Strings](https://www.py4e.com/lessons/strings)
     - [PY4E: Files](https://www.py4e.com/lessons/files)
     - [PY4E: Lists](https://www.py4e.com/lessons/lists)
+
 **Scientific python**
 - Week 05
     - [Installing Packages](week_05/01-install-packages)
@@ -101,21 +102,10 @@ You will notice that there are 12 weekly units for a 15 weeks long semester: thi
 - Week 07
     - [numpy - continued: numerics](week_07/01-numerics)
 - Week 08
-    - Dictionaries
-    - Pandas
+    - [python dictionaries](week_08/01-dictionaries)
+    - [Pandas - manipulating tabular data](week_08/02-pandas)
 - Week 09
-    - **Project starts**
-    - **Project time**
-- Week 10
-    - numpy multi dimensional arrays (incl. broadcasting)
-    - plotting gridded data as images and contours with matplotlib
-- Week 11
-    - xarray
-- Week 12
-    - plotting georeferenced data
-    - reading geotiff files
-- Week 13
-    - Useful software and libraries: SciPy, MetPy ...
-
-**Project returns**
-**Exam**
+    - [numpy - continued: multi dimensional arrays](week_09/01-multidim-numpy)
+- Week 10 (not part of the exam)
+    - [Scientific python](week_10/01-scientific-python)
+    - [Recipes](cookbook/intro)
