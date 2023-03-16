@@ -15,12 +15,12 @@ parts:
     - file: week_01/01-Installation
     - file: week_01/02-Why-Program
     - file: week_01/03-Assignment
-  # - caption: Week 02 - Gaining speed
-  #   chapters:
-  #   - file: week_02/01-Install-jupyter
-  #   - file: week_02/02-Intro-jupyter
-  #   - file: week_02/03-Lessons
-  #   - file: week_02/04-Assignment
+  - caption: Week 02 - Gaining speed
+    chapters:
+    - file: week_02/01-Install-jupyter
+    - file: week_02/02-Intro-jupyter
+    - file: week_02/03-Lessons
+    - file: week_02/04-Assignment
   # - caption: Week 03 - Control flow
   #   chapters:
   #   - file: week_03/01-Intro-notebooks
