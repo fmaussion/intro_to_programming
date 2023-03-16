@@ -53,7 +53,7 @@ A positive evaluation of each of these elements is mandatory to pass the class!
 
 **Weekly assignments**
 
-Each Wednesday, we will discuss the weekly assignment solutions together. Before the class, each student will have to upload their solution to OLAT (deadline 08h15). I will then select one or two solutions (at random) as a basis for the class discussion. This assignment is **not** graded, and it's okay (or even expected!) to make mistakes. However, it is mandatory to upload your solution each week (you have two "jokers" that you may use at your wish during the semester). You can also decide to stay anonymous if you prefer your name not to be attached to your solution during discussion. The mandatory exercises start at week 02.
+Each Wednesday, we will discuss the weekly assignment solutions together. Before the class, each student will have to upload their solution to OLAT (deadline 08h00). I will then select one or two solutions (at random) as a basis for the class discussion. This assignment is **not** graded, and it's okay (or even expected!) to make mistakes. However, it is mandatory to upload your solution each week (you have two "jokers" that you may use at your wish during the semester). You can also decide to stay anonymous if you prefer your name not to be attached to your solution during discussion. The mandatory exercises start at week 02.
 
 **Programming project**
 
