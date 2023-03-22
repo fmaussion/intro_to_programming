@@ -21,11 +21,11 @@ parts:
     - file: week_02/02-Intro-jupyter
     - file: week_02/03-Lessons
     - file: week_02/04-Assignment
-  # - caption: Week 03 - Control flow
-  #   chapters:
-  #   - file: week_03/01-Intro-notebooks
-  #   - file: week_03/02-Lessons
-  #   - file: week_03/03-Assignment
+  - caption: Week 03 - Control flow
+    chapters:
+    - file: week_03/01-Intro-notebooks
+    - file: week_03/02-Lessons
+    - file: week_03/03-Assignment
   # - caption: Week 04 - Strings, Files and Lists
   #   chapters:
   #     - file: week_04/01-documenting-functions
@@ -62,10 +62,11 @@ parts:
   #   chapters:
   #     - file: week_10/01-scientific-python
   #     - file: week_10/02-Assignment
-  # - caption: Homework cookbook
-  #   chapters:
-  #     - file: cookbook/intro
-  #     - file: cookbook/reading_mat_files
-  #     - file: cookbook/reading_txt_files
-  #     - file: cookbook/reading_netcdf_files
-  #     - file: cookbook/reading_geotiff_files
+  - caption: Homework cookbook
+    chapters:
+    - file: cookbook/intro
+      sections:
+      - file: cookbook/reading_mat_files
+      - file: cookbook/reading_txt_files
+      - file: cookbook/reading_netcdf_files
+      - file: cookbook/reading_geotiff_files

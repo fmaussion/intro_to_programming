@@ -1,6 +1,6 @@
 # Assignment 03
 
-*Due date: 30.03.2022*
+*Due date: 29.03.2023*
 
 This week's assignment has to be returned in the form of one python script OR one jupyter notebook. Don't forget the [instructions](../assignments)!
 
