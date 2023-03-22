@@ -1,6 +1,6 @@
 # Assignment 02
 
-*Due date: 23.03.2022*
+*Due date: 22.03.2023*
 
 This week's assignment has to be returned in the form of two python scripts. Have a look at the [instructions](../assignments) first!
 
