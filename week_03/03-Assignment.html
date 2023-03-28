@@ -428,10 +428,17 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="assignment-03">
 <h1>Assignment 03<a class="headerlink" href="#assignment-03" title="Permalink to this headline">#</a></h1>
 <p><em>Due date: 29.03.2023</em></p>
-<p>This week’s assignment has to be returned in the form of one python script OR one jupyter notebook. Don’t forget the <a class="reference internal" href="../assignments.html"><span class="doc std std-doc">instructions</span></a>!</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This week’s assignment has to be returned in the form of one (1) python script <strong>OR</strong> one (1) jupyter notebook. Don’t forget the <a class="reference internal" href="../assignments.html"><span class="doc std std-doc">instructions</span></a>!</p>
+<ul class="simple">
+<li><p>Exercise 1 and Exercise 2 are independent from one another.</p></li>
+<li><p>Exercise 3 uses the functions you wrote in Exercise 1 and 2 in a small program.</p></li>
+</ul>
+</div>
 <section id="exercise-1-write-two-temperature-conversion-functions">
 <h2>Exercise 1: write two temperature conversion functions<a class="headerlink" href="#exercise-1-write-two-temperature-conversion-functions" title="Permalink to this headline">#</a></h2>
-<p>Write a function called <code class="docutils literal notranslate"><span class="pre">fahrenheit_to_celsius</span></code>, which accepts a <code class="docutils literal notranslate"><span class="pre">float</span></code> or <code class="docutils literal notranslate"><span class="pre">int</span></code> as input parameter and returns the temperature value converted to degrees celsius. Here are some examples of the function’s execution:</p>
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">fahrenheit_to_celsius</span></code>, which accepts a <code class="docutils literal notranslate"><span class="pre">float</span></code> or <code class="docutils literal notranslate"><span class="pre">int</span></code> as <strong>input parameter</strong> and returns the temperature value converted to degrees celsius. Here are some examples of the function’s execution:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fahrenheit_to_celsius</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
 <span class="mf">37.77777777777778</span>
 </pre></div>
@@ -449,6 +456,16 @@ document.write(`
 <span class="mf">32.0</span>
 </pre></div>
 </div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>A few things to note here:</p>
+<ul class="simple">
+<li><p>these functions are <strong>fruitful functions</strong>: they returns a value</p></li>
+<li><p>these functions <strong>do not print anything</strong>: there is no <code class="docutils literal notranslate"><span class="pre">print</span></code> statement in these functions</p></li>
+<li><p>these functions have one input parameter only</p></li>
+</ul>
+<p>If you are unsure about what I mean with “fruitful” or “input parameter”, go back to the <a class="reference external" href="https://www.py4e.com/html3/04-functions">lecture notes</a>.</p>
+</div>
 </section>
 <section id="exercise-2-write-two-user-input-checking-functions">
 <h2>Exercise 2: write two user input checking functions<a class="headerlink" href="#exercise-2-write-two-user-input-checking-functions" title="Permalink to this headline">#</a></h2>
@@ -462,6 +479,7 @@ document.write(`
 <ul class="simple">
 <li><p>if the value can be converted to a number and this number is above the parameter <code class="docutils literal notranslate"><span class="pre">min_value</span></code>, return this number</p></li>
 <li><p>if the value cannot be converted to a number or is below the specified limit print a message to the user and ask them to enter a new value.</p></li>
+<li><p>this program never ends until a valid value is entered.</p></li>
 </ul>
 <p>Examples:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_temperature_input(0))
@@ -499,6 +517,15 @@ What conversion do you want to do? Type:
 1 for Celsius to Farenheit
 2 for Farenheit to Celsius
 3 for doing nothing
+Your input: 3
+3
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(valid_conversion_input())
+What conversion do you want to do? Type:
+1 for Celsius to Farenheit
+2 for Farenheit to Celsius
+3 for doing nothing
 Your input: ups
 Not valid! Try again.
 Your input: 4
@@ -506,6 +533,18 @@ Not valid! Try again.
 Your input: 2
 2
 </pre></div>
+</div>
+<p>The function always returns one of 1, 2, 3 and never ends until the user gives a valid input.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>A few things to note here:</p>
+<ul class="simple">
+<li><p>these functions are <strong>fruitful functions</strong>: they returns a value</p></li>
+<li><p>these functions <strong>do print something</strong>: there are <code class="docutils literal notranslate"><span class="pre">print</span></code> statements in these functions</p></li>
+<li><p>these functions have <strong>no input parameter</strong>.</p></li>
+<li><p>these functions use <code class="docutils literal notranslate"><span class="pre">input()</span></code> internally.</p></li>
+</ul>
+<p>If you are unsure about what I mean with “fruitful” or “input parameter”, go back to the <a class="reference external" href="https://www.py4e.com/html3/04-functions">lecture notes</a>.</p>
 </div>
 </section>
 <section id="exercise-3-write-a-temperature-conversion-program">
@@ -516,7 +555,7 @@ Your input: 2
 <li><p>if convert, ask the user for the value to convert. The minimum acceptable value depends on the conversion function to use (indeed, the value in °C or °F cannot be below the absolute minimum, 0 Kelvin)</p></li>
 <li><p>convert the value to the other unit and print it on screen</p></li>
 </ul>
-<p><strong>This program should make use of the functions you wrote in exercise 1 and 2</strong>, and therefore have only little code other than calling the functions.</p>
+<p><strong>This program should use the functions you wrote in exercise 1 and 2</strong>, and therefore have only little code other than calling the functions.</p>
 <p>Example output for a °C to °F conversion:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0°C are converted to 32.0°F
 </pre></div>
