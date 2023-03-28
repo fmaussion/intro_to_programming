@@ -2,11 +2,18 @@
 
 *Due date: 29.03.2023*
 
-This week's assignment has to be returned in the form of one python script OR one jupyter notebook. Don't forget the [instructions](../assignments)!
+
+```{important}
+
+This week's assignment has to be returned in the form of one (1) python script **OR** one (1) jupyter notebook. Don't forget the [instructions](../assignments)!
+
+- Exercise 1 and Exercise 2 are independent from one another. 
+- Exercise 3 uses the functions you wrote in Exercise 1 and 2 in a small program.
+```
 
 ## Exercise 1: write two temperature conversion functions
 
-Write a function called `fahrenheit_to_celsius`, which accepts a `float` or `int` as input parameter and returns the temperature value converted to degrees celsius. Here are some examples of the function's execution:
+Write a function called `fahrenheit_to_celsius`, which accepts a `float` or `int` as **input parameter** and returns the temperature value converted to degrees celsius. Here are some examples of the function's execution:
 
 ```python
 print(fahrenheit_to_celsius(100))
@@ -30,6 +37,17 @@ print(celsius_to_fahrenheit(0))
 32.0
 ```
 
+```{important}
+
+A few things to note here:
+- these functions are **fruitful functions**: they returns a value
+- these functions **do not print anything**: there is no `print` statement in these functions
+- these functions have one input parameter only
+
+If you are unsure about what I mean with "fruitful" or "input parameter", go back to the [lecture notes](https://www.py4e.com/html3/04-functions).
+
+```
+
 ## Exercise 2: write two user input checking functions
 
 Write a new function with the following signature:
@@ -43,6 +61,7 @@ def valid_temperature_input(min_value):
 This function uses python's `input` to ask for the temperature value to convert, and then decides:
 - if the value can be converted to a number and this number is above the parameter `min_value`, return this number
 - if the value cannot be converted to a number or is below the specified limit print a message to the user and ask them to enter a new value.
+- this program never ends until a valid value is entered.
 
 Examples:
 
@@ -89,12 +108,37 @@ What conversion do you want to do? Type:
 1 for Celsius to Farenheit
 2 for Farenheit to Celsius
 3 for doing nothing
+Your input: 3
+3
+```
+
+```none
+print(valid_conversion_input())
+What conversion do you want to do? Type:
+1 for Celsius to Farenheit
+2 for Farenheit to Celsius
+3 for doing nothing
 Your input: ups
 Not valid! Try again.
 Your input: 4
 Not valid! Try again.
 Your input: 2
 2
+```
+
+The function always returns one of 1, 2, 3 and never ends until the user gives a valid input.
+
+
+```{important}
+
+A few things to note here:
+- these functions are **fruitful functions**: they returns a value
+- these functions **do print something**: there are `print` statements in these functions
+- these functions have **no input parameter**. 
+- these functions use `input()` internally.
+
+If you are unsure about what I mean with "fruitful" or "input parameter", go back to the [lecture notes](https://www.py4e.com/html3/04-functions).
+
 ```
 
 ## Exercise 3: write a temperature conversion program
@@ -104,7 +148,7 @@ Now, **rely on your hard work and the functions you just created to write a full
 - if convert, ask the user for the value to convert. The minimum acceptable value depends on the conversion function to use (indeed, the value in °C or °F cannot be below the absolute minimum, 0 Kelvin)
 - convert the value to the other unit and print it on screen
 
-**This program should make use of the functions you wrote in exercise 1 and 2**, and therefore have only little code other than calling the functions.
+**This program should use the functions you wrote in exercise 1 and 2**, and therefore have only little code other than calling the functions.
 
 Example output for a °C to °F conversion:
 
