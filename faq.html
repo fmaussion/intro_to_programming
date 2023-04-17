@@ -425,7 +425,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -441,6 +443,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-python-interpreter">What is the “python interpreter”?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-python-script">What is a “python script”?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-jupyter-notebook">What is a “jupyter notebook”?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -453,6 +465,23 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="frequently-asked-questions">
 <h1>Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">#</a></h1>
 <p>This page offers some explanations to frequent questions and common problems encountered by beginners in programming. This page is here to help!</p>
+<section id="what-is-the-python-interpreter">
+<h2>What is the “python interpreter”?<a class="headerlink" href="#what-is-the-python-interpreter" title="Permalink to this headline">#</a></h2>
+<p>The python interpreter is a program that is able to understand and execute python commands. It needs to be installed on your computer. In this class, we recommend to install python using the <a class="reference internal" href="week_01/01-Installation.html"><span class="doc std std-doc">mambaforge installer</span></a>, but other installers exist as well. Once python is installed, the interpreter can be called in two main ways:</p>
+<ul class="simple">
+<li><p>the first, maybe most intuitive, is to read and interpret a file containing lines of code (e.g. <code class="docutils literal notranslate"><span class="pre">myprogram.py</span></code>), with the command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myprogram.py</span></code> in the command prompt (if you forgot what the command prompt is, read <a class="reference internal" href="week_02/01-Install-jupyter.html#cmd-prompt"><span class="std std-ref">this explanation</span></a> one more time). When using the python interpreter in this way (<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myprogram.py</span></code>), the interpreter is opened once, it interprets the program line by line, and then closes. If the program instructs to print something on screen or write a file to disk, it will do it.</p></li>
+<li><p>the second way to use an interpreter is in “interactive mode”. To open the interpreter in interactive mode, just type <code class="docutils literal notranslate"><span class="pre">python</span></code> in the command prompt. In interactive mode, the interpreter is waiting for your instructions: instead of reading them from a file, it waits for you to type commands and interprets them after you type “enter”. You can exit the interactive interpreter with the python command <code class="docutils literal notranslate"><span class="pre">exit()</span></code>.</p></li>
+</ul>
+</section>
+<section id="what-is-a-python-script">
+<h2>What is a “python script”?<a class="headerlink" href="#what-is-a-python-script" title="Permalink to this headline">#</a></h2>
+<p>A python script is a series of valid python commands, often organized in lines (one line is one python command). To execute a script, one can use the python interpreter.</p>
+</section>
+<section id="what-is-a-jupyter-notebook">
+<h2>What is a “jupyter notebook”?<a class="headerlink" href="#what-is-a-jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<p>A “jupyter notebook” is a mix of python commands with other elements (text or images). Jupyter notebooks are organized in “cells”, and one cell can only be of one type: “code” or “text” (no exception!). This is important because when a jupyter notebook is opened (in jupyterlab), a python interpreter is also opened in the background (this is called a “kernel” in the jupyter jargon). This python interpreter is there to interpret the code cells in the notebook “on demand”, i.e. when the user asks for it. Text cells, in turn, are not interpreted, they are just displayed.</p>
+<p>Jupyter notebooks are widely used for scientific applications. Scientists like the possibility to mix code with other content, in so-called “computational documents”. For beginners however jupyter notebooks can be a bit surprising to use, which is why we don’t recommend their use until week 05 in the class.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -507,6 +536,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-python-interpreter">What is the “python interpreter”?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-python-script">What is a “python script”?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-jupyter-notebook">What is a “jupyter notebook”?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
