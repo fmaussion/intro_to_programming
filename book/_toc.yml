@@ -32,12 +32,12 @@ parts:
       - file: week_04/01-documenting-functions
       - file: week_04/02-Lessons
       - file: week_04/03-Assignment
-  # - caption: Week 05 - Scientific python
-  #   chapters:
-  #     - file: week_05/01-install-packages
-  #     - file: week_05/02-jupyter-dos
-  #     - file: week_05/03-numpy
-  #     - file: week_05/04-Assignment
+  - caption: Week 05 - Scientific python
+    chapters:
+      - file: week_05/01-install-packages
+      - file: week_05/02-jupyter-dos
+      - file: week_05/03-numpy
+      - file: week_05/04-Assignment
   # - caption: Week 06 - Scientific python - continued
   #   chapters:
   #     - file: week_06/01-tuples
