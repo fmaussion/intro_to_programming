@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Learning with artificial intelligence &#8212; Introduction to Programming</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/save_state.js"></script>
+    <script src="_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-88391345-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-88391345-1');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ai';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="External resources" href="references.html" />
+    <link rel="prev" title="Frequently asked questions" href="faq.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="welcome.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_tips.html">Learning tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assignments.html">Homework instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Learning with artificial intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">External resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 01 - Getting started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week_01/01-Installation.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_01/02-Why-Program.html">Why program?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_01/03-Assignment.html">Assignment 01</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 02 - Gaining speed</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week_02/01-Install-jupyter.html">Installing Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_02/02-Intro-jupyter.html">Introduction to Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_02/03-Lessons.html">Lessons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_02/04-Assignment.html">Assignment 02</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 03 - Control flow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week_03/01-Intro-notebooks.html">Introduction to Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_03/02-Lessons.html">Lessons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_03/03-Assignment.html">Assignment 03</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 04 - Strings, Files and Lists</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week_04/01-documenting-functions.html">Documenting functions and testing their output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_04/02-Lessons.html">Lessons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_04/03-Assignment.html">Assignment 04</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 05 - Scientific python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week_05/01-install-packages.html">Installing python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_05/02-jupyter-dos.html">Jupyter notebooks tips and tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_05/03-numpy.html">Introduction to scientific python: numpy and matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_05/04-Assignment.html">Assignment 05</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 06 - Scientific python - continued</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="week_06/01-tuples.html">Python tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_06/02-computations.html">Computations with numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="week_06/03-Assignment.html">Assignment 06</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework cookbook</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="cookbook/intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cookbook/reading_mat_files.html">Reading MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cookbook/reading_txt_files.html">Reading space-separated files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cookbook/reading_netcdf_files.html">Reading geotiff files with rasterio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cookbook/reading_geotiff_files.html">Reading netCDF files with xarray</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/ai.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fmaussion/intro_to_programming" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fmaussion/intro_to_programming/edit/master/book/ai.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fai.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ai.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Learning with artificial intelligence</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generative-ai-and-programming">Generative AI and programming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-benefits-of-ai-for-learning">Potential benefits of AI for learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-pitfalls-of-using-generative-ai-for-learning">Potential pitfalls of using generative AI for learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-about-the-exams">What about the exams?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note">Final note</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="learning-with-artificial-intelligence">
+<h1>Learning with artificial intelligence<a class="headerlink" href="#learning-with-artificial-intelligence" title="Permalink to this headline">#</a></h1>
+<p>A big change in our learning and teaching practices is happening right now, and very fast: <a class="reference external" href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">generative artificial intelligence</a>. Tools like ChatGPT are available to anyone for free (at least for now) and are helping us to solve problems significantly faster than by using google or our own brain. These tools are too powerful and to dangerous to ignore. In this short lesson, I will discuss which tools are available to you, and what you should be careful about.</p>
+<section id="generative-ai-and-programming">
+<h2>Generative AI and programming<a class="headerlink" href="#generative-ai-and-programming" title="Permalink to this headline">#</a></h2>
+<p>If you don’t know ChatGPT yet, you should google it. In fact, I am now going to demonstrate the power of generative AI by using ChatGPT to write the rest of this lesson. I will put all of ChatGPT’s text with a different formatting to differentiate it from mine.</p>
+<p>ChatGPT (free version):</p>
+<blockquote>
+<div><p>Generative AI can produce code by using a neural network to learn from a large dataset of source code. The network is trained to understand the syntax, structure, and meaning of the code. Once the model has been trained, it can generate new code by taking a prompt or seed code as input and generating a sequence of tokens to complete the code. However, the generated code may not always be optimal or meet specific requirements, so it’s important to evaluate and modify it before using it in a real-world application.</p>
+</div></blockquote>
+<p>ChatGPT can be used to solve most of your assignments of the past weeks. For example:</p>
+<p><img alt="" src="_images/chat_gpt_1.png" /></p>
+<p>This implementation is correct. Let’s try it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter_list</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Filters a list of numbers to keep only the ones between one or two thresholds.</span>
+
+<span class="sd">    You need to set at least one of min_value or max_value!</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    values : list</span>
+<span class="sd">        a list of numbers (floats or ints)</span>
+<span class="sd">    min_value : float or int, optional</span>
+<span class="sd">        the minimum threshold to filter the data (inclusive)</span>
+<span class="sd">    max_value : float or int, optional</span>
+<span class="sd">        the maximum threshold to filter the data (inclusive)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; a = [1, 3, 4, 2.2]</span>
+<span class="sd">    &gt;&gt;&gt; filter_list(a, min_value=2)</span>
+<span class="sd">    [3, 4, 2.2]</span>
+<span class="sd">    &gt;&gt;&gt; a  # a is unchanged</span>
+<span class="sd">    [1, 3, 4, 2.2]</span>
+<span class="sd">    &gt;&gt;&gt; filter_list(a, max_value=3)</span>
+<span class="sd">    [1, 3, 2.2]</span>
+<span class="sd">    &gt;&gt;&gt; filter_list(a, min_value=2, max_value=3)</span>
+<span class="sd">    [3, 2.2]</span>
+<span class="sd">    &gt;&gt;&gt; filter_list([1, 2, 3, 4])</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">     ...</span>
+<span class="sd">    ValueError: Need to set at least one of min_value or max_value!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">min_value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">max_value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Need to set at least one of min_value or max_value!&quot;</span><span class="p">)</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">min_value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&gt;=</span> <span class="n">min_value</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">max_value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="n">max_value</span><span class="p">):</span>
+            <span class="n">filtered</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">filtered</span>
+
+<span class="c1"># Testing</span>
+<span class="kn">import</span> <span class="nn">doctest</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=6)
+</pre></div>
+</div>
+</div>
+</div>
+<p>All the tests pass! It is shorter than the solution I gave you (but, in my opinion, less readable for beginners).</p>
+<p>I asked ChatGPT where it got this solution from. Here is what it answered:</p>
+<blockquote>
+<div><p>The code I provided is a custom implementation of the filter_list function based on the description you provided in your initial question. I wrote the code myself based on that description.</p>
+<p>As an AI language model, I don’t have access to external sources by myself. However, the function implements a common data filtering operation and is similar in structure to other filtering functions found in Python’s standard library or third-party packages.</p>
+</div></blockquote>
+<p>To conclude, <strong>ChatGPT can write valid code on demand.</strong> There are other tools around offering similar services (such as Github Copilot), but the technology is <em>very</em> new, and rarely free (ChatGPT’s free version is not guaranteed to always work).</p>
+</section>
+<section id="potential-benefits-of-ai-for-learning">
+<h2>Potential benefits of AI for learning<a class="headerlink" href="#potential-benefits-of-ai-for-learning" title="Permalink to this headline">#</a></h2>
+<p><em>I’m writing a lesson to first year university students about the potential advantages and benefits of using generative AI to learn python programming. Can you help me out?</em></p>
+<blockquote>
+<div><p>Certainly! Here are some potential advantages and benefits of using generative AI to learn Python programming:</p>
+<ol class="arabic simple">
+<li><p>Faster learning: Generative AI tools can help students quickly generate examples of code and provide immediate feedback, allowing for faster learning and iteration.</p></li>
+<li><p>Personalized learning: Generative AI models can adapt to each student’s learning style and pace, providing personalized feedback and guidance.</p></li>
+<li><p>Improved problem-solving skills: Generative AI models can help students develop stronger problem-solving skills by providing examples of how to approach and solve programming challenges.</p></li>
+<li><p>Enhanced creativity: Generative AI models can inspire students to explore new possibilities and generate novel ideas, leading to innovative approaches to programming and problem-solving.</p></li>
+<li><p>Access to advanced techniques: Generative AI models can help students access advanced techniques and approaches to programming, such as machine learning and data analysis, which may be difficult to implement manually.</p></li>
+<li><p>Improved collaboration: Generative AI models can facilitate collaboration between students by providing a common language and framework for working with complex programming concepts and data sets.</p></li>
+<li><p>Increased motivation: Generative AI tools can make learning programming more engaging and fun, leading to increased motivation and interest in the subject.</p></li>
+</ol>
+<p>Overall, using generative AI in Python programming education has the potential to accelerate learning, improve problem-solving skills, enhance creativity, and provide students with access to advanced techniques and approaches to programming.</p>
+</div></blockquote>
+<p>OK so there is some truth in there, but also some exaggeration (for example the “improved collaboration”). It is true that ChatGPT offers explanations, for example with the <code class="docutils literal notranslate"><span class="pre">filter_list</span></code> function, ChatGPT offered examples:</p>
+<p><img alt="" src="_images/chat_gpt_2.png" /></p>
+<p>However, when asked a bit more in depth about its capabilities regarding code writing, ChatGPT requires more caution:</p>
+<blockquote>
+<div><p>However, it’s important to note that generative AI models may not always produce high-quality or optimal code. The generated code may require further refinement or modification to meet specific requirements or constraints. Additionally, generated code may not always be optimal for a particular task or context, so it’s important to carefully evaluate and test the generated code before using it in production.</p>
+</div></blockquote>
+<p>And this is very true.</p>
+</section>
+<section id="potential-pitfalls-of-using-generative-ai-for-learning">
+<h2>Potential pitfalls of using generative AI for learning<a class="headerlink" href="#potential-pitfalls-of-using-generative-ai-for-learning" title="Permalink to this headline">#</a></h2>
+<p><em>OK, fine, I believe you. Now tell me about the potential pitfalls of using generative AI for learning python programming.</em></p>
+<blockquote>
+<div><p>Certainly! Here are some potential pitfalls to be aware of when using generative AI for learning Python programming:</p>
+<ol class="arabic simple">
+<li><p>Overreliance on AI-generated code: Students may become too reliant on generative AI tools to provide solutions to programming problems, leading to a lack of understanding and difficulty applying concepts to new problems.</p></li>
+<li><p>Lack of creativity: While generative AI can provide examples of code, it may not encourage students to explore and generate their own solutions to programming challenges, leading to a lack of creativity and innovation.</p></li>
+<li><p>Limited scope: Generative AI tools may only be able to generate solutions to a limited range of programming problems, leading to a narrow understanding of Python programming.</p></li>
+<li><p>Lack of critical thinking: Students may become overly focused on generating correct solutions rather than developing critical thinking and problem-solving skills, leading to a lack of creativity and innovation.</p></li>
+<li><p>Difficulty with real-world application: AI-generated solutions may not always be applicable in real-world scenarios, leading to difficulties when applying programming concepts to practical problems.</p></li>
+<li><p>Dependence on technology: Students may become too reliant on generative AI tools and lose the ability to solve programming problems manually, leading to difficulties in situations where technology is not available or applicable.</p></li>
+<li><p>Ethical concerns: There are ethical concerns surrounding the use of generative AI in education, such as the potential for bias and the impact on employment in the programming field.</p></li>
+</ol>
+<p>Overall, it’s important to approach the use of generative AI for learning Python programming with a critical eye and a balanced perspective. While there are potential benefits, it’s also important to be aware of the limitations and potential pitfalls, and to encourage students to develop a well-rounded understanding of programming concepts and problem-solving skills.</p>
+</div></blockquote>
+<p>Here again, I agree with most of it. With one exception maybe:</p>
+<p><em>Don’t you think that generative AI will increase inequality between students (rich vs poor, gifted vs less talented)?</em></p>
+<blockquote>
+<div><p>There is a possibility that the use of generative AI in Python programming education could increase inequality between students. Students who have access to advanced technology and resources may have an advantage in using generative AI tools compared to those who do not have access. Additionally, students who are naturally talented in programming may be able to more easily understand and apply the concepts learned from generative AI tools, leading to a widening achievement gap.</p>
+<p>However, it’s important to note that the use of generative AI can also help level the playing field in some ways. For example, it can provide personalized learning opportunities to students who may not have access to one-on-one tutoring or personalized feedback from an instructor. It can also offer a more engaging and interactive way for students to learn programming, which may increase motivation and interest in the subject.</p>
+<p>Ultimately, it’s important to approach the use of generative AI in Python programming education with a focus on equity and inclusion. This could include ensuring that all students have access to the necessary resources and technology, providing additional support and resources to students who may be at a disadvantage, and designing the curriculum in a way that promotes accessibility and inclusivity for all learners.</p>
+</div></blockquote>
+<p>This is also true, but did you notice something? ChatGPT only mentioned this issue <strong>after I asked it about it.</strong> This is a common theme I found when using it: be extremely careful about its answers, and critical thinking allows to use it in a much (much) better way than only swallowing what it has to say.</p>
+<p><strong>Always remember: ChatGPT is always “hallucinating”</strong>.</p>
+<p><em>What is “hallucinating” in the context of generative AI?</em></p>
+<blockquote>
+<div><p>In the context of generative AI, hallucination refers to the generation of outputs that do not accurately reflect the input or the real world. This can occur when a generative model is trained on incomplete or biased data, or when the model’s architecture or training process is flawed in some way.</p>
+<p>For example, a generative model trained on images of dogs may generate images of creatures that resemble dogs, but have additional features or characteristics that do not exist in real dogs. This could be due to the model’s inability to accurately capture the true distribution of dog images in the training data, or due to limitations in the model’s architecture that prevent it from accurately modeling the complex relationships between the input and output data.</p>
+<p>Similarly, a generative model trained on text may generate text that is grammatically correct and semantically coherent, but does not accurately reflect the nuances or complexities of the real world. This could be due to biases or limitations in the training data, or due to limitations in the model’s ability to accurately capture the complex relationships between the input and output data.</p>
+<p>In both cases, it’s important to critically evaluate the outputs generated by generative models and to understand their limitations in order to use them effectively and responsibly.</p>
+</div></blockquote>
+</section>
+<section id="what-about-the-exams">
+<h2>What about the exams?<a class="headerlink" href="#what-about-the-exams" title="Permalink to this headline">#</a></h2>
+<p><em>Should I allow my 1st year university students to use ChatGPT during their programming exam?</em></p>
+<blockquote>
+<div><p>As an AI language model, I am not qualified to make decisions about exams or grading policies. Ultimately, the decision about whether or not to allow students to use ChatGPT or other AI tools during an exam should be based on the learning objectives and assessment criteria for the course, as well as any policies or guidelines set by the instructor or institution.</p>
+<p>However, it’s worth considering that allowing students to use generative AI tools like ChatGPT during an exam could potentially undermine the assessment of their programming skills, as it could make it more difficult to differentiate between students who have a deep understanding of programming concepts and those who are simply using the tool to generate code. Additionally, there may be concerns about the reliability and accuracy of the generated code, which could impact the validity and fairness of the exam.</p>
+<p>That being said, there may be cases where the use of AI tools is appropriate and beneficial for learning and assessment purposes, such as in cases where the goal is to assess the student’s ability to use AI tools to solve real-world problems or to develop innovative solutions. Ultimately, the decision about whether or not to allow the use of AI tools during an exam should be carefully considered in light of the learning objectives, assessment criteria, and ethical and pedagogical considerations of the course.</p>
+</div></blockquote>
+<p>I think that ideally, I should allow you to use any tool you like during the programming exams. <strong>But:</strong></p>
+<ul class="simple">
+<li><p>ChatGPT is not fully reliable: if its busy, it can shut down at any time (unless you pay for it).</p></li>
+<li><p>Some you you may pay for ChatGPT or Copilot, some may not. The answers are likely to be more reliable with the paid version. How to deal with that?</p></li>
+<li><p>I want you to be good programmers <em>without</em> AI, and better programmers <em>with</em> AI.</p></li>
+</ul>
+<p>I think therefore that it is likely that I will <strong>not</strong> allow ChatGPT or Copilot during the exams (at least for now). The rules might change and will be announced in time before the exam.</p>
+</section>
+<section id="final-note">
+<h2>Final note<a class="headerlink" href="#final-note" title="Permalink to this headline">#</a></h2>
+<p>With the exception of this lesson, I never used ChatGPT to write lessons in this class. However, I am seriously considering using it much more in my teaching and research in the future. I think that there is no way to ignore this technology today.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="faq.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Frequently asked questions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="references.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">External resources</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generative-ai-and-programming">Generative AI and programming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-benefits-of-ai-for-learning">Potential benefits of AI for learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-pitfalls-of-using-generative-ai-for-learning">Potential pitfalls of using generative AI for learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-about-the-exams">What about the exams?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-note">Final note</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fabien Maussion
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+  <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
+</a>
+These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
+<br>
+&copy; Copyright 2021-2022.
+</p>
+
+</div>
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

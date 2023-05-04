@@ -171,6 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../learning_tips.html">Learning tips</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../assignments.html">Homework instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ai.html">Learning with artificial intelligence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">External resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 01 - Getting started</span></p>
@@ -204,6 +205,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="02-jupyter-dos.html">Jupyter notebooks tips and tricks</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to scientific python: numpy and matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-Assignment.html">Assignment 05</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 06 - Scientific python - continued</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_06/01-tuples.html">Python tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_06/02-computations.html">Computations with numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_06/03-Assignment.html">Assignment 06</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework cookbook</span></p>
 <ul class="nav bd-sidenav">
@@ -818,7 +825,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 8,  5,  7,  1, 10,  2, 14, 13, 11, 12,  4,  3,  6,  9])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 5,  1, 13,  2, 11, 12,  3,  9,  6,  4, 14,  8, 10,  7])
 </pre></div>
 </div>
 </div>
@@ -832,7 +839,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 3, 4])
 </pre></div>
 </div>
 </div>
@@ -853,8 +860,8 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True, False,  True, False,  True, False, False, False,
-       False,  True,  True, False, False])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True,  True, False,  True, False, False,  True, False, False,
+        True, False, False, False, False])
 </pre></div>
 </div>
 </div>
@@ -868,7 +875,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 3, 4])
 </pre></div>
 </div>
 </div>
@@ -882,7 +889,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 3, 4])
 </pre></div>
 </div>
 </div>
@@ -897,7 +904,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 8,  5,  7, 10,  4,  3,  6,  9])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 5,  3,  9,  6,  4,  8, 10,  7])
 </pre></div>
 </div>
 </div>
@@ -917,7 +924,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_29777/1830006926.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">/tmp/ipykernel_13194/1830006926.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># These two are equivalent with boolean scalars</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">((</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">))</span>  <span class="c1"># On numpy arrays, the second one will raise an error</span>
 
@@ -1152,7 +1159,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d158c625360c2e128237537342b297db6cad388da0902398c91a6123ef4f5773.png" src="../_images/d158c625360c2e128237537342b297db6cad388da0902398c91a6123ef4f5773.png" />
+<img alt="../_images/f5f7272b1c686d5e58d3d43c4e27b7ff47b913014b6ec6f0f2ecb896fd9c504c.png" src="../_images/f5f7272b1c686d5e58d3d43c4e27b7ff47b913014b6ec6f0f2ecb896fd9c504c.png" />
 </div>
 </div>
 </section>
@@ -1174,7 +1181,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/60662bca9de6b5bc128dd8014ac8ee48a09ecc0fc1746b753f19d61a2f62d1c7.png" src="../_images/60662bca9de6b5bc128dd8014ac8ee48a09ecc0fc1746b753f19d61a2f62d1c7.png" />
+<img alt="../_images/29cdd5374f41617f2b784bfd77678b09c5c16acfb1db19ef4e371fe15c8098c9.png" src="../_images/29cdd5374f41617f2b784bfd77678b09c5c16acfb1db19ef4e371fe15c8098c9.png" />
 </div>
 </div>
 <ul class="simple">

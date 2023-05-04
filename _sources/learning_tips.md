@@ -20,5 +20,6 @@ so we can spend more time explaining the problematic concepts and make the most 
 You can ask questions:
 - to your friends and colleagues (highly recommended!)
 - in a search machine (one of the most important skills in programming!)
+- using AI (this in new! And should be used with caution: [](ai))
 - to me during class (and per email if necessary)
 - in the matrix/element chat (link on OLAT)
