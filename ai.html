@@ -480,15 +480,16 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="learning-with-artificial-intelligence">
 <h1>Learning with artificial intelligence<a class="headerlink" href="#learning-with-artificial-intelligence" title="Permalink to this headline">#</a></h1>
-<p>A big change in our learning and teaching practices is happening right now, and very fast: <a class="reference external" href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">generative artificial intelligence</a>. Tools like ChatGPT are available to anyone for free (at least for now) and are helping us to solve problems significantly faster than by using google or our own brain. These tools are too powerful and to dangerous to ignore. In this short lesson, I will discuss which tools are available to you, and what you should be careful about.</p>
+<p>The current learning and teaching practices are undergoing a major transformation, rapidly propelled by <a class="reference external" href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">generative artificial intelligence</a>. Tools like ChatGPT, which are easily accessible and free (for now), have proven to be more efficient in solving simple programming tasks compared to conventional methods such as a web search or relying on our own intellect. Ignoring this transformation would be unwise. In this brief lesson, I will highlight the available tools and advise on cautionary measures to be taken.</p>
 <section id="generative-ai-and-programming">
 <h2>Generative AI and programming<a class="headerlink" href="#generative-ai-and-programming" title="Permalink to this headline">#</a></h2>
-<p>If you don’t know ChatGPT yet, you should google it. In fact, I am now going to demonstrate the power of generative AI by using ChatGPT to write the rest of this lesson. I will put all of ChatGPT’s text with a different formatting to differentiate it from mine.</p>
-<p>ChatGPT (free version):</p>
+<p>If you don’t know ChatGPT yet, you should google it. In fact, I am now going to demonstrate the power of generative AI by using ChatGPT to write most of the rest of this lesson. I will write ChatGPT’s prompts with a different formatting to differentiate it from mine.</p>
+<p><em>Can you explain to a student how you generate code?</em></p>
+<p>ChatGPT3 (free version):</p>
 <blockquote>
 <div><p>Generative AI can produce code by using a neural network to learn from a large dataset of source code. The network is trained to understand the syntax, structure, and meaning of the code. Once the model has been trained, it can generate new code by taking a prompt or seed code as input and generating a sequence of tokens to complete the code. However, the generated code may not always be optimal or meet specific requirements, so it’s important to evaluate and modify it before using it in a real-world application.</p>
 </div></blockquote>
-<p>ChatGPT can be used to solve most of your assignments of the past weeks. For example:</p>
+<p>ChatGPT can be used to solve most of your programming assignments of the past weeks. For example, I asked ChatGPT to solve last weeks assignment:</p>
 <p><img alt="" src="_images/chat_gpt_1.png" /></p>
 <p>This implementation is correct. Let’s try it:</p>
 <div class="cell docutils container">
@@ -543,13 +544,13 @@ document.write(`
 </div>
 </div>
 </div>
-<p>All the tests pass! It is shorter than the solution I gave you (but, in my opinion, less readable for beginners).</p>
+<p>All the tests pass! ChatGPT’s solution is shorter than the one I suggested you (but, in my opinion, less readable for beginners).</p>
 <p>I asked ChatGPT where it got this solution from. Here is what it answered:</p>
 <blockquote>
 <div><p>The code I provided is a custom implementation of the filter_list function based on the description you provided in your initial question. I wrote the code myself based on that description.</p>
 <p>As an AI language model, I don’t have access to external sources by myself. However, the function implements a common data filtering operation and is similar in structure to other filtering functions found in Python’s standard library or third-party packages.</p>
 </div></blockquote>
-<p>To conclude, <strong>ChatGPT can write valid code on demand.</strong> There are other tools around offering similar services (such as Github Copilot), but the technology is <em>very</em> new, and rarely free (ChatGPT’s free version is not guaranteed to always work).</p>
+<p>In summary, <strong>ChatGPT has the capability to generate functional code from scratch</strong>. While there are other tools such as Github Copilot that offer comparable services, the technology is still in its infancy and is rarely available for free. Additionally, the reliability of ChatGPT’s free version cannot be guaranteed.</p>
 </section>
 <section id="potential-benefits-of-ai-for-learning">
 <h2>Potential benefits of AI for learning<a class="headerlink" href="#potential-benefits-of-ai-for-learning" title="Permalink to this headline">#</a></h2>
@@ -567,9 +568,9 @@ document.write(`
 </ol>
 <p>Overall, using generative AI in Python programming education has the potential to accelerate learning, improve problem-solving skills, enhance creativity, and provide students with access to advanced techniques and approaches to programming.</p>
 </div></blockquote>
-<p>OK so there is some truth in there, but also some exaggeration (for example the “improved collaboration”). It is true that ChatGPT offers explanations, for example with the <code class="docutils literal notranslate"><span class="pre">filter_list</span></code> function, ChatGPT offered examples:</p>
+<p>OK so there is some truth in there, but also some exaggeration. It is true that ChatGPT offers explanations: together with its <code class="docutils literal notranslate"><span class="pre">filter_list</span></code> implementation, ChatGPT offered examples:</p>
 <p><img alt="" src="_images/chat_gpt_2.png" /></p>
-<p>However, when asked a bit more in depth about its capabilities regarding code writing, ChatGPT requires more caution:</p>
+<p>However, when asked a bit more in depth about its capabilities regarding code writing, ChatGPT advises more caution:</p>
 <blockquote>
 <div><p>However, it’s important to note that generative AI models may not always produce high-quality or optimal code. The generated code may require further refinement or modification to meet specific requirements or constraints. Additionally, generated code may not always be optimal for a particular task or context, so it’s important to carefully evaluate and test the generated code before using it in production.</p>
 </div></blockquote>
@@ -598,8 +599,7 @@ document.write(`
 <p>However, it’s important to note that the use of generative AI can also help level the playing field in some ways. For example, it can provide personalized learning opportunities to students who may not have access to one-on-one tutoring or personalized feedback from an instructor. It can also offer a more engaging and interactive way for students to learn programming, which may increase motivation and interest in the subject.</p>
 <p>Ultimately, it’s important to approach the use of generative AI in Python programming education with a focus on equity and inclusion. This could include ensuring that all students have access to the necessary resources and technology, providing additional support and resources to students who may be at a disadvantage, and designing the curriculum in a way that promotes accessibility and inclusivity for all learners.</p>
 </div></blockquote>
-<p>This is also true, but did you notice something? ChatGPT only mentioned this issue <strong>after I asked it about it.</strong> This is a common theme I found when using it: be extremely careful about its answers, and critical thinking allows to use it in a much (much) better way than only swallowing what it has to say.</p>
-<p><strong>Always remember: ChatGPT is always “hallucinating”</strong>.</p>
+<p>It is worth noting that ChatGPT only raised this issue after being prompted. <strong>During my interactions with ChatGPT, I noticed a recurring pattern where exercising caution and applying critical thinking when evaluating its responses proved to be essential</strong>. Simply accepting ChatGPT’s output without proper scrutiny could lead to erroneous conclusions. Always remember: ChatGPT is often “hallucinating”.</p>
 <p><em>What is “hallucinating” in the context of generative AI?</em></p>
 <blockquote>
 <div><p>In the context of generative AI, hallucination refers to the generation of outputs that do not accurately reflect the input or the real world. This can occur when a generative model is trained on incomplete or biased data, or when the model’s architecture or training process is flawed in some way.</p>
@@ -616,17 +616,17 @@ document.write(`
 <p>However, it’s worth considering that allowing students to use generative AI tools like ChatGPT during an exam could potentially undermine the assessment of their programming skills, as it could make it more difficult to differentiate between students who have a deep understanding of programming concepts and those who are simply using the tool to generate code. Additionally, there may be concerns about the reliability and accuracy of the generated code, which could impact the validity and fairness of the exam.</p>
 <p>That being said, there may be cases where the use of AI tools is appropriate and beneficial for learning and assessment purposes, such as in cases where the goal is to assess the student’s ability to use AI tools to solve real-world problems or to develop innovative solutions. Ultimately, the decision about whether or not to allow the use of AI tools during an exam should be carefully considered in light of the learning objectives, assessment criteria, and ethical and pedagogical considerations of the course.</p>
 </div></blockquote>
-<p>I think that ideally, I should allow you to use any tool you like during the programming exams. <strong>But:</strong></p>
+<p>In my opinion, it would be ideal to allow the usage of any tool during programming exams. However, there are some issues to consider:</p>
 <ul class="simple">
-<li><p>ChatGPT is not fully reliable: if its busy, it can shut down at any time (unless you pay for it).</p></li>
-<li><p>Some you you may pay for ChatGPT or Copilot, some may not. The answers are likely to be more reliable with the paid version. How to deal with that?</p></li>
-<li><p>I want you to be good programmers <em>without</em> AI, and better programmers <em>with</em> AI.</p></li>
+<li><p>ChatGPT’s reliability is not guaranteed, and it may shut down abruptly if overloaded, unless you pay for it.</p></li>
+<li><p>Some students may have access to paid versions of ChatGPT or Copilot, while others may not, which is unfair.</p></li>
+<li><p>My objective is for you to be good programmers <em>without</em> AI, and better programmers <em>with</em> AI.</p></li>
 </ul>
-<p>I think therefore that it is likely that I will <strong>not</strong> allow ChatGPT or Copilot during the exams (at least for now). The rules might change and will be announced in time before the exam.</p>
+<p>Therefore, for the time being, it is unlikely that ChatGPT or Copilot will be permitted during the exams. However, the rules may change in the future, and any updates will be communicated in due time before the exam.</p>
 </section>
 <section id="final-note">
 <h2>Final note<a class="headerlink" href="#final-note" title="Permalink to this headline">#</a></h2>
-<p>With the exception of this lesson, I never used ChatGPT to write lessons in this class. However, I am seriously considering using it much more in my teaching and research in the future. I think that there is no way to ignore this technology today.</p>
+<p>Apart from this particular lesson, I have refrained from utilizing ChatGPT to generate content for this class. Nonetheless, I am contemplating integrating this tool more extensively in my research and teaching endeavors going forward. Ignoring the potential of this technology is not a viable option in today’s world.</p>
 </section>
 </section>
 
