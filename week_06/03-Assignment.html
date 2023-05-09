@@ -502,7 +502,7 @@ document.write(`
 <span class="sd">    ----------</span>
 <span class="sd">    x, y: ndarray-like</span>
 <span class="sd">        Two sets of measurements. Both arrays should be 1-dimensional </span>
-<span class="sd">        and have the same length.</span>
+<span class="sd">        and have the same length. They should not contain any missing data!</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -514,10 +514,10 @@ document.write(`
 <span class="sd">    &gt;&gt;&gt; x = np.array([1, 2, 3, 4, 5])</span>
 <span class="sd">    &gt;&gt;&gt; y = np.array([-5.3, -2.6,  0.1,  2.8,  5.5])</span>
 <span class="sd">    &gt;&gt;&gt; a, b = linear_regression(x, y)</span>
-<span class="sd">    &gt;&gt;&gt; a</span>
-<span class="sd">    -8.000000000000002</span>
-<span class="sd">    &gt;&gt;&gt; b</span>
-<span class="sd">    2.7</span>
+<span class="sd">    &gt;&gt;&gt; np.isclose(a, -8)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; np.isclose(b, 2.7)</span>
+<span class="sd">    True</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Make sure we manipulate ndarrays</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -564,7 +564,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p><strong>Something happened during the experiment, and unfortunately some of the values are invalid with the missing value indicator -999. Filter the data series so that both <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> are of the same length and still represent the correct value pairs.</strong></p>
+<p><strong>Something happened during the experiment, and unfortunately some of the values are invalid with the missing value indicator -999. Filter the data series so that both <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> are of the same length and still represent the correct value pairs, without missing data.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
