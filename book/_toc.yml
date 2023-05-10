@@ -44,10 +44,10 @@ parts:
       - file: week_06/01-tuples
       - file: week_06/02-computations
       - file: week_06/03-Assignment
-  # - caption: Week 07 - Numerics 
-  #   chapters:
-  #     - file: week_07/01-numerics
-  #     - file: week_07/02-Assignment
+  - caption: Week 07 - Numerics 
+    chapters:
+      - file: week_07/01-numerics
+      - file: week_07/02-Assignment
   # - caption: Week 08 - Pandas 
   #   chapters:
   #     - file: week_08/01-dictionaries
