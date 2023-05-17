@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Assignment 07 &#8212; Introduction to Programming</title>
+    <title>Assignment 08 &#8212; Introduction to Programming</title>
   
   
   
@@ -70,13 +70,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'week_07/02-Assignment';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'week_08/03-Assignment';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python dictionaries" href="../week_08/01-dictionaries.html" />
-    <link rel="prev" title="Numpy as numerical solver" href="01-numerics.html" />
+    <link rel="next" title="Introduction" href="../cookbook/intro.html" />
+    <link rel="prev" title="Pandas: working with tabular data" href="02-pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -215,15 +213,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../week_06/03-Assignment.html">Assignment 06</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 07 - Numerics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-numerics.html">Numpy as numerical solver</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment 07</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_07/01-numerics.html">Numpy as numerical solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_07/02-Assignment.html">Assignment 07</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 08 - Pandas</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../week_08/01-dictionaries.html">Python dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../week_08/02-pandas.html">Pandas: working with tabular data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../week_08/03-Assignment.html">Assignment 08</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-dictionaries.html">Python dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-pandas.html">Pandas: working with tabular data</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment 08</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework cookbook</span></p>
 <ul class="nav bd-sidenav">
@@ -288,7 +286,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_07/02-Assignment.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_08/03-Assignment.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -336,7 +334,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_07/02-Assignment.ipynb" target="_blank"
+      <li><a href="https://github.com/fmaussion/intro_to_programming/edit/master/book/week_08/03-Assignment.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -353,7 +351,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_07/02-Assignment.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fweek_08/03-Assignment.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -383,7 +381,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/week_07/02-Assignment.ipynb" target="_blank"
+      <li><a href="../_sources/week_08/03-Assignment.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -465,7 +463,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Assignment 07</h1>
+    <h1>Assignment 08</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -475,8 +473,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equations">01 - Linear equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-earth-energy-balance-model">02 - A simple Earth Energy Balance model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">01 - Data preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind">02 - Wind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#station-comparison">03 - Station comparison</a></li>
 </ul>
             </nav>
         </div>
@@ -488,23 +487,220 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="assignment-07">
-<h1>Assignment 07<a class="headerlink" href="#assignment-07" title="Permalink to this headline">#</a></h1>
-<p><em>Due date: 17.05.2023</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="assignment-08">
+<h1>Assignment 08<a class="headerlink" href="#assignment-08" title="Permalink to this headline">#</a></h1>
+<p><em>Due date: 24.05.2023</em></p>
 <p>This week’s assignment has to be returned <strong>in the form a jupyter notebook</strong>.</p>
 <p>Don’t forget the <a class="reference internal" href="../assignments.html"><span class="doc std std-doc">instructions</span></a>!</p>
-<section id="linear-equations">
-<h2>01 - Linear equations<a class="headerlink" href="#linear-equations" title="Permalink to this headline">#</a></h2>
-<p>Using numpy alone, solve the following system of linear equations:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-3 x + 2 y - z &amp;= 10 \\
-- x + 3 y + 2 z &amp;= 5 \\
-x - y - z &amp;= -1
-\end{aligned}
-\end{split}\]</div>
-<p>To solve it, remember that in matrix notation, <span class="math notranslate nohighlight">\(A x = y\)</span> can be refactored to <span class="math notranslate nohighlight">\(x = A^{-1} y\)</span>, if <span class="math notranslate nohighlight">\(A\)</span> is an invertible matrix, and <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are vectors. Use <code class="docutils literal notranslate"><span class="pre">numpy</span></code> to invert the matrix <span class="math notranslate nohighlight">\(A\)</span> and solve for <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<section id="data-preparation">
+<h2>01 - Data preparation<a class="headerlink" href="#data-preparation" title="Permalink to this headline">#</a></h2>
+<p>Rewrite the <code class="docutils literal notranslate"><span class="pre">acinn_meteo_data</span></code> function we used in <a class="reference internal" href="../week_05/04-Assignment.html"><span class="doc std std-doc">week 05</span></a> to return a pandas dataframe instead of individual arrays. When creating the dataframe, rename the column as follows:</p>
+<ul class="simple">
+<li><p>“rr” -&gt; “rainfall” (invalid: &lt; 0)</p></li>
+<li><p>“dd” -&gt; “wind_dir” (invalid: &lt; 0)</p></li>
+<li><p>“ff” -&gt; “wind_speed” (invalid: &lt; 0)</p></li>
+<li><p>“tp” -&gt; “dewpoint” (invalid: &lt; -50)</p></li>
+<li><p>“p” -&gt; “pressure” (invalid: &lt; 500)</p></li>
+<li><p>“tl” -&gt; “temperature” (invalid: &lt; -50)</p></li>
+<li><p>“so” -&gt; “sunshine_min” (invalid: &lt; 0)</p></li>
+<li><p>“rf” -&gt; “relative_humidity” (invalid: &lt; 0)</p></li>
+</ul>
+<p>You should ignore the <code class="docutils literal notranslate"><span class="pre">datumsec</span></code> key and instead use the converted time as <code class="docutils literal notranslate"><span class="pre">index</span></code> for the dataframe you’ll create. Not all stations have all the variables! Your algorithm should work regardless of if the variable is available or not.</p>
+<p>Filter for missing data before placing the data in the pandas dafaframe: replace <strong>all values which are below the invalid threshold in the list above with <code class="docutils literal notranslate"><span class="pre">np.nan</span></code></strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">acinn_meteo_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s2">&quot;innsbruck&quot;</span><span class="p">,</span> <span class="n">ndays</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse live meteorological data from the ACINN servers.</span>
+
+<span class="sd">    Requires an internet connection and the pandas library!</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    station : str</span>
+<span class="sd">        one of &quot;innsbruck&quot;, &quot;obergurgl&quot;</span>
+<span class="sd">    ndays : int</span>
+<span class="sd">        either 3 or 7 days</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    df : pd.DataFrame</span>
+<span class="sd">        the meteorological data in a pandas dataframe</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; df = acinn_meteo_data()</span>
+<span class="sd">    &gt;&gt;&gt; type(df)</span>
+<span class="sd">    &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; type(df.index)</span>
+<span class="sd">    &lt;class &#39;pandas.core.indexes.datetimes.DatetimeIndex&#39;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; len(df.columns)</span>
+<span class="sd">    7</span>
+<span class="sd">    &gt;&gt;&gt; df[&#39;temperature&#39;].dtype</span>
+<span class="sd">    dtype(&#39;float64&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
+    <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+    <span class="kn">import</span> <span class="nn">json</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://acinn-data.uibk.ac.at/</span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">ndays</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="c1"># Read the data</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+
+    <span class="c1"># Convert the time</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">milliseconds</span><span class="o">=</span><span class="n">ds</span><span class="p">)</span> <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;datumsec&#39;</span><span class="p">]]</span>
+    
+    <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=0)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="wind">
+<h2>02 - Wind<a class="headerlink" href="#wind" title="Permalink to this headline">#</a></h2>
+<p><strong>1. write a new function called <code class="docutils literal notranslate"><span class="pre">sd_to_uv</span></code> which accept two arrays as input (or equivalent): wind speed and wind direction, and which converts the values into u and v, the vector components of the wind</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sd_to_uv</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Converts wind speed and direction to (u, v) vector components.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    speed : ndarray-like</span>
+<span class="sd">        wind speed in m/s</span>
+<span class="sd">    direction : ndarray-like</span>
+<span class="sd">        wind direction in degrees, meteorological convention (0° = North)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    (u, v) : wind u and v vector components (unit: m/s)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from numpy.testing import assert_allclose</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(sd_to_uv(1, 90), [-1, 0], atol=1e-7)</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(sd_to_uv(0, 234), [0., 0.], atol=1e-7)</span>
+<span class="sd">    &gt;&gt;&gt; u, v = sd_to_uv([1, 1, 1], [0, 90, 180])</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(u, [0, -1, 0], atol=1e-7)</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(v, [-1, 0, 1], atol=1e-7)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>2. write another function called <code class="docutils literal notranslate"><span class="pre">uv_to_sd</span></code> which does the conversion in the other direction</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">uv_to_sd</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Converts (u, v) wind vector components to wind speed and direction.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    u : ndarray-like</span>
+<span class="sd">        u-component of the wind speed in m/s</span>
+<span class="sd">    v : ndarray-like</span>
+<span class="sd">        v-component of the wind speed in m/s</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    (speed, direction) : wind speed (unit: m/s) and direction (° in the meterological convention)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from numpy.testing import assert_allclose</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(uv_to_sd(1, 1), [2**0.5, 225])</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(uv_to_sd(-1, -1), [2**0.5, 45])</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(uv_to_sd(0, 0), [0.0, 270.0])</span>
+<span class="sd">    &gt;&gt;&gt; u, v = sd_to_uv([1, 2], [90, 235])</span>
+<span class="sd">    &gt;&gt;&gt; s, d = uv_to_sd(u, v)  # round trip</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(s, [1, 2])</span>
+<span class="sd">    &gt;&gt;&gt; assert_allclose(d, [90, 235])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://colaweb.gmu.edu/dev/clim301/lectures/wind/wind-uv">This webpage</a> contains all the info you need to compute this conversion. Don’t forget to run the tests!</p>
+<p>In order to help you out with one particular aspect, here is a useful function that I recommend to apply in your code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_wind_dir</span><span class="p">(</span><span class="n">direction</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Makes sure that a wind direction value is comprised between 0 and 360°.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    direction : ndarray-like</span>
+<span class="sd">        wind direction in degrees, between [-360; +720]</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    direction : the direction, mapped to the [0; 360[ range.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; check_wind_dir(0)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; check_wind_dir(360)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; print(check_wind_dir([-180, 90, 420]))</span>
+<span class="sd">    [180  90  60]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">direction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">direction</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">360</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid wind direction value&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">fmod</span><span class="p">(</span><span class="n">direction</span> <span class="o">+</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+
+
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=3)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>3. use the <code class="docutils literal notranslate"><span class="pre">sd_to_uv</span></code> functions to add two columns to the Innsbruck dataframe: <code class="docutils literal notranslate"><span class="pre">u_wind</span></code> and <code class="docutils literal notranslate"><span class="pre">v_wind</span></code></strong>. Tip: this is very easy to do and does not require any complicated pandas function! Start by noticing that <code class="docutils literal notranslate"><span class="pre">sd_to_uv</span></code> and <code class="docutils literal notranslate"><span class="pre">uv_to_sd</span></code> return numpy arrays regardless of the type of the input (even with <code class="docutils literal notranslate"><span class="pre">pd.Series</span></code>), and then remember that numpy arrays can be added as columns to a <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code>.</p>
+<p><strong>4. now compute the average statistics of wind for the 3 days period (average speed, average direction), by noting that wind speed is best averaged from the original data, and that wind direction is best averaged in vector space and converted back to trigonometry space. Compare the differences between the “naive” average and the “more correct” one.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
@@ -513,239 +709,19 @@ x - y - z &amp;= -1
 </div>
 </div>
 </section>
-<section id="a-simple-earth-energy-balance-model">
-<h2>02 - A simple Earth Energy Balance model<a class="headerlink" href="#a-simple-earth-energy-balance-model" title="Permalink to this headline">#</a></h2>
-<p>Let’s imagine a simple 1-layer model of our planetary climate system. We will try to compute its energy balance.</p>
-<p>In space, the only source of incoming energy is that of the sun. The sun energy per unit area (<span class="math notranslate nohighlight">\(W m^{-2}\)</span>) reaching earth is the solar constant <span class="math notranslate nohighlight">\(S_0\)</span>: its value is approximately 1362 <span class="math notranslate nohighlight">\(W m^{-2}\)</span>. This energy is distributed from a circle to the sphere (cf. climate lecture), which implies that only a quarter of it is available on average over the globe. Part of this energy is reflected directly to space (mostly by clouds and ice) according to the planetary albedo <span class="math notranslate nohighlight">\(\alpha = 0.32\)</span>.</p>
-<p>Therefore, the total energy entering the climate system (the Absorbed Shortwave Radiation or ASR) is:</p>
-<div class="math notranslate nohighlight">
-\[
-ASR = (1 - \alpha) \frac{S_0}{4}
-\]</div>
-<p>At human time scales, <span class="math notranslate nohighlight">\(S_0\)</span> is a constant, while <span class="math notranslate nohighlight">\(\alpha\)</span> may change with time.</p>
-<p><strong>Define a function <code class="docutils literal notranslate"><span class="pre">asr</span></code> which takes one optional keyword argument <code class="docutils literal notranslate"><span class="pre">alpha</span></code> (which defaults to 0.3) and returns the ASR (<span class="math notranslate nohighlight">\(W m^{-2}\)</span>)</strong>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">asr</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Absorbed Solar Radiation (W m-2).</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    alpha : float, optional</span>
-<span class="sd">        the planetary albedo</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    the asr (float)</span>
-
-<span class="sd">    Examples</span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; print(f&#39;{asr():.2f}&#39;)</span>
-<span class="sd">    238.35</span>
-<span class="sd">    &gt;&gt;&gt; print(f&#39;{asr(alpha=0.32):.2f}&#39;)</span>
-<span class="sd">    231.54</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="o">&lt;</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">&gt;</span>
+<section id="station-comparison">
+<h2>03 - Station comparison<a class="headerlink" href="#station-comparison" title="Permalink to this headline">#</a></h2>
+<p><strong>For the two stations <code class="docutils literal notranslate"><span class="pre">'innsbruck',</span> <span class="pre">'obergurgl'</span></code>, parse the data and put all temperature variables in a single merged dataframe looking like this</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                     <span class="n">innsbruck</span>  <span class="n">obergurgl</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">10</span> <span class="mi">16</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">11.4</span>        <span class="mf">2.2</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">10</span> <span class="mi">16</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">11.6</span>        <span class="mf">2.0</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">10</span> <span class="mi">16</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">11.6</span>        <span class="mf">1.9</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">10</span> <span class="mi">16</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">11.4</span>        <span class="mf">1.9</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">10</span> <span class="mi">16</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">00</span>       <span class="mf">11.4</span>        <span class="mf">1.8</span>
 </pre></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Testing</span>
-<span class="kn">import</span> <span class="nn">doctest</span>
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=0)
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Plot the ASR as a function of albedo, for the range [0.2, 0.7]:</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>This incoming solar energy is warming up the climate system which, in turn, emits longwave radiation. Using Stefan Boltzmann’s law, the Outgoing Longwave Radiation (OLR) is therefore:</p>
-<div class="math notranslate nohighlight">
-\[
-OLR = \tau \sigma T^4
-\]</div>
-<p>with <span class="math notranslate nohighlight">\(T\)</span> the atmosphere temperature in Kelvin, <span class="math notranslate nohighlight">\(\sigma\)</span> the Stefan Boltzmann constant (<span class="math notranslate nohighlight">\(5.67 \times 10^{-8}\)</span>) and <span class="math notranslate nohighlight">\(\tau\)</span> the transmissivity of the atmosphere (let’s say it is 0.611 - a value I tuned to match the observed OLR).</p>
-<p><strong>Define a function <code class="docutils literal notranslate"><span class="pre">olr</span></code> which takes one positional argument <code class="docutils literal notranslate"><span class="pre">t</span></code> and one optional keyword argument <code class="docutils literal notranslate"><span class="pre">tau</span></code> (which defaults to 0.611) and which returns the OLR (<span class="math notranslate nohighlight">\(W m^{-2}\)</span>)</strong>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">olr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">0.611</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Outgoing Longwave Radiation (W m-2).</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    t : float</span>
-<span class="sd">        the atmosphere temperature (K)</span>
-<span class="sd">    tau : float, optional</span>
-<span class="sd">        the atmosphere transmissivity (-)</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    the olr (float)</span>
-
-<span class="sd">    Examples</span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; print(f&#39;{olr(288):.2f}&#39;)</span>
-<span class="sd">    238.34</span>
-<span class="sd">    &gt;&gt;&gt; print(f&#39;{olr(288, tau=0.63):.2f}&#39;)</span>
-<span class="sd">    245.75</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="o">&lt;</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">&gt;</span>
-</pre></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Testing</span>
-<span class="kn">import</span> <span class="nn">doctest</span>
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=0)
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Plot the OLR as a function of temperature, for the range [270 300]. Repeat with tau=0.5 and tau=0.7 (three lines on the same plot, with a legend).</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Verify that with the default parameters and an atmosphere temperature of 288K, the climate system is approximately in energy balance (ASR == OLR, <span class="math notranslate nohighlight">\(\pm 0.02 W m^{-2}\)</span>).</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Humans started to emit greenhouse gases to the atmosphere. Since greenhouse gases are trapping heat, this has the consequence to <em>reduce</em> the transmissivity of the atmosphere.</p>
-<p><strong>Compute the energy imbalance of the climate system (<span class="math notranslate nohighlight">\(\Delta E = ASR -OLR\)</span>) if <span class="math notranslate nohighlight">\(\tau\)</span> is reduced to 0.59 but the temperature stays constant at 288.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Written mathematically:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{dE}{dt} = ASR - OLR
-\]</div>
-<p>The change of energy over time is equal to the energy imbalance. If ASR is equal to OLR the rate of change is zero. With our emissions however we have an energy excess, which will warm um the atmosphere. The rate at which temperature increases depends on the energy imbalance and the thermal capacity of the climate system. If we suppose that:</p>
-<div class="math notranslate nohighlight">
-\[
-E = C T
-\]</div>
-<p>With E the total energy of the climate system, T the temperature and C the effective heat capacity of the climate system (earth + land + ocean, assumed to be constant).</p>
-<p>We can now write:</p>
-<div class="math notranslate nohighlight">
-\[
-C \frac{dT}{dt} = ASR - OLR(T)
-\]</div>
-<p>which is a ordinary differential equation (ODE). Let’s use <a class="reference external" href="https://en.wikipedia.org/wiki/Finite_difference">forward finite differences</a> to approximate our equation numerically:</p>
-<div class="math notranslate nohighlight">
-\[
-C \frac{\Delta T}{\Delta t} = C \frac{T_{i+1} - T_{i}}{\Delta t} = ASR - OLR(T_i)
-\]</div>
-<p>Which we can rearrange to to solve for future temperature (<span class="math notranslate nohighlight">\(T_{i+1}\)</span> at time <span class="math notranslate nohighlight">\(t + \Delta t\)</span>) knowing present-day temperature (<span class="math notranslate nohighlight">\(T_{i}\)</span> ad time t):</p>
-<div class="math notranslate nohighlight">
-\[
-T_{i+1} = T_{i}  + \frac{\Delta t}{C} (ASR - OLR(T_i))
-\]</div>
-<p>Assuming that <span class="math notranslate nohighlight">\(C = 4 \times 10^8 J m^2 K^{-1}\)</span> and taking a time step of <span class="math notranslate nohighlight">\(\Delta t = 31536000 s\)</span> (1 year), <strong>compute <span class="math notranslate nohighlight">\(T_1\)</span> if <span class="math notranslate nohighlight">\(T_0\)</span> = 288K and the transmissivity <span class="math notranslate nohighlight">\(\tau\)</span> is 0.59:</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="mf">4.0e+08</span>
-<span class="n">t_0</span> <span class="o">=</span> <span class="mi">288</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Now, use the strategies you learned in the lecture to write a function which computes the temperature change over time:</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">temperature_change</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">n_years</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">0.611</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Temperature change scenario after change of transmissivity.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    t0 : float</span>
-<span class="sd">        the starting temperature (K)</span>
-<span class="sd">    n_years : int</span>
-<span class="sd">        the number of simulation years</span>
-<span class="sd">    tau : float, optional</span>
-<span class="sd">        the atmosphere transmissivity (-)</span>
-<span class="sd">    alpha : float, optional</span>
-<span class="sd">        the planetary albedo</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    (time, temperature) : ndarrays of size n_years + 1</span>
-
-<span class="sd">    Examples</span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; y, t = temperature_change(288, 2, tau=0.59)</span>
-<span class="sd">    &gt;&gt;&gt; y</span>
-<span class="sd">    array([0, 1, 2])</span>
-<span class="sd">    &gt;&gt;&gt; print(f&#39;{t[0]:.2f}&#39;)</span>
-<span class="sd">    288.00</span>
-<span class="sd">    &gt;&gt;&gt; print(f&#39;{t[1]:.2f}&#39;)</span>
-<span class="sd">    288.65</span>
-<span class="sd">    &gt;&gt;&gt; print(f&#39;{t[2]:.2f}&#39;)</span>
-<span class="sd">    289.13</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="o">&lt;</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">&gt;</span>
-</pre></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Testing</span>
-<span class="kn">import</span> <span class="nn">doctest</span>
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=0)
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Plot the temperature change scenarios with <span class="math notranslate nohighlight">\(\tau\)</span> values of 0.6, 0.59, 0.58. The result should look something like <a class="reference external" href="https://raw.githubusercontent.com/fmaussion/intro_to_programming/master/book/week_07/example_temp_change.png">this plot</a>.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Now plot the temperature change scenarios with <span class="math notranslate nohighlight">\(\tau\)</span> = 0.6 and starting temperatures of [288, 293].</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Compute the e-folding response time (in years) of this simple climate model for the scenario T=288K, <span class="math notranslate nohighlight">\(\tau\)</span>=0.6</strong> (the e-folding response time is the time it takes for the system to reach 1 - 1 / e <span class="math notranslate nohighlight">\(\approx\)</span> 63% of the final <span class="math notranslate nohighlight">\(\Delta T\)</span>).</p>
+<p>Then, <strong>plot them all together in a single plot with legend</strong>.</p>
+<p>Which station recorded the warmest temperature over the period? How do their standard deviations compare with each other?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
@@ -769,7 +745,7 @@ T_{i+1} = T_{i}  + \frac{\Delta t}{C} (ASR - OLR(T_i))
         },
         kernelOptions: {
             name: "python3",
-            path: "./week_07"
+            path: "./week_08"
         },
         predefinedOutput: true
     }
@@ -785,20 +761,20 @@ T_{i+1} = T_{i}  + \frac{\Delta t}{C} (ASR - OLR(T_i))
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01-numerics.html"
+       href="02-pandas.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Numpy as numerical solver</p>
+        <p class="prev-next-title">Pandas: working with tabular data</p>
       </div>
     </a>
     <a class="right-next"
-       href="../week_08/01-dictionaries.html"
+       href="../cookbook/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python dictionaries</p>
+        <p class="prev-next-title">Introduction</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -817,8 +793,9 @@ T_{i+1} = T_{i}  + \frac{\Delta t}{C} (ASR - OLR(T_i))
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-equations">01 - Linear equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-earth-energy-balance-model">02 - A simple Earth Energy Balance model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">01 - Data preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind">02 - Wind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#station-comparison">03 - Station comparison</a></li>
 </ul>
   </nav></div>
 
