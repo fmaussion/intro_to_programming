@@ -69,7 +69,7 @@ The final exam (~90', OLAT-exam with presence in class) will take place on **Tue
 
 **Bonus points**
 
-There will be bonus points for anyone pointing me to typos / mistakes / broken links / incomprehensible or difficult passages in the lecture notes. [Send me an email](https://fabienmaussion.infointro) or [open an issue](https://github.com/fmaussion/intro_to_programming/issues) on GitHub!
+There will be bonus points for anyone pointing me to typos / mistakes / broken links / incomprehensible or difficult passages in the lecture notes. [Send me an email](https://fabienmaussion.info) or [open an issue](https://github.com/fmaussion/intro_to_programming/issues) on GitHub!
 
 ## Weekly lesson plan 
 
@@ -108,7 +108,7 @@ The first half of the class will be heavily based on the "[Python for Everybody 
     - [python dictionaries](week_08/01-dictionaries)
     - [Pandas - manipulating tabular data](week_08/02-pandas)
 
-**Start projects: 24.05.2023. Submission deadline: 13.06.2023.**
+**Start projects: 24.05.2023. Submission deadline: 11.06.2023.**
     
 - Week 09 (31.05.23 - 06.06.23)
     - [numpy - continued: multi dimensional arrays](week_09/01-multidim-numpy)
@@ -118,4 +118,4 @@ The first half of the class will be heavily based on the "[Python for Everybody 
     
 **Final exam: 27.06.2023**
 
-You will notice that there are 12 weekly units for a 15 weeks long semester: this is expected since some weeks contain holidays or I am traveling. Furthermore, some weeks will be kept free to work on your projects or learn for the exams.
+You will notice that there are 10 weekly units for a 15 weeks long semester: this is expected since some weeks contain holidays or I am traveling. Furthermore, some weeks will be kept free to work on your projects or learn for the exams.
