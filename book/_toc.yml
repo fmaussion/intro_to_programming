@@ -53,9 +53,9 @@ parts:
       - file: week_08/01-dictionaries
       - file: week_08/02-pandas
       - file: week_08/03-Assignment
-  # - caption: Project
-  #   chapters:
-  #     - file: project/project_instructions
+  - caption: Project
+    chapters:
+      - file: project/project_instructions
   # - caption: Week 09 - Multidimensional arrays 
   #   chapters:
   #     - file: week_09/01-multidim-numpy
