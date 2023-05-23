@@ -1,0 +1,884 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Programming project &#8212; Introduction to Programming</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-88391345-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-88391345-1');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'project/project_instructions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction" href="../cookbook/intro.html" />
+    <link rel="prev" title="Assignment 08" href="../week_08/03-Assignment.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../learning_tips.html">Learning tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments.html">Homework instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ai.html">Learning with artificial intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">External resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 01 - Getting started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_01/01-Installation.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_01/02-Why-Program.html">Why program?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_01/03-Assignment.html">Assignment 01</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 02 - Gaining speed</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_02/01-Install-jupyter.html">Installing Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_02/02-Intro-jupyter.html">Introduction to Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_02/03-Lessons.html">Lessons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_02/04-Assignment.html">Assignment 02</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 03 - Control flow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_03/01-Intro-notebooks.html">Introduction to Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_03/02-Lessons.html">Lessons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_03/03-Assignment.html">Assignment 03</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 04 - Strings, Files and Lists</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_04/01-documenting-functions.html">Documenting functions and testing their output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_04/02-Lessons.html">Lessons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_04/03-Assignment.html">Assignment 04</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 05 - Scientific python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_05/01-install-packages.html">Installing python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_05/02-jupyter-dos.html">Jupyter notebooks tips and tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_05/03-numpy.html">Introduction to scientific python: numpy and matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_05/04-Assignment.html">Assignment 05</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 06 - Scientific python - continued</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_06/01-tuples.html">Python tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_06/02-computations.html">Computations with numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_06/03-Assignment.html">Assignment 06</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 07 - Numerics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_07/01-numerics.html">Numpy as numerical solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_07/02-Assignment.html">Assignment 07</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 08 - Pandas</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../week_08/01-dictionaries.html">Python dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_08/02-pandas.html">Pandas: working with tabular data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../week_08/03-Assignment.html">Assignment 08</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Programming project</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework cookbook</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_mat_files.html">Reading MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_txt_files.html">Reading space-separated files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_netcdf_files.html">Reading geotiff files with rasterio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_geotiff_files.html">Reading netCDF files with xarray</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/project/project_instructions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fmaussion/intro_to_programming" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fmaussion/intro_to_programming/edit/master/book/project/project_instructions.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fmaussion/intro_to_programming/issues/new?title=Issue%20on%20page%20%2Fproject/project_instructions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/project/project_instructions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Programming project</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble">Preamble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-energy-balance-model-with-hysteresis">01 - An energy balance model with hysteresis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-station-data-files">02 - Weather station data files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precipitation">03 - Precipitation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-few-other-variables">04 - A few other variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-coding-project">05 - Free coding project</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="programming-project">
+<h1>Programming project<a class="headerlink" href="#programming-project" title="Permalink to this headline">#</a></h1>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h2>
+<p>The programming tasks described below have to be done <strong>in groups of two</strong>. It’s totally okay to ask for help or advice to others (also to me!), but copy-pasting from your classmates is strictly forbidden. You will see that some tasks require internet searches that go beyond what you’ve learned in my class notes. This is expected: my goal is for you to be able to solve new problems more or less independently.</p>
+<p>Project due date: <strong>Sunday 11.06.2023, 23:59</strong> (the return folders on OLAT will close at precisely this time - no exceptions!)</p>
+<p>Please return two files:</p>
+<ul class="simple">
+<li><p>the full notebook as <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>, executed with all outputs (I recommend to execute “<em>Restart kernel and run all cells</em>” one last time before submission)</p></li>
+<li><p>any additional file you may have downloaded for your project (as zip or tar file containing several files if too large).</p></li>
+</ul>
+<p>Please return only one project per group (one of the two has to upload the files).</p>
+<p><strong>Grading</strong> (30% of the final VU grade) will be based on the following criteria:</p>
+<ul class="simple">
+<li><p>correctness of the code (the notebook should theoretically run on my laptop as well, assuming that the data files are in the folder)</p></li>
+<li><p>correctness of the solutions (correct plot, correct values, etc.)</p></li>
+<li><p>for the plots: correct use of title, axis labels, units, etc.</p></li>
+<li><p>clarity of the code (no unused lines of code, presence of inline comments, etc.)</p></li>
+<li><p>clarity and layout of the overall document (correct use of the Jupyter Notebook markdown format)</p></li>
+<li><p>originality (for the open project)</p></li>
+</ul>
+<p>You can download this notebook to get started. Delete this “Instructions” section, add your name and Matrikelnummer and start coding! For the tasks that ask for a written answer (e.g. some values, answers, etc.), please <strong>use the notebook’s markdown format to write them down</strong>!</p>
+</section>
+<section id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><strong>Names</strong>:</p></li>
+<li><p><strong>Matrikelnummer</strong>:</p></li>
+</ul>
+</section>
+<section id="an-energy-balance-model-with-hysteresis">
+<h2>01 - An energy balance model with hysteresis<a class="headerlink" href="#an-energy-balance-model-with-hysteresis" title="Permalink to this headline">#</a></h2>
+<p>Based on the code we wrote in <a class="reference internal" href="../week_07/02-Assignment.html"><span class="doc std std-doc">week 07</span></a>, code the following extension. For this exercise it’s OK to copy-paste my solutions and start from there. Only copy the necessary (no useless code)!</p>
+<p>The planetary albedo <span class="math notranslate nohighlight">\(\alpha\)</span> is in fact changing with climate change. As the temperature drops, sea-ice and ice sheets are extending (increasing the albedo). Inversely, the albedo decreases as temperature rises. The planetary albedo of our simple energy balance model follows the following equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\alpha = 
+\begin{cases}
+    0.3,&amp; \text{if } T \gt 280\\
+    0.7,&amp; \text{if } T \lt 250\\
+    a T + b,  &amp; \text{otherwise}
+\end{cases}
+\end{split}\]</div>
+<p><strong>01-01</strong>: Compute the parameters <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> so that the equation is continuous at T=250K and T=280K.</p>
+<p><strong>01-02</strong>: Now write a function called <code class="docutils literal notranslate"><span class="pre">alpha_from_temperature</span></code> which accepts a single positional parameter <code class="docutils literal notranslate"><span class="pre">T</span></code> as input (a scalar) and returns the corresponding albedo. Test your function using doctests to make sure that it complies to the instructions above.</p>
+<p><strong>01-03</strong>: Adapt the existing code from week 07 to write a function called <code class="docutils literal notranslate"><span class="pre">temperature_change_with_hysteresis</span></code> which accepts <code class="docutils literal notranslate"><span class="pre">t0</span></code> (the starting temperature in K), <code class="docutils literal notranslate"><span class="pre">n_years</span></code> (the number of simulation years) as positional arguments and <code class="docutils literal notranslate"><span class="pre">tau</span></code> (the atmosphere transmissivity) as keyword argument (default value 0.611). Verify that:</p>
+<ul class="simple">
+<li><p>the stabilization temperature with <code class="docutils literal notranslate"><span class="pre">t0</span> <span class="pre">=</span> <span class="pre">292</span></code> and default tau is approximately 288K</p></li>
+<li><p>the stabilization temperature with <code class="docutils literal notranslate"><span class="pre">t0</span> <span class="pre">=</span> <span class="pre">265</span></code> and default tau is approximately 233K</p></li>
+</ul>
+<p><strong>01-04</strong>: Realize a total of N simulations with starting temperatures regularly spaced between <code class="docutils literal notranslate"><span class="pre">t0</span></code>=206K, and <code class="docutils literal notranslate"><span class="pre">t0</span></code>=318K and plot them on a single plot for <code class="docutils literal notranslate"><span class="pre">n_years</span></code>=50. The plot should look somewhat similar to <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/project/hysteresis_bw.png">this example</a> for <code class="docutils literal notranslate"><span class="pre">N=21</span></code>.</p>
+<p><strong>Bonus</strong>: only if you want (and if time permits), you can try to increase N and add colors to your plot to create a graph similar to <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/project/hysteresis_bonus.png">this one</a>.</p>
+</section>
+<section id="weather-station-data-files">
+<h2>02 - Weather station data files<a class="headerlink" href="#weather-station-data-files" title="Permalink to this headline">#</a></h2>
+<p>I downloaded 10 min data from the recently launched <a class="reference external" href="https://data.hub.zamg.ac.at/dataset/klima-v1-10min">ZAMG data hub</a>. The data file contains selected parameters from the “INNSBRUCK-FLUGPLATZ (ID: 11804)” weather station.</p>
+<p>You can download the data from the following links (right-click + “Save as…”):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/fmaussion/intro_to_programming/raw/master/book/project/INNSBRUCK-FLUGPLATZ_Datensatz_20150101_20211231.csv">station data</a></p></li>
+<li><p><a class="reference external" href="https://github.com/fmaussion/intro_to_programming/raw/master/book/project/ZEHNMIN%20Parameter-Metadaten.csv">parameter metadata</a></p></li>
+<li><p><a class="reference external" href="https://github.com/fmaussion/intro_to_programming/raw/master/book/project/ZEHNMIN%20Stations-Metadaten.csv">station list from the ZAMG</a> (in a better format than last time)</p></li>
+</ul>
+<p>Let me open the data for you and display its content:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;INNSBRUCK-FLUGPLATZ_Datensatz_20150101_20211231.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;station&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>02-01</strong>: after reading the documentation of the respective functions (and maybe try a few things yourself), explain in plain sentences:</p>
+<ul class="simple">
+<li><p>what am I asking pandas to do with the <code class="docutils literal notranslate"><span class="pre">index_col=1,</span> <span class="pre">parse_dates=True</span></code> keyword arguments? Why am I doing this?</p></li>
+<li><p>what am I asking pandas to do with <code class="docutils literal notranslate"><span class="pre">.drop()</span></code>? Why <code class="docutils literal notranslate"><span class="pre">axis=1</span></code>?</p></li>
+</ul>
+<p>Now let me do something else from you:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfmeta</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ZEHNMIN Parameter-Metadaten.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">dfmeta</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Kurzbeschreibung</th>
+      <th>Beschreibung</th>
+      <th>Einheit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>DD</th>
+      <td>Windrichtung</td>
+      <td>Windrichtung, vektorielles Mittel über 10 Minuten</td>
+      <td>°</td>
+    </tr>
+    <tr>
+      <th>FF</th>
+      <td>vektorielle Windgeschwindigkeit</td>
+      <td>Windgeschwindigkeit, vektorielles Mittel über ...</td>
+      <td>m/s</td>
+    </tr>
+    <tr>
+      <th>GSX</th>
+      <td>Globalstrahlung</td>
+      <td>Globalstrahlung, arithmetisches Mittel über 10...</td>
+      <td>W/m²</td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td>Luftdruck</td>
+      <td>Luftdruck, Basiswert zur Minute10</td>
+      <td>hPa</td>
+    </tr>
+    <tr>
+      <th>RF</th>
+      <td>Relative Feuchte</td>
+      <td>Relative Luftfeuchte, Basiswert zur Minute10</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>RR</th>
+      <td>Niederschlag</td>
+      <td>10 Minuten Summe des Niederschlags, Summe der ...</td>
+      <td>mm</td>
+    </tr>
+    <tr>
+      <th>SO</th>
+      <td>Sonnenscheindauer</td>
+      <td>Sonnenscheindauer, Sekundensumme über 10 Minuten</td>
+      <td>s</td>
+    </tr>
+    <tr>
+      <th>TB1</th>
+      <td>Erdbodentemperatur in 10cm Tiefe</td>
+      <td>Erdbodentemperatur in 10cm Tiefe, Basiswert zu...</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <th>TB2</th>
+      <td>Erdbodentemperatur in 20cm Tiefe</td>
+      <td>Erdbodentemperatur in 20cm Tiefe, Basiswert zu...</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <th>TB3</th>
+      <td>Erdbodentemperatur in 50cm Tiefe</td>
+      <td>Erdbodentemperatur in 50cm Tiefe, Basiswert zu...</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <th>TL</th>
+      <td>Lufttemperatur in 2m</td>
+      <td>Lufttemperatur in 2m Höhe, Basiswert zur Minute10</td>
+      <td>°C</td>
+    </tr>
+    <tr>
+      <th>TP</th>
+      <td>Taupunkt</td>
+      <td>Taupunktstemperatur,  Basiswert zur Minute10</td>
+      <td>°C</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>02-02</strong>: again, explain in plain sentences what the <code class="docutils literal notranslate"><span class="pre">dfmeta.loc[df.columns]</span></code> is doing, and why it works that way.</p>
+<p>Finally, let me do a last step for you before you start coding:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>02-03</strong>: explore the <code class="docutils literal notranslate"><span class="pre">dfh</span></code> dataframe. Explain, in plain words, what the purpose of <code class="docutils literal notranslate"><span class="pre">.resample('H')</span></code> followed by <code class="docutils literal notranslate"><span class="pre">mean()</span></code> is. Explain what <code class="docutils literal notranslate"><span class="pre">.resample('H').max()</span></code> and <code class="docutils literal notranslate"><span class="pre">.resample('H').sum()</span></code> would do.</p>
+<p><strong>02-04</strong>: Using <code class="docutils literal notranslate"><span class="pre">np.allclose</span></code>, make sure that the average of the first hour (that you’ll compute yourself from <code class="docutils literal notranslate"><span class="pre">df</span></code>) is indeed equal to the first row of <code class="docutils literal notranslate"><span class="pre">dfh</span></code>. Now, two variables in the dataframe have units that aren’t suitable for averaging. Please convert the following variables to the correct units:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RR</span></code> needs to be converted from the average of 10 min sums to mm/h</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SO</span></code> needs to be converted from the average of 10 min sums to s/h</p></li>
+</ul>
+<p><strong>From now on, we will use the hourly data only</strong> (and further aggregations when necessary). The 10 mins data are great but require a little bit more of pandas kung fu (the chinese term, not the sport) to be used efficiently.</p>
+<p>Spend some time exploring the <code class="docutils literal notranslate"><span class="pre">dfh</span></code> dataframe we just created. What time period does it cover? What variables does it contain?</p>
+<p><strong>Note on pandas:</strong> all the exercises below can be done with or without pandas. Each question can be answered with very few lines of code (often one or two) with pandas, and I recommend to use it as much as possible. If you want, you can always use numpy in case of doubt: you can access the data as a numpy array with: <code class="docutils literal notranslate"><span class="pre">df[column_name].values</span></code>.</p>
+</section>
+<section id="precipitation">
+<h2>03 - Precipitation<a class="headerlink" href="#precipitation" title="Permalink to this headline">#</a></h2>
+<p>In this section, we will focus on precipitation only.</p>
+<p><strong>03-01</strong>: Compute the average annual precipitation (m/year) over the 7-year period.</p>
+<p><strong>03-02</strong>: What is the smallest non-zero precipitation measured at the station? What is the maximum hourly precipitation measured at the station? When did this occur?</p>
+<p><strong>03-03</strong>: Plot a <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.hist.html">histogram</a> of hourly precipitation, with bins of size 0.2 mm/h, starting at 0.1 mm/h and ending at 25 mm/h. Plot the same data, but this time with a logarithmic y-axis. Compute the 99th <a class="reference external" href="https://en.wikipedia.org/wiki/Percentile">percentile</a> (or quantile) of hourly precipitation.</p>
+<p><strong>03-04</strong>: Compute daily sums (mm/d) of precipitation (tip: use <code class="docutils literal notranslate"><span class="pre">.resample</span></code> again). Compute the average number or rain days per year in Innsbruck (a “rain day” is a day with at least 0.1 mm / d of measured precipitation).</p>
+<p><strong>03-05</strong>: Now select (subset) the <em>daily</em> dataframe to keep only only daily data in the months of December, January, February (DFJ). To do this, note that <code class="docutils literal notranslate"><span class="pre">dfh.index.month</span></code> exists and can be used to subset the data efficiently. Compute the average precipitation in DJF (mm / d), and the average number of rainy days in DJF. Repeat with the months of June, July, August (JJA).</p>
+<p><strong>03-06</strong>: Repeat the DJF and JJA subsetting, but this time with hourly data. Count the total number of times that hourly precipitation in DJF is above the 99th percentile computed in exercise 03-03. Repeat with JJA.</p>
+<p><strong>03-07</strong>: Compute and plot the average daily cycle of hourly precipitation in DFJ and JJA. I expect a plot similar to <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/project/precip_dailycycle.png">this example</a>. To compute the daily cycle, I recommend to combine two very useful tools. First, start by noticing that <code class="docutils literal notranslate"><span class="pre">ds.index.hour</span></code> exists and can be used to categorize data. Then, note that <code class="docutils literal notranslate"><span class="pre">df.groupby</span></code> exists and can be used exactly for that (<a class="reference external" href="https://pandas.pydata.org/docs/user_guide/groupby.html#aggregation">documentation</a>).</p>
+</section>
+<section id="a-few-other-variables">
+<h2>04 - A few other variables<a class="headerlink" href="#a-few-other-variables" title="Permalink to this headline">#</a></h2>
+<p>In this section, we will continue to analyze the weather station data.</p>
+<p><strong>04-01</strong>: Verify that the three soil temperatures have approximately the same average value over the entire period. Now plot the three soil temperature timeseries in hourly resolution over the course of the year of 2020 (<a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/project/tsoil.png">example</a>). Repeat the plot with the month of may 2020.</p>
+<p><strong>04-02</strong>: Plot the average daily cycle of all three soil temperatures.</p>
+<p><strong>04-03</strong>: Compute the difference (in °C) between the air temperature and the dewpoint temperature. Now plot this difference on a scatter plot (x-axis: relative humidity, y-axis: temperature difference).</p>
+</section>
+<section id="free-coding-project">
+<h2>05 - Free coding project<a class="headerlink" href="#free-coding-project" title="Permalink to this headline">#</a></h2>
+<p>The last part of this semester project is up to you! You are free to explore whatever interests you. <strong>I however add three requirements</strong>:</p>
+<ol class="arabic simple">
+<li><p>This section should have at least 5 original plots in it. They are the output of your analysis.</p></li>
+<li><p>This section should also use additional data that you downloaded yourself. The easiest way would probably be to download another station(s) from the ZAMG database, or data from the same station but for another time period (e.g. for trend or change analysis). You can, however, decide to do something completely different if you prefer (as long as you download and read one more file).</p></li>
+<li><p>this section should contain at least one regression or correlation analysis between two parameters. Examples:</p>
+<ul class="simple">
+<li><p>between two different variables at the same station (like we did with the dewpoint above)</p></li>
+<li><p>between different stations (for example, average temperature as a function of station elevation)</p></li>
+<li><p>between average temperature and time (trends analysis)</p></li>
+<li><p>etc.</p></li>
+</ul>
+</li>
+</ol>
+<p>That’s it! Here are a few ideas:</p>
+<ul class="simple">
+<li><p>detection of trends and changes at the station Innsbruck for 1993-2021</p></li>
+<li><p>comparison of 5-yr climatologies at various stations in Tirol, taking elevation or location into account</p></li>
+<li><p>compute the theoretical day length from the station’s longitude and latitude (you can find solutions for this online, just let me know the source if you used a solution online), and use these computations to compare the measured sunshine duration to the maximum day length. This can be used to classify “sunshine days” for example.</p></li>
+<li><p>use the python “windrose” library to plot a windrose at different locations and time of day.</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>If you have your own idea but are unsure about whether this is too much or not enough, come to see me in class! In general, the three requirements above should be enough.</p>
+<p><strong>My goal with this section is to let you formulate a programming goal and implement it.</strong></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../week_08/03-Assignment.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Assignment 08</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../cookbook/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preamble">Preamble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-energy-balance-model-with-hysteresis">01 - An energy balance model with hysteresis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-station-data-files">02 - Weather station data files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precipitation">03 - Precipitation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-few-other-variables">04 - A few other variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-coding-project">05 - Free coding project</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fabien Maussion
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+  <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
+</a>
+These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
+<br>
+&copy; Copyright 2021-2022.
+</p>
+
+</div>
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
