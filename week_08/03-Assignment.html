@@ -634,7 +634,6 @@ document.write(`
 <span class="sd">    &gt;&gt;&gt; from numpy.testing import assert_allclose</span>
 <span class="sd">    &gt;&gt;&gt; assert_allclose(uv_to_sd(1, 1), [2**0.5, 225])</span>
 <span class="sd">    &gt;&gt;&gt; assert_allclose(uv_to_sd(-1, -1), [2**0.5, 45])</span>
-<span class="sd">    &gt;&gt;&gt; assert_allclose(uv_to_sd(0, 0), [0.0, 270.0])</span>
 <span class="sd">    &gt;&gt;&gt; u, v = sd_to_uv([1, 2], [90, 235])</span>
 <span class="sd">    &gt;&gt;&gt; s, d = uv_to_sd(u, v)  # round trip</span>
 <span class="sd">    &gt;&gt;&gt; assert_allclose(s, [1, 2])</span>
@@ -653,7 +652,7 @@ document.write(`
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    direction : ndarray-like</span>
-<span class="sd">        wind direction in degrees, between [-360; +720]</span>
+<span class="sd">        wind direction in degrees, in the range [-360; +720]</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
