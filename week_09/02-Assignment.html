@@ -538,8 +538,7 @@ document.write(`
 <li><p>Blue: pixel values from the blue band</p></li>
 <li><p>all three scaled to the [0-1] range</p></li>
 </ul>
-<p><strong>Compute VARI from the zimg image. Plot it in the [0-1] range, with a colorbar added to it (<a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/week_09/example_modis_vari.png">example</a>). Plot a histogram of the vari with 100 automatically selected bins (don’t forget to flatten the data first! When <code class="docutils literal notranslate"><span class="pre">hist</span></code> called on a 2D array it has a very different meaning).</strong></p>
-<p><em>Optional: if you want to check what values of vari are given to each pixel, you could overplot contours to the image to vizualize them, as in <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/week_09/example_modis_vari_contours.png">this example</a>.</em></p>
+<p><strong>Compute VARI from the zimg image. Plot it in the [0-1] range, with a colorbar added to it (<a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/week_09/example_modis_vari.png">example</a>).</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
@@ -547,7 +546,15 @@ document.write(`
 </div>
 </div>
 </div>
-<p><strong>Now think about a simple algorithm that could be used to detect snow and clouds in the image (disentangling between clouds and snow is still an active research field today, and it cannot be done with RGB images only). Once you have found where snow is, mask it red on the image an plot it to obtain an image similar <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/week_09/example_modis_snow.png">to this one</a>. Count the number of snow/cloud pixels in the image and its percentage coverage of the <code class="docutils literal notranslate"><span class="pre">zimg</span></code> image.</strong></p>
+<p><em>Optional: Plot a histogram of the vari with 100 automatically selected bins (don’t forget to flatten the data first! When <code class="docutils literal notranslate"><span class="pre">hist</span></code> called on a 2D array it has a very different meaning).</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Optional: now think about a simple algorithm that could be used to detect snow and clouds in the image (disentangling between clouds and snow is still an active research field today, and it cannot be done with RGB images only). Once you have found where snow is, mask it red on the image an plot it to obtain an image similar <a class="reference external" href="https://github.com/fmaussion/intro_to_programming/blob/master/book/week_09/example_modis_snow.png">to this one</a>. Count the number of snow/cloud pixels in the image and its percentage coverage of the <code class="docutils literal notranslate"><span class="pre">zimg</span></code> image.</em></p>
 <p><em>Tip: my algorithm is super super simple by the way - it involves summing all three color channels and a simple threshold.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
