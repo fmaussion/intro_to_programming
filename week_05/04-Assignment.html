@@ -247,6 +247,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Previous exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exams/exam23.html">Correction of the exam 2023</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -594,7 +598,60 @@ Use jupyter notebooks for what they excel at: combining text, code, and figures.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>**********************************************************************
+File &quot;__main__&quot;, line 22, in __main__.acinn_meteo_data
+Failed example:
+    time, air_temp, wind_speed, wind_dir = acinn_meteo_data()
+Exception raised:
+    Traceback (most recent call last):
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/doctest.py&quot;, line 1350, in __run
+        exec(compile(example.source, filename, &quot;single&quot;,
+      File &quot;&lt;doctest __main__.acinn_meteo_data[0]&gt;&quot;, line 1, in &lt;module&gt;
+        time, air_temp, wind_speed, wind_dir = acinn_meteo_data()
+      File &quot;/tmp/ipykernel_123760/3280285223.py&quot;, line 33, in acinn_meteo_data
+        req = urlopen(Request(url)).read()
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/urllib/request.py&quot;, line 216, in urlopen
+        return opener.open(url, data, timeout)
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/urllib/request.py&quot;, line 525, in open
+        response = meth(req, response)
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/urllib/request.py&quot;, line 634, in http_response
+        response = self.parent.error(
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/urllib/request.py&quot;, line 563, in error
+        return self._call_chain(*args)
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/urllib/request.py&quot;, line 496, in _call_chain
+        result = func(*args)
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/urllib/request.py&quot;, line 643, in http_error_default
+        raise HTTPError(req.full_url, code, msg, hdrs, fp)
+    urllib.error.HTTPError: HTTP Error 502: Bad Gateway
+**********************************************************************
+File &quot;__main__&quot;, line 23, in __main__.acinn_meteo_data
+Failed example:
+    type(time)
+Exception raised:
+    Traceback (most recent call last):
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/doctest.py&quot;, line 1350, in __run
+        exec(compile(example.source, filename, &quot;single&quot;,
+      File &quot;&lt;doctest __main__.acinn_meteo_data[1]&gt;&quot;, line 1, in &lt;module&gt;
+        type(time)
+    NameError: name &#39;time&#39; is not defined
+**********************************************************************
+File &quot;__main__&quot;, line 25, in __main__.acinn_meteo_data
+Failed example:
+    len(time) &gt; 0
+Exception raised:
+    Traceback (most recent call last):
+      File &quot;/home/mowglie/.miniconda3/envs/py3/lib/python3.10/doctest.py&quot;, line 1350, in __run
+        exec(compile(example.source, filename, &quot;single&quot;,
+      File &quot;&lt;doctest __main__.acinn_meteo_data[2]&gt;&quot;, line 1, in &lt;module&gt;
+        len(time) &gt; 0
+    NameError: name &#39;time&#39; is not defined
+**********************************************************************
+1 items had failures:
+   3 of   3 in __main__.acinn_meteo_data
+***Test Failed*** 3 failures.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=3, attempted=3)
 </pre></div>
 </div>
 </div>
@@ -603,6 +660,65 @@ Use jupyter notebooks for what they excel at: combining text, code, and figures.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span><span class="p">,</span> <span class="n">air_temp</span><span class="p">,</span> <span class="n">wind_speed</span><span class="p">,</span> <span class="n">wind_dir</span> <span class="o">=</span> <span class="n">acinn_meteo_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s1">&#39;innsbruck&#39;</span><span class="p">,</span> <span class="n">ndays</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">/tmp/ipykernel_123760/399944022.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">time</span><span class="p">,</span> <span class="n">air_temp</span><span class="p">,</span> <span class="n">wind_speed</span><span class="p">,</span> <span class="n">wind_dir</span> <span class="o">=</span> <span class="n">acinn_meteo_data</span><span class="p">(</span><span class="n">station</span><span class="o">=</span><span class="s1">&#39;innsbruck&#39;</span><span class="p">,</span> <span class="n">ndays</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="nn">/tmp/ipykernel_123760/3280285223.py</span> in <span class="ni">acinn_meteo_data</span><span class="nt">(station, ndays)</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> 
+<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://acinn-data.uibk.ac.at/</span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">ndays</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="ne">---&gt; </span><span class="mi">33</span>     <span class="n">req</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="c1"># Read the data</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+
+<span class="nn">~/.miniconda3/envs/py3/lib/python3.10/urllib/request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">214</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span>         <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">216</span>     <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">217</span> 
+<span class="g g-Whitespace">    </span><span class="mi">218</span> <span class="k">def</span> <span class="nf">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">):</span>
+
+<span class="nn">~/.miniconda3/envs/py3/lib/python3.10/urllib/request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">523</span>         <span class="k">for</span> <span class="n">processor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="p">[]):</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span>             <span class="n">meth</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">processor</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">525</span>             <span class="n">response</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">526</span> 
+<span class="g g-Whitespace">    </span><span class="mi">527</span>         <span class="k">return</span> <span class="n">response</span>
+
+<span class="nn">~/.miniconda3/envs/py3/lib/python3.10/urllib/request.py</span> in <span class="ni">http_response</span><span class="nt">(self, request, response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">632</span>         <span class="c1"># request was successfully received, understood, and accepted.</span>
+<span class="g g-Whitespace">    </span><span class="mi">633</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">634</span>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">635</span>                 <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">636</span> 
+
+<span class="nn">~/.miniconda3/envs/py3/lib/python3.10/urllib/request.py</span> in <span class="ni">error</span><span class="nt">(self, proto, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">561</span>         <span class="k">if</span> <span class="n">http_err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span>             <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;http_error_default&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
+<span class="ne">--&gt; </span><span class="mi">563</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span> 
+<span class="g g-Whitespace">    </span><span class="mi">565</span> <span class="c1"># XXX probably also want an abstract factory that knows when it makes</span>
+
+<span class="nn">~/.miniconda3/envs/py3/lib/python3.10/urllib/request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>         <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">496</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>             <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>                 <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">~/.miniconda3/envs/py3/lib/python3.10/urllib/request.py</span> in <span class="ni">http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">641</span> <span class="k">class</span> <span class="nc">HTTPDefaultErrorHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span>     <span class="k">def</span> <span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">643</span>         <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">644</span> 
+<span class="g g-Whitespace">    </span><span class="mi">645</span> <span class="k">class</span> <span class="nc">HTTPRedirectHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
+
+<span class="ne">HTTPError</span>: HTTP Error 502: Bad Gateway
 </pre></div>
 </div>
 </div>

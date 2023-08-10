@@ -247,6 +247,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Previous exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exams/exam23.html">Correction of the exam 2023</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -713,7 +717,7 @@ document.write(`
 <p><strong>Q: based on the example above and maybe a web search, formulate for yourself what is mean by “slicing” in numpy.</strong></p>
 </section>
 <section id="selecting-parts-of-an-array-with-positional-indexing">
-<h3>Selecting parts of an array with positional indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-positional-indexing" title="Permalink to this headline">#</a></h3>
+<span id="pos-ind"></span><h3>Selecting parts of an array with positional indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-positional-indexing" title="Permalink to this headline">#</a></h3>
 <p><strong>Slicing</strong> is one way to <strong>index</strong> parts of a numpy array. It is useful when the area you want to select is structured, e.g. to select only one point or a range of an array as in the example above. Sometimes however you may want to select parts of an array based on other considerations, such as the location of multiple points or based on a condition. Let’s get back to our previous example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -766,7 +770,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_194670/340510348.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="nn">/tmp/ipykernel_126810/340510348.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>  <span class="c1"># won&#39;t work</span>
 
 <span class="ne">IndexError</span>: shape mismatch: indexing arrays could not be broadcast together with shapes (2,) (3,) 
@@ -789,7 +793,7 @@ document.write(`
 </div>
 </section>
 <section id="selecting-parts-of-an-array-with-boolean-indexing">
-<h3>Selecting parts of an array with boolean indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-boolean-indexing" title="Permalink to this headline">#</a></h3>
+<span id="bool-ind"></span><h3>Selecting parts of an array with boolean indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-boolean-indexing" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://numpy.org/doc/stable/user/basics.indexing.html#boolean-array-indexing">Boolean indexing</a> allows to select parts on an array according to a condition of your choice. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

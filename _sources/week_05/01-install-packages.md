@@ -17,6 +17,7 @@ weeks [01](../week_01/01-Installation.ipynb) and [02](../week_02/01-Install-jupy
 as the video in week [03](../week_03/01-Intro-notebooks.ipynb)
 ```
 
+(install-mamba)=
 ## Context: conda environments
 
 When you open the **miniforge prompt**, you are opening a windows prompt with new tools available:
@@ -62,6 +63,7 @@ Open a miniforge prompt and ask windows where to find your current python instal
 What about the location of `ipython`? And of `jupyter-lab`? 
 ```
 
+(install-env)=
 ## Recommended: create an environment called "inpro"
 
 `(base)` is the name of the base (default) environment for conda. Installing further packages in `(base)` is fine,

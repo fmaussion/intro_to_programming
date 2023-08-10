@@ -247,6 +247,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Previous exams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exams/exam23.html">Correction of the exam 2023</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -850,7 +854,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  3, 13,  7,  4, 12,  1,  6,  8,  5, 14, 11,  9, 10])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 7,  9, 12,  8,  6, 10,  5,  1, 11, 14, 13,  2,  4,  3])
 </pre></div>
 </div>
 </div>
@@ -864,7 +868,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 3, 4, 1, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
 </pre></div>
 </div>
 </div>
@@ -885,8 +889,8 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True,  True, False, False,  True, False,  True, False, False,
-        True, False, False, False, False])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False, False, False, False,  True,  True, False,
+       False, False,  True,  True,  True])
 </pre></div>
 </div>
 </div>
@@ -900,7 +904,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 3, 4, 1, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
 </pre></div>
 </div>
 </div>
@@ -914,7 +918,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 3, 4, 1, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
 </pre></div>
 </div>
 </div>
@@ -929,7 +933,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 3,  7,  4,  6,  8,  5,  9, 10])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 7,  9,  8,  6, 10,  5,  4,  3])
 </pre></div>
 </div>
 </div>
@@ -949,7 +953,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_194332/1830006926.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">/tmp/ipykernel_123724/1830006926.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># These two are equivalent with boolean scalars</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">((</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">))</span>  <span class="c1"># On numpy arrays, the second one will raise an error</span>
 
@@ -1184,7 +1188,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2e2baa37903d145a651ba53b64d0d5c8d37fc7bb03eb5466455f0f4147d3f1fc.png" src="../_images/2e2baa37903d145a651ba53b64d0d5c8d37fc7bb03eb5466455f0f4147d3f1fc.png" />
+<img alt="../_images/5df58c8e243924e6ce96754103a800ad28a50c85fa7f90d014b2d0737c8766ce.png" src="../_images/5df58c8e243924e6ce96754103a800ad28a50c85fa7f90d014b2d0737c8766ce.png" />
 </div>
 </div>
 </section>
@@ -1206,7 +1210,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/df56b02a089bf023328344802df39598a27673a49da83823c23b26c472bf23af.png" src="../_images/df56b02a089bf023328344802df39598a27673a49da83823c23b26c472bf23af.png" />
+<img alt="../_images/492966399f6d334bc2d572cad1b1f8579f88b67e04cb37918ee7266d1b0268b2.png" src="../_images/492966399f6d334bc2d572cad1b1f8579f88b67e04cb37918ee7266d1b0268b2.png" />
 </div>
 </div>
 <ul class="simple">
