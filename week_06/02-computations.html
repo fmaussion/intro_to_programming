@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Computations with numpy &#8212; Introduction to Programming</title>
   
@@ -15,68 +14,74 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-88391345-1"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-5BGML8VW02"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
                 gtag('js', new Date());
-                gtag('config', 'UA-88391345-1');
+                gtag('config', 'G-5BGML8VW02');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-5BGML8VW02');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week_06/02-computations';</script>
+    <script data-domain="fabienmaussion.info" defer="defer" src="https://plausible.oggm.org/js/script.js"></script>
+    <script src="../_static/save_state.js?v=c12ce3aa"></script>
+    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Assignment 06" href="03-Assignment.html" />
     <link rel="prev" title="Python tuples" href="01-tuples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Aug 13, 2024"/>
   </head>
   
   
@@ -84,19 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -118,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -138,9 +155,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../welcome.html">
+  
   
   
   
@@ -150,12 +171,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Programming - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Programming - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -239,13 +271,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework cookbook</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_mat_files.html">Reading MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_txt_files.html">Reading space-separated files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_netcdf_files.html">Reading geotiff files with rasterio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_geotiff_files.html">Reading netCDF files with xarray</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Previous exams</span></p>
 <ul class="nav bd-sidenav">
@@ -265,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -274,14 +306,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -306,14 +338,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_06/02-computations.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -451,26 +483,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -509,10 +543,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="computations-with-numpy">
-<h1>Computations with numpy<a class="headerlink" href="#computations-with-numpy" title="Permalink to this headline">#</a></h1>
+<h1>Computations with numpy<a class="headerlink" href="#computations-with-numpy" title="Link to this heading">#</a></h1>
 <p>This week, we will continue to work with <code class="docutils literal notranslate"><span class="pre">numpy</span></code> as a scientific tool and calculator. You will learn about tools and strategies which are used very often in scientific applications, in particular in geosciences.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -522,7 +556,7 @@ document.write(`
 </div>
 </div>
 <section id="element-wise-operations">
-<h2>Element-wise operations<a class="headerlink" href="#element-wise-operations" title="Permalink to this headline">#</a></h2>
+<h2>Element-wise operations<a class="headerlink" href="#element-wise-operations" title="Link to this heading">#</a></h2>
 <p>This is a reminder from last week. Arithmetic and comparison operators act on numpy arrays in an element-by-element fashion. When the array sizes don’t match, broadcasting is used to make it work where possible. Make sure you understand what each of the examples below are doing:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -599,7 +633,7 @@ document.write(`
 </div>
 </section>
 <section id="element-wise-mathematical-functions">
-<h2>Element-wise mathematical functions<a class="headerlink" href="#element-wise-mathematical-functions" title="Permalink to this headline">#</a></h2>
+<h2>Element-wise mathematical functions<a class="headerlink" href="#element-wise-mathematical-functions" title="Link to this heading">#</a></h2>
 <p>There are <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.math.html">plenty</a> of functions applying operations on numpy arrays in an element-by-element fashion. Let’s pick some examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -643,7 +677,7 @@ document.write(`
 </div>
 </section>
 <section id="statistical-functions">
-<h2>Statistical functions<a class="headerlink" href="#statistical-functions" title="Permalink to this headline">#</a></h2>
+<h2>Statistical functions<a class="headerlink" href="#statistical-functions" title="Link to this heading">#</a></h2>
 <p>There are also <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.statistics.html">a lot of numpy functions</a> which take an array as input and compute various statistics on them, often used for “data reduction” (summarizing the data in less numbers). Let’s highlight some of them:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -735,7 +769,7 @@ document.write(`
 </div>
 </section>
 <section id="working-with-missing-data">
-<h2>Working with missing data<a class="headerlink" href="#working-with-missing-data" title="Permalink to this headline">#</a></h2>
+<h2>Working with missing data<a class="headerlink" href="#working-with-missing-data" title="Link to this heading">#</a></h2>
 <p>Unfortunately, sometimes the data delivered from the stations is missing. In this case, the data provider may decide to replace missing values with a special number, for example -9.9, -999.9, etc…</p>
 <p>This practice is vary common (for reasons I’m happy to explain in class), but it also have one main problem: numpy or matplotlib do not know that these are wrong or missing. More problematically, the value is often even a valid one in theory: -99.9 for example is a valid temperature value in °C (even if very rare at the surface).</p>
 <p>Here is what happens when this occurs in these (fake) temperature measurements for example:</p>
@@ -760,7 +794,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6ce2f60ebc999e40d300b5fa7610ea141e97c24476ee0befe9bc75010015707b.png" src="../_images/6ce2f60ebc999e40d300b5fa7610ea141e97c24476ee0befe9bc75010015707b.png" />
+<img alt="../_images/46ac60ca3514d65b394c0586f093233c1674cb1f641098687c39efff07b89fe5.png" src="../_images/46ac60ca3514d65b394c0586f093233c1674cb1f641098687c39efff07b89fe5.png" />
 </div>
 </div>
 <p>Depending on your use case, you two main options available to you:</p>
@@ -770,7 +804,7 @@ document.write(`
 </ul>
 <p>Each of these two options have pros and cons.</p>
 <section id="working-with-nans">
-<h3>Working with NaNs<a class="headerlink" href="#working-with-nans" title="Permalink to this headline">#</a></h3>
+<h3>Working with NaNs<a class="headerlink" href="#working-with-nans" title="Link to this heading">#</a></h3>
 <p>“Not A Number” (<code class="docutils literal notranslate"><span class="pre">NaN</span></code>) is a special floating point number in numpy. <strong>It works ONLY with floats, not with ints.</strong> You can replace float values in arrays with NaNs very easily:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -788,7 +822,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/af52f53505acd789497bdf25884db280920070519253d612ac5a42474edd7ff7.png" src="../_images/af52f53505acd789497bdf25884db280920070519253d612ac5a42474edd7ff7.png" />
+<img alt="../_images/eff9498acd526fa134ccb421fd02b3a9b7b41ceb66a3651ab4b3d79f17475334.png" src="../_images/eff9498acd526fa134ccb421fd02b3a9b7b41ceb66a3651ab4b3d79f17475334.png" />
 </div>
 </div>
 <p>NaNs can actually happen after invalid mathematical operations. They are also propagating through operations, which is a very useful feature and prevents unexpected errors:</p>
@@ -802,7 +836,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_123820/4230832818.py:3: RuntimeWarning: invalid value encountered in divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/29/f4w56zjd1c1b_gdh_b7bjs3c0000gq/T/ipykernel_55331/4230832818.py:3: RuntimeWarning: invalid value encountered in divide
   c = a / b
 </pre></div>
 </div>
@@ -866,7 +900,7 @@ document.write(`
 </div>
 </section>
 <section id="filtering-the-data">
-<h3>Filtering the data<a class="headerlink" href="#filtering-the-data" title="Permalink to this headline">#</a></h3>
+<h3>Filtering the data<a class="headerlink" href="#filtering-the-data" title="Link to this heading">#</a></h3>
 <p>Another way to deal with NaNs is to remove them (filter them) from the data. This can be achieved with boolean indexing:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -947,14 +981,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d34a37020f0a041d90db7e385d593f9e115e72c5b541ee18780368efadf38b11.png" src="../_images/d34a37020f0a041d90db7e385d593f9e115e72c5b541ee18780368efadf38b11.png" />
+<img alt="../_images/82b9c279a61c18f22ad8cb7c2d8a58e5c12dcfc8521bfbf0058402c7d93d5a57.png" src="../_images/82b9c279a61c18f22ad8cb7c2d8a58e5c12dcfc8521bfbf0058402c7d93d5a57.png" />
 </div>
 </div>
 <p>Depending on the situation, this can be misleading.</p>
 </section>
 </section>
 <section id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">#</a></h2>
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Link to this heading">#</a></h2>
 <p><label><input type="checkbox" id="week05_01" class="box"> I understand what element-wise operations are. I am aware of basic numpy operations (e.g. “+”) and functions (e.g. <code class="docutils literal notranslate"><span class="pre">np.sin</span></code>) operating element-wise.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I understand that numpy also offers many statistical functions, often summarizing the data in seful statistics (e.g. the mean, standard deviation, etc.).</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I am aware of the existence of the special number “Not A Number” in numpy.</input></label><br>
@@ -987,8 +1021,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="01-tuples.html"
@@ -1017,6 +1053,7 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1040,7 +1077,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -1053,10 +1090,14 @@ By Fabien Maussion
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
-    
+    <p class="last-updated">
+  Last updated on Aug 13, 2024.
+  <br/>
+</p>
   </div>
   
   <div class="footer-item">
@@ -1068,13 +1109,13 @@ By Fabien Maussion
 </a>
 These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
 <br>
-&copy; Copyright 2021-2022.
+&copy; Copyright 2021-2024.
 </p>
 
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -1083,8 +1124,8 @@ These lecture notes and exercises are licensed under a <a href="https://creative
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

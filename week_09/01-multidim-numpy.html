@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Multi-dimensional numpy arrays &#8212; Introduction to Programming</title>
   
@@ -15,68 +14,74 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-88391345-1"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-5BGML8VW02"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
                 gtag('js', new Date());
-                gtag('config', 'UA-88391345-1');
+                gtag('config', 'G-5BGML8VW02');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-5BGML8VW02');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week_09/01-multidim-numpy';</script>
+    <script data-domain="fabienmaussion.info" defer="defer" src="https://plausible.oggm.org/js/script.js"></script>
+    <script src="../_static/save_state.js?v=c12ce3aa"></script>
+    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Assignment 09" href="02-Assignment.html" />
     <link rel="prev" title="Programming project" href="../project/project_instructions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Aug 13, 2024"/>
   </head>
   
   
@@ -84,19 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -118,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -138,9 +155,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../welcome.html">
+  
   
   
   
@@ -150,12 +171,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Programming - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Programming - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -239,13 +271,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework cookbook</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_mat_files.html">Reading MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_txt_files.html">Reading space-separated files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_netcdf_files.html">Reading geotiff files with rasterio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_geotiff_files.html">Reading netCDF files with xarray</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Previous exams</span></p>
 <ul class="nav bd-sidenav">
@@ -265,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -274,14 +306,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -306,14 +338,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_09/01-multidim-numpy.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -451,26 +483,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -525,10 +559,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="multi-dimensional-numpy-arrays">
-<h1>Multi-dimensional numpy arrays<a class="headerlink" href="#multi-dimensional-numpy-arrays" title="Permalink to this headline">#</a></h1>
+<h1>Multi-dimensional numpy arrays<a class="headerlink" href="#multi-dimensional-numpy-arrays" title="Link to this heading">#</a></h1>
 <p>You have now learned how to read and analyze 1-dimensional data with numpy (and with pandas as an additional “layer” of tools on top of the core numpy arrays).</p>
 <p>For the final two weeks of the semester, you will learn to manipulate multi-dimensional arrays (<a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.ndarray.html">ndarrays</a>) which are very common in meteorology, climatology, and geosciences in general.</p>
 <div class="cell docutils container">
@@ -540,10 +574,10 @@ document.write(`
 </div>
 </div>
 <section id="when-are-multidimensional-arrays-useful">
-<h2>When are multidimensional arrays useful?<a class="headerlink" href="#when-are-multidimensional-arrays-useful" title="Permalink to this headline">#</a></h2>
+<h2>When are multidimensional arrays useful?<a class="headerlink" href="#when-are-multidimensional-arrays-useful" title="Link to this heading">#</a></h2>
 <p>For numpy, all data in any multi-dimensional array is actually stored in memory as a long 1D array (we will get back to this in the master lecture). The number of dimensions and shape of an array is actually only used to structure the data access in a certain way. But why is it useful to store data in multiple dimensions?</p>
 <section id="nd-arrays-as-matrices">
-<h3>nD arrays as matrices<a class="headerlink" href="#nd-arrays-as-matrices" title="Permalink to this headline">#</a></h3>
+<h3>nD arrays as matrices<a class="headerlink" href="#nd-arrays-as-matrices" title="Link to this heading">#</a></h3>
 <p>The first time we learned about arrays as matrices was during <a class="reference internal" href="../week_07/01-numerics.html#numpy-algebra"><span class="std std-ref">week 07</span></a>, when we learned about matrix multiplication and other <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.linalg.html">linear algebra</a> numpy functions. To use nD arrays as matrices, you have to use matrix specific operators (such as <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>) or functions (such at <code class="docutils literal notranslate"><span class="pre">np.linalg.inv</span></code>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -563,7 +597,7 @@ document.write(`
 <p>Linear algebra is a very common use case for nD arrays, yet it is (by far) not the only one. I, for example, use linear algebra only sporadically in my daily work (or it is hidden behind other tools).</p>
 </section>
 <section id="nd-arrays-as-images">
-<h3>nD arrays as images<a class="headerlink" href="#nd-arrays-as-images" title="Permalink to this headline">#</a></h3>
+<h3>nD arrays as images<a class="headerlink" href="#nd-arrays-as-images" title="Link to this heading">#</a></h3>
 <p>Another common use case for nD arrays is to store images:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -578,7 +612,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3a7ee48b94a3f681ab625a084ab1cdd559263445266667dac7fc87062cbc947c.png" src="../_images/3a7ee48b94a3f681ab625a084ab1cdd559263445266667dac7fc87062cbc947c.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/29/f4w56zjd1c1b_gdh_b7bjs3c0000gq/T/ipykernel_55371/3349719320.py:4: DeprecationWarning: scipy.misc.face has been deprecated in SciPy v1.10.0; and will be completely removed in SciPy v1.12.0. Dataset methods have moved into the scipy.datasets module. Use scipy.datasets.face instead.
+  img = scipy.misc.face()
+</pre></div>
+</div>
+<img alt="../_images/06122cb45437cff10fd2c0cbf47c604d8db22fb5857cd4c87ded1d891f81979d.png" src="../_images/06122cb45437cff10fd2c0cbf47c604d8db22fb5857cd4c87ded1d891f81979d.png" />
 </div>
 </div>
 <p>What is <code class="docutils literal notranslate"><span class="pre">img</span></code>? Lets find out:</p>
@@ -605,7 +643,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/caf3fe502d65ec12ca80e63c9a63b1b93ae8314d060821d70cacc16f83cb7499.png" src="../_images/caf3fe502d65ec12ca80e63c9a63b1b93ae8314d060821d70cacc16f83cb7499.png" />
+<img alt="../_images/fabcef8fcf985c004c08f3eb85931bf46eb79f503c737e75e4842eb38ebb958d.png" src="../_images/fabcef8fcf985c004c08f3eb85931bf46eb79f503c737e75e4842eb38ebb958d.png" />
 </div>
 </div>
 <p>Matplotlib’s <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.imshow.html#matplotlib.axes.Axes.imshow">imshow</a> understands what is meant when given 3D data with the last dimension of size 3. When given a 2D array of any type, it will map the data to a colorscale value:</p>
@@ -618,13 +656,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/44e64d8599938f0810e1853291d5c6f822dcb38a980208b8f9f326846c8f5660.png" src="../_images/44e64d8599938f0810e1853291d5c6f822dcb38a980208b8f9f326846c8f5660.png" />
+<img alt="../_images/0d9c717709c76342c43958da7a247701629e9a829816f09c96705dac774d6325.png" src="../_images/0d9c717709c76342c43958da7a247701629e9a829816f09c96705dac774d6325.png" />
 </div>
 </div>
 <p>Some of the things explained above might be a bit overwhelming right now. Don’t worry! We will get back to these concepts later in this unit.</p>
 </section>
 <section id="nd-arrays-as-structured-data">
-<h3>nD arrays as structured data<a class="headerlink" href="#nd-arrays-as-structured-data" title="Permalink to this headline">#</a></h3>
+<h3>nD arrays as structured data<a class="headerlink" href="#nd-arrays-as-structured-data" title="Link to this heading">#</a></h3>
 <p>Nearly all other use cases for nD arrays fall in this category. Multidimensional arrays allow to store data in the shape which is most meaningful for its analysis, display, and storage. For example:</p>
 <ul class="simple">
 <li><p>a map of temperature of shape (Y, X) where Y are the latitudes and X the longitudes</p></li>
@@ -635,7 +673,7 @@ document.write(`
 </section>
 </section>
 <section id="working-with-nd-arrays">
-<h2>Working with nD arrays<a class="headerlink" href="#working-with-nd-arrays" title="Permalink to this headline">#</a></h2>
+<h2>Working with nD arrays<a class="headerlink" href="#working-with-nd-arrays" title="Link to this heading">#</a></h2>
 <p><em>Copyright notice: parts of these examples are taken from the <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html">numpy tutorial for beginners</a>.</em></p>
 <p>Multidimensional arrays are not different from 1 dimensional arrays. In fact, it is rather the 1 dimensional array which is a special case of the multidimensional one. All methods which work on 1D arrays also apply to nD arrays.</p>
 <p>Let’s create a 2D array:</p>
@@ -656,7 +694,7 @@ document.write(`
 </div>
 <p><img alt="" src="https://numpy.org/doc/stable/_images/np_create_matrix.png" /></p>
 <section id="selecting-parts-of-an-array-with-slicing">
-<h3>Selecting parts of an array with slicing<a class="headerlink" href="#selecting-parts-of-an-array-with-slicing" title="Permalink to this headline">#</a></h3>
+<h3>Selecting parts of an array with slicing<a class="headerlink" href="#selecting-parts-of-an-array-with-slicing" title="Link to this heading">#</a></h3>
 <p><strong>Slicing</strong> operations also work on nD arrays:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -717,7 +755,7 @@ document.write(`
 <p><strong>Q: based on the example above and maybe a web search, formulate for yourself what is mean by “slicing” in numpy.</strong></p>
 </section>
 <section id="selecting-parts-of-an-array-with-positional-indexing">
-<span id="pos-ind"></span><h3>Selecting parts of an array with positional indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-positional-indexing" title="Permalink to this headline">#</a></h3>
+<span id="pos-ind"></span><h3>Selecting parts of an array with positional indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-positional-indexing" title="Link to this heading">#</a></h3>
 <p><strong>Slicing</strong> is one way to <strong>index</strong> parts of a numpy array. It is useful when the area you want to select is structured, e.g. to select only one point or a range of an array as in the example above. Sometimes however you may want to select parts of an array based on other considerations, such as the location of multiple points or based on a condition. Let’s get back to our previous example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -770,7 +808,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_126810/340510348.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>  <span class="c1"># won&#39;t work</span>
 
 <span class="ne">IndexError</span>: shape mismatch: indexing arrays could not be broadcast together with shapes (2,) (3,) 
@@ -793,7 +831,7 @@ document.write(`
 </div>
 </section>
 <section id="selecting-parts-of-an-array-with-boolean-indexing">
-<span id="bool-ind"></span><h3>Selecting parts of an array with boolean indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-boolean-indexing" title="Permalink to this headline">#</a></h3>
+<span id="bool-ind"></span><h3>Selecting parts of an array with boolean indexing<a class="headerlink" href="#selecting-parts-of-an-array-with-boolean-indexing" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://numpy.org/doc/stable/user/basics.indexing.html#boolean-array-indexing">Boolean indexing</a> allows to select parts on an array according to a condition of your choice. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -824,7 +862,7 @@ document.write(`
 <p>This is called <strong>boolean indexing</strong> because what actually matters is the type of <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">&gt;</span> <span class="pre">2</span></code>.</p>
 </section>
 <section id="np-nonzero-and-indexing">
-<h3><code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code> and indexing<a class="headerlink" href="#np-nonzero-and-indexing" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code> and indexing<a class="headerlink" href="#np-nonzero-and-indexing" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.nonzero.html">np.nonzero</a> is another way to do indexing based on a condition, but with a slightly different workflow and use cases:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -855,7 +893,7 @@ document.write(`
 <p>Which is the equivalent of <code class="docutils literal notranslate"><span class="pre">data[data</span> <span class="pre">&gt;</span> <span class="pre">2]</span></code>! If you have the choice between the two, boolean indexing (<code class="docutils literal notranslate"><span class="pre">data[data</span> <span class="pre">&gt;</span> <span class="pre">2]</span></code>) is faster and better than using <code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code>, but sometimes <code class="docutils literal notranslate"><span class="pre">np.nonzero</span></code> is useful as well (see homework).</p>
 </section>
 <section id="replacing-data-in-ndarrays">
-<h3>Replacing data in ndarrays<a class="headerlink" href="#replacing-data-in-ndarrays" title="Permalink to this headline">#</a></h3>
+<h3>Replacing data in ndarrays<a class="headerlink" href="#replacing-data-in-ndarrays" title="Link to this heading">#</a></h3>
 <p>To replace elements in a <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, indexing has to be applied on the left-hand side of the assignment operator. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -985,7 +1023,7 @@ document.write(`
 </div>
 </section>
 <section id="array-statistics-aggregation">
-<h3>Array statistics (aggregation)<a class="headerlink" href="#array-statistics-aggregation" title="Permalink to this headline">#</a></h3>
+<h3>Array statistics (aggregation)<a class="headerlink" href="#array-statistics-aggregation" title="Link to this heading">#</a></h3>
 <p>You can aggregate nD arrays the same way you aggregated 1D arrays:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1082,7 +1120,7 @@ document.write(`
 <p><img alt="" src="https://numpy.org/doc/stable/_images/np_matrix_aggregation_row.png" /></p>
 </section>
 <section id="np-meshgrid">
-<h3><code class="docutils literal notranslate"><span class="pre">np.meshgrid</span></code><a class="headerlink" href="#np-meshgrid" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.meshgrid</span></code><a class="headerlink" href="#np-meshgrid" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html">np.meshgrid</a> is a very useful numpy function for grids and gridded data which are so common in physics and geosciences. It allows to create coordinate matrices from coordinate vectors:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1124,12 +1162,12 @@ document.write(`
 <p>This is useful to generate 2D fields, but also for plotting, selection by coordinates, and more.</p>
 </section>
 <section id="how-to-save-and-load-numpy-objects">
-<h3>How to save and load NumPy objects<a class="headerlink" href="#how-to-save-and-load-numpy-objects" title="Permalink to this headline">#</a></h3>
+<h3>How to save and load NumPy objects<a class="headerlink" href="#how-to-save-and-load-numpy-objects" title="Link to this heading">#</a></h3>
 <p>You will learn about several data formats used commonly in the geosciences next week, and especially next semester in the climate lecture. In the meantime, have a look at <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html#how-to-save-and-load-numpy-objects">this short section</a> in the numpy tutorial. You will need to read <code class="docutils literal notranslate"><span class="pre">.npy</span></code> files for your homework.</p>
 </section>
 </section>
 <section id="numpy-continued">
-<h2>numpy - continued<a class="headerlink" href="#numpy-continued" title="Permalink to this headline">#</a></h2>
+<h2>numpy - continued<a class="headerlink" href="#numpy-continued" title="Link to this heading">#</a></h2>
 <p>I highly recommend to learn the details of numpy at your own pace. The documentation is truly excellent:</p>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html">numpy tutorials for beginners</a> to revisit many of the concepts (and learn a few new ones)</p></li>
@@ -1137,7 +1175,7 @@ document.write(`
 </ul>
 </section>
 <section id="plotting-2d-arrays">
-<h2>Plotting 2D arrays<a class="headerlink" href="#plotting-2d-arrays" title="Permalink to this headline">#</a></h2>
+<h2>Plotting 2D arrays<a class="headerlink" href="#plotting-2d-arrays" title="Link to this heading">#</a></h2>
 <p>3D arrays (or more) cannot be plotted on a static flat image easily. 2D data, however, is plotted all the time. Here are a few recipes for you to start with. Plotting with matplotlib offers a very wide range of options and possibilities, sometimes confusing. I can’t teach you all of it now: you will learn the details during the course of your studies and practice!</p>
 <p>I recommend to quickly scroll through the following documentation pages, which will give you an overview of matplotlib’s capabilities:</p>
 <ul class="simple">
@@ -1146,7 +1184,7 @@ document.write(`
 <li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/index.html">https://matplotlib.org/stable/tutorials/index.html</a></p></li>
 </ul>
 <section id="imshow">
-<h3><code class="docutils literal notranslate"><span class="pre">imshow</span></code><a class="headerlink" href="#imshow" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">imshow</span></code><a class="headerlink" href="#imshow" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">plt.imshow</span></code> is the simplest way to display an RGB image or assign a color to a value in a 2D array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1177,7 +1215,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a534c6bb6101b88d48fb620c3a4cfd7de3c252f2b708b9c59bbc4fa431d42b72.png" src="../_images/a534c6bb6101b88d48fb620c3a4cfd7de3c252f2b708b9c59bbc4fa431d42b72.png" />
+<img alt="../_images/12d09564295fca6c90577f4a28112dfc990e2d7328e7b811d9dbcf6a182da74c.png" src="../_images/12d09564295fca6c90577f4a28112dfc990e2d7328e7b811d9dbcf6a182da74c.png" />
 </div>
 </div>
 <p>Note the x and y coordinates of the plot. They to not correspond to the one we generated (how could they? <code class="docutils literal notranslate"><span class="pre">imshow</span></code> was not told about them). If you want the coordinates to show up properly, you will have to indicate them:</p>
@@ -1188,7 +1226,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/213d70b15b261f503187ddbf5c142e5b0ed0966d6377595dac2bcc8c3e6be6b9.png" src="../_images/213d70b15b261f503187ddbf5c142e5b0ed0966d6377595dac2bcc8c3e6be6b9.png" />
+<img alt="../_images/6dbd4b69187e9247d21d5076a440fe113621202e931f99dce8674767b1734f98.png" src="../_images/6dbd4b69187e9247d21d5076a440fe113621202e931f99dce8674767b1734f98.png" />
 </div>
 </div>
 <p>Actually, this is still wrong! The correct way is to indicate the corner coordinates, which is a bit more work and implies to know the spatial resolution of the data:</p>
@@ -1199,12 +1237,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5630ef425c8b598145e7c17e5976498f8a1d36012ac98bebd1ed134a574a5364.png" src="../_images/5630ef425c8b598145e7c17e5976498f8a1d36012ac98bebd1ed134a574a5364.png" />
+<img alt="../_images/e968a60b99f0652cb3964a6fd676299bc5e7a3dba885caeca63fcbf8941b3657.png" src="../_images/e968a60b99f0652cb3964a6fd676299bc5e7a3dba885caeca63fcbf8941b3657.png" />
 </div>
 </div>
 </section>
 <section id="pcolormesh">
-<h3><code class="docutils literal notranslate"><span class="pre">pcolormesh</span></code><a class="headerlink" href="#pcolormesh" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">pcolormesh</span></code><a class="headerlink" href="#pcolormesh" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.pcolormesh.html#matplotlib.axes.Axes.pcolormesh">pcolormesh</a> is a slower, more flexible solution to the problem of displaying 2D data on screen. Unlike <code class="docutils literal notranslate"><span class="pre">imshow</span></code>, it allows coordinates as input, and these coordinates do not have to be regularly spaced:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1235,7 +1273,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/66221e8db347371e980c7592c13f5a1a5f90b6e99874f4932c9dfab10a5edf5d.png" src="../_images/66221e8db347371e980c7592c13f5a1a5f90b6e99874f4932c9dfab10a5edf5d.png" />
+<img alt="../_images/76af3ced433b3c5957e09f32cee141bb795bee8030db9083f2916eaaa95d5203.png" src="../_images/76af3ced433b3c5957e09f32cee141bb795bee8030db9083f2916eaaa95d5203.png" />
 </div>
 </div>
 <p>Note that it also takes decisions on the direction of the y-axis based on the data. This is often a good idea, but can be changed of course:</p>
@@ -1249,7 +1287,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/274b2ce0aca86095e60a81d65bdb1895e1fe4679d19c6201483f84e845fd9deb.png" src="../_images/274b2ce0aca86095e60a81d65bdb1895e1fe4679d19c6201483f84e845fd9deb.png" />
+<img alt="../_images/094551a92193a72a66369307ebd719fef4ddbe52669ebe867f86a51377883903.png" src="../_images/094551a92193a72a66369307ebd719fef4ddbe52669ebe867f86a51377883903.png" />
 </div>
 </div>
 <p>Of course, you can change aspects of the plot such as <a class="reference external" href="https://matplotlib.org/3.5.0/tutorials/colors/colormaps.html">the colormap</a> to use:</p>
@@ -1263,12 +1301,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/07c33f20237fcaa0e548e2a7367592a284f2db75e0a14a4fbdd9c0be4e3e5908.png" src="../_images/07c33f20237fcaa0e548e2a7367592a284f2db75e0a14a4fbdd9c0be4e3e5908.png" />
+<img alt="../_images/cf7f9b9c25ea164a97e0d33b0e31b3ada2c379921e5fd4a59a62108d13728f94.png" src="../_images/cf7f9b9c25ea164a97e0d33b0e31b3ada2c379921e5fd4a59a62108d13728f94.png" />
 </div>
 </div>
 </section>
 <section id="contour-and-contourf">
-<h3><code class="docutils literal notranslate"><span class="pre">contour</span></code> and <code class="docutils literal notranslate"><span class="pre">contourf</span></code><a class="headerlink" href="#contour-and-contourf" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">contour</span></code> and <code class="docutils literal notranslate"><span class="pre">contourf</span></code><a class="headerlink" href="#contour-and-contourf" title="Link to this heading">#</a></h3>
 <p>Contours are leaving the “pixel space” to make smooth contour fields around the data points.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1279,7 +1317,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d1b58ee81dc76458db677dadb6c099250ebc3d117b816ff5bac0b650761f2368.png" src="../_images/d1b58ee81dc76458db677dadb6c099250ebc3d117b816ff5bac0b650761f2368.png" />
+<img alt="../_images/f55ff7d75f9769ef331c5a4294c4f9933d6aabc1ba4be16540ee8c9372a68870.png" src="../_images/f55ff7d75f9769ef331c5a4294c4f9933d6aabc1ba4be16540ee8c9372a68870.png" />
 </div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">contourf</span></code> fills with colors, while <code class="docutils literal notranslate"><span class="pre">contour</span></code> draws lines that can be annotated:</p>
@@ -1292,13 +1330,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4cedb78b425e963a363939f55a98a241353dbfdddc26e414b4e5c6052cff4f1c.png" src="../_images/4cedb78b425e963a363939f55a98a241353dbfdddc26e414b4e5c6052cff4f1c.png" />
+<img alt="../_images/7a8212e99288b660ff7bca8bb5e87a214bdb89e88c5384318bb47931978ac672.png" src="../_images/7a8212e99288b660ff7bca8bb5e87a214bdb89e88c5384318bb47931978ac672.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">#</a></h2>
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Link to this heading">#</a></h2>
 <p><label><input type="checkbox" id="week05_01" class="box"> I am able to subset multidimensional arrays according to location and according to a condition.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I understand the concepts of slicing, positional indexing, and boolean indexing.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I am aware of the pitfalls of assigning the same array to two different variable names. I am aware that a similar behavior occurs when slicing arrays.</input></label><br>
@@ -1331,8 +1369,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="../project/project_instructions.html"
@@ -1360,6 +1400,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1400,7 +1441,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -1413,10 +1454,14 @@ By Fabien Maussion
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
-    
+    <p class="last-updated">
+  Last updated on Aug 13, 2024.
+  <br/>
+</p>
   </div>
   
   <div class="footer-item">
@@ -1428,13 +1473,13 @@ By Fabien Maussion
 </a>
 These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
 <br>
-&copy; Copyright 2021-2022.
+&copy; Copyright 2021-2024.
 </p>
 
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -1443,8 +1488,8 @@ These lecture notes and exercises are licensed under a <a href="https://creative
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

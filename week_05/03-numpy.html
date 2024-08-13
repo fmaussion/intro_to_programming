@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Introduction to scientific python: numpy and matplotlib &#8212; Introduction to Programming</title>
   
@@ -15,68 +14,74 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-88391345-1"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-5BGML8VW02"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
                 gtag('js', new Date());
-                gtag('config', 'UA-88391345-1');
+                gtag('config', 'G-5BGML8VW02');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-5BGML8VW02');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week_05/03-numpy';</script>
+    <script data-domain="fabienmaussion.info" defer="defer" src="https://plausible.oggm.org/js/script.js"></script>
+    <script src="../_static/save_state.js?v=c12ce3aa"></script>
+    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Assignment 05" href="04-Assignment.html" />
     <link rel="prev" title="Jupyter notebooks tips and tricks" href="02-jupyter-dos.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Aug 13, 2024"/>
   </head>
   
   
@@ -84,19 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -118,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -138,9 +155,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../welcome.html">
+  
   
   
   
@@ -150,12 +171,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Programming - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Programming - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -239,13 +271,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework cookbook</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_mat_files.html">Reading MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_txt_files.html">Reading space-separated files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_netcdf_files.html">Reading geotiff files with rasterio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_geotiff_files.html">Reading netCDF files with xarray</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Previous exams</span></p>
 <ul class="nav bd-sidenav">
@@ -265,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -274,14 +306,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -306,14 +338,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_05/03-numpy.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -451,26 +483,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -530,18 +564,18 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-scientific-python-numpy-and-matplotlib">
-<h1>Introduction to scientific python: numpy and matplotlib<a class="headerlink" href="#introduction-to-scientific-python-numpy-and-matplotlib" title="Permalink to this headline">#</a></h1>
+<h1>Introduction to scientific python: numpy and matplotlib<a class="headerlink" href="#introduction-to-scientific-python-numpy-and-matplotlib" title="Link to this heading">#</a></h1>
 <p>After a few weeks at learning programming, you may have noticed already that computers are quite good at manipulating numbers. The python language is helping us at it, by providing an interface between us and “the machine”. However, we are going to see that the language needs a little bit of “extra help” to become truly useful for us scientists.</p>
 <p>This help comes with the scientific python ecosystem: in the front line, <a class="reference external" href="https://numpy.org">numpy</a> and <a class="reference external" href="https://matplotlib.org/">matplotlib</a>!</p>
 <p><strong>I strongly recommend to download this notebook, run the examples yourself and play with it on your computer as you go through this unit</strong> (see the <a class="reference internal" href="02-jupyter-dos.html"><span class="doc std std-doc">explanation video</span></a>).</p>
 <p><em>Copyright note: many parts of this lesson are taken from the excellent <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html">numpy for beginners</a> tutorial.</em></p>
 <section id="numpy">
-<h2>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">#</a></h2>
+<h2>NumPy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h2>
 <section id="why-numpy">
-<h3>Why NumPy?<a class="headerlink" href="#why-numpy" title="Permalink to this headline">#</a></h3>
+<h3>Why NumPy?<a class="headerlink" href="#why-numpy" title="Link to this heading">#</a></h3>
 <p>NumPy (<strong>Numerical Python</strong>) is an open source Python library that’s used in almost every field of science and engineering. It’s the universal standard for working with numerical data in Python, and it’s at the core of the scientific Python and PyData ecosystems. NumPy users include everyone from beginning coders to experienced researchers doing state-of-the-art scientific and industrial research and development.</p>
 <p>The NumPy library contains multidimensional array and matrix data structures (you’ll find more information about this in later sections). It provides <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, a homogeneous n-dimensional array object, with methods to efficiently operate on it.</p>
 <p><strong>But why do we need arrays?</strong></p>
@@ -562,7 +596,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">elementwise_addition</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A pale copy of numpy&#39;s addition. Don&#39;t do this at home!&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A pale copy of numpy&#39;s addition. Don&#39;t do this at home!&quot;&quot;&quot;</span>
     <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">):</span>
         <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span>
@@ -583,11 +617,11 @@ document.write(`
 NumPy <strong>efficient calculations</strong> with arrays and matrices and it supplies an enormous library of <strong>high-level mathematical functions</strong> that operate on them.</p>
 </section>
 <section id="installing-numpy">
-<h3>Installing NumPy<a class="headerlink" href="#installing-numpy" title="Permalink to this headline">#</a></h3>
+<h3>Installing NumPy<a class="headerlink" href="#installing-numpy" title="Link to this heading">#</a></h3>
 <p>Make sure you have followed <a class="reference internal" href="01-install-packages.html"><span class="doc std std-doc">my instructions</span></a> before going on.</p>
 </section>
 <section id="how-to-import-numpy">
-<h3>How to import NumPy<a class="headerlink" href="#how-to-import-numpy" title="Permalink to this headline">#</a></h3>
+<h3>How to import NumPy<a class="headerlink" href="#how-to-import-numpy" title="Link to this heading">#</a></h3>
 <p>To access NumPy and its functions import it in your Python code like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -599,7 +633,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <p>We shorten the imported name to <code class="docutils literal notranslate"><span class="pre">np</span></code> for better readability of code using NumPy. This is a widely adopted convention that you should follow so that anyone working with your code can easily understand it.</p>
 </section>
 <section id="what-is-an-array">
-<h3>What is an array?<a class="headerlink" href="#what-is-an-array" title="Permalink to this headline">#</a></h3>
+<h3>What is an array?<a class="headerlink" href="#what-is-an-array" title="Link to this heading">#</a></h3>
 <p>An array is a central data structure of the NumPy library. An array is a grid of values: <strong>the elements in an array are all of the same type</strong>, referred to as the array <code class="docutils literal notranslate"><span class="pre">dtype</span></code>.</p>
 <p>There are many ways to create an array, and one of the simplest is by converting a Python list to a NumPy array:</p>
 <div class="cell docutils container">
@@ -708,7 +742,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <p><strong>For this week’s class, we will stick with vectors (1-D arrays).</strong></p>
 </section>
 <section id="creating-arrays">
-<h3>Creating arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this headline">#</a></h3>
+<h3>Creating arrays<a class="headerlink" href="#creating-arrays" title="Link to this heading">#</a></h3>
 <p>Besides creating an array from a sequence of elements (e.g. with a list as done above), you can easily create an array filled with 0’s:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -789,7 +823,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </section>
 <section id="indexing-and-slicing">
-<h3>Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this headline">#</a></h3>
+<h3>Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Link to this heading">#</a></h3>
 <p>You can index and slice NumPy arrays in the same ways you can slice Python lists.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -854,7 +888,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 7,  9, 12,  8,  6, 10,  5,  1, 11, 14, 13,  2,  4,  3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 6,  3, 12,  7, 11, 13, 10, 14,  4,  5,  1,  8,  2,  9])
 </pre></div>
 </div>
 </div>
@@ -868,7 +902,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 4, 5, 1, 2])
 </pre></div>
 </div>
 </div>
@@ -889,8 +923,8 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False, False, False, False,  True,  True, False,
-       False, False,  True,  True,  True])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True, False, False, False, False, False, False,  True,
+        True,  True, False,  True, False])
 </pre></div>
 </div>
 </div>
@@ -904,7 +938,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 4, 5, 1, 2])
 </pre></div>
 </div>
 </div>
@@ -918,7 +952,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 4, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 4, 5, 1, 2])
 </pre></div>
 </div>
 </div>
@@ -933,7 +967,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 7,  9,  8,  6, 10,  5,  4,  3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 6,  3,  7, 10,  4,  5,  8,  9])
 </pre></div>
 </div>
 </div>
@@ -953,7 +987,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_123724/1830006926.py</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># These two are equivalent with boolean scalars</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">((</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">))</span>  <span class="c1"># On numpy arrays, the second one will raise an error</span>
 
@@ -964,7 +998,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </section>
 <section id="basic-array-operations">
-<h3>Basic array operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this headline">#</a></h3>
+<h3>Basic array operations<a class="headerlink" href="#basic-array-operations" title="Link to this heading">#</a></h3>
 <p>NumPy is very good at doing math!</p>
 <p>For example, you can add two arrays together with the plus sign.</p>
 <div class="cell docutils container">
@@ -1019,7 +1053,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <p>NumPy understands that the multiplication should happen with each cell. That concept is called broadcasting. Broadcasting is a mechanism that allows NumPy to perform operations on arrays of different shapes (we’ll learn about this in a later lecture).</p>
 </section>
 <section id="more-useful-array-operations">
-<h3>More useful array operations<a class="headerlink" href="#more-useful-array-operations" title="Permalink to this headline">#</a></h3>
+<h3>More useful array operations<a class="headerlink" href="#more-useful-array-operations" title="Link to this heading">#</a></h3>
 <p>NumPy also performs aggregation functions. In addition to <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, and <code class="docutils literal notranslate"><span class="pre">sum</span></code>, you can easily run <code class="docutils literal notranslate"><span class="pre">mean</span></code> to get the average, <code class="docutils literal notranslate"><span class="pre">prod</span></code> to get the result of multiplying the elements together, <code class="docutils literal notranslate"><span class="pre">std</span></code> to get the standard deviation, and more:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1041,7 +1075,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <p><img alt="img" src="https://numpy.org/doc/stable/_images/np_aggregation.png" /></p>
 </section>
 <section id="mathematical-operations">
-<h3>Mathematical operations<a class="headerlink" href="#mathematical-operations" title="Permalink to this headline">#</a></h3>
+<h3>Mathematical operations<a class="headerlink" href="#mathematical-operations" title="Link to this heading">#</a></h3>
 <p>NumPy also comes with a very (very) large amount of <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.math.html">mathematical functions</a> that operate on arrays. Here are two examples of them:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1084,17 +1118,17 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </section>
 </section>
 <section id="matplotlib">
-<h2>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">#</a></h2>
+<h2>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h2>
 <section id="why-matplotlib">
-<h3>Why matplotlib?<a class="headerlink" href="#why-matplotlib" title="Permalink to this headline">#</a></h3>
+<h3>Why matplotlib?<a class="headerlink" href="#why-matplotlib" title="Link to this heading">#</a></h3>
 <p>Matplotlib is a comprehensive library for creating plots and graphics in python. It is used in combination with NumPy in many (many) scientific applications.</p>
 </section>
 <section id="installing-matplotlib">
-<h3>Installing matplotlib<a class="headerlink" href="#installing-matplotlib" title="Permalink to this headline">#</a></h3>
+<h3>Installing matplotlib<a class="headerlink" href="#installing-matplotlib" title="Link to this heading">#</a></h3>
 <p>Make sure you have followed <a class="reference internal" href="01-install-packages.html"><span class="doc std std-doc">my instructions</span></a> before going on.</p>
 </section>
 <section id="how-to-import-matplotlib">
-<h3>How to import matplotlib<a class="headerlink" href="#how-to-import-matplotlib" title="Permalink to this headline">#</a></h3>
+<h3>How to import matplotlib<a class="headerlink" href="#how-to-import-matplotlib" title="Link to this heading">#</a></h3>
 <p>For now, you will import the matlotlib tools we need like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1107,7 +1141,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <p><strong>Matplotlib is best learned by doing</strong>. Today I’ll showcase some of the tools you’ll need for the assignments, and with time you’ll learn to use many more!</p>
 </section>
 <section id="a-first-plot">
-<h3>A first plot<a class="headerlink" href="#a-first-plot" title="Permalink to this headline">#</a></h3>
+<h3>A first plot<a class="headerlink" href="#a-first-plot" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This you should know by now what it does - if not, check it out above</span>
@@ -1122,7 +1156,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f841cab18a1d557f2a90cd84b88c14ff9af198c6a3bc3ccbac668e7de15272a4.png" src="../_images/f841cab18a1d557f2a90cd84b88c14ff9af198c6a3bc3ccbac668e7de15272a4.png" />
+<img alt="../_images/612c444b409dafe976bbcd5c178503d66a8154a71800faaee06189076d079c1e.png" src="../_images/612c444b409dafe976bbcd5c178503d66a8154a71800faaee06189076d079c1e.png" />
 </div>
 </div>
 <p>Let’s repeat this example, but with inline comments and adding some elements to the plot:</p>
@@ -1138,13 +1172,13 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/92b2f84327bdf343a07d338dbb5e463a5bca804db92303f0ad6ede3d75752629.png" src="../_images/92b2f84327bdf343a07d338dbb5e463a5bca804db92303f0ad6ede3d75752629.png" />
+<img alt="../_images/e351bba8c770b8fed9ebc8102adbfccb00ce93de9bdba46409b5295c77e498d3.png" src="../_images/e351bba8c770b8fed9ebc8102adbfccb00ce93de9bdba46409b5295c77e498d3.png" />
 </div>
 </div>
 <p><strong>Exercise: write a simple python script (not a notebook) reproducing the plot above. Run the code with and without <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> at the end.</strong></p>
 </section>
 <section id="line-plots">
-<h3>Line plots<a class="headerlink" href="#line-plots" title="Permalink to this headline">#</a></h3>
+<h3>Line plots<a class="headerlink" href="#line-plots" title="Link to this heading">#</a></h3>
 <p>Line plots are probably the most common way to represent data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1165,12 +1199,12 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e941c24dd8fa68b304c48224c239d707664c18011cb33d093b10456bea160081.png" src="../_images/e941c24dd8fa68b304c48224c239d707664c18011cb33d093b10456bea160081.png" />
+<img alt="../_images/a649bc079ff15356ad5158078cb646315eae92e7f6fd199b62f15ef5c2426f75.png" src="../_images/a649bc079ff15356ad5158078cb646315eae92e7f6fd199b62f15ef5c2426f75.png" />
 </div>
 </div>
 </section>
 <section id="scatter-plots">
-<h3>Scatter plots<a class="headerlink" href="#scatter-plots" title="Permalink to this headline">#</a></h3>
+<h3>Scatter plots<a class="headerlink" href="#scatter-plots" title="Link to this heading">#</a></h3>
 <p>Scatter plots are used when it does not make sense to connect the data points together with lines. This happens when there is no temporal or spatial relationship between the data points, when the data is noisy or has discontinuities (for example wind direction).</p>
 <p>Scatter plots are often used in statistics, to represent relationships between data. Here for example:</p>
 <div class="cell docutils container">
@@ -1188,12 +1222,12 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5df58c8e243924e6ce96754103a800ad28a50c85fa7f90d014b2d0737c8766ce.png" src="../_images/5df58c8e243924e6ce96754103a800ad28a50c85fa7f90d014b2d0737c8766ce.png" />
+<img alt="../_images/2f2f9a4b956c748cb7cfbefa51e44406c4fb3341c8eb358cfa8c775b3c50a456.png" src="../_images/2f2f9a4b956c748cb7cfbefa51e44406c4fb3341c8eb358cfa8c775b3c50a456.png" />
 </div>
 </div>
 </section>
 <section id="styling-plots">
-<h3>Styling plots<a class="headerlink" href="#styling-plots" title="Permalink to this headline">#</a></h3>
+<h3>Styling plots<a class="headerlink" href="#styling-plots" title="Link to this heading">#</a></h3>
 <p>You can change the style of practically <em>everything</em> in a plot. For now, we will focus on the most important things: figure size, lines and markers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1210,7 +1244,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/492966399f6d334bc2d572cad1b1f8579f88b67e04cb37918ee7266d1b0268b2.png" src="../_images/492966399f6d334bc2d572cad1b1f8579f88b67e04cb37918ee7266d1b0268b2.png" />
+<img alt="../_images/0c89354435550317f1f2968ed891142729278186b1f4d5a34c4ebf923ba59a17.png" src="../_images/0c89354435550317f1f2968ed891142729278186b1f4d5a34c4ebf923ba59a17.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1225,7 +1259,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <p><strong>Exercise: play around with the many options available and make experiments!</strong></p>
 </section>
 <section id="plotting-data-of-different-units">
-<h3>Plotting data of different units<a class="headerlink" href="#plotting-data-of-different-units" title="Permalink to this headline">#</a></h3>
+<h3>Plotting data of different units<a class="headerlink" href="#plotting-data-of-different-units" title="Link to this heading">#</a></h3>
 <p>Sometimes, you want to plot data with very different values on the same figure. For example, plotting data of different order of magnitudes or of different units:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1241,12 +1275,12 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/74cbff45c61972d6931503b0baa379a10e50ebc5d9717527b6be623a55c3bf46.png" src="../_images/74cbff45c61972d6931503b0baa379a10e50ebc5d9717527b6be623a55c3bf46.png" />
+<img alt="../_images/f1ac791bc04a0a0a29fa604768a12b7b77877da732ba4ca4572a34cae4609199.png" src="../_images/f1ac791bc04a0a0a29fa604768a12b7b77877da732ba4ca4572a34cae4609199.png" />
 </div>
 </div>
 <p>The problem is that the orange line has variations which are not visible in the graph. There are two simple solutions to this problem, explained below.</p>
 <section id="two-subplots-on-the-same-figure">
-<h4>Two subplots on the same figure<a class="headerlink" href="#two-subplots-on-the-same-figure" title="Permalink to this headline">#</a></h4>
+<h4>Two subplots on the same figure<a class="headerlink" href="#two-subplots-on-the-same-figure" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subplots: 2 rows one column, they share the same x-axis</span>
@@ -1271,12 +1305,12 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/90c8b6161f63d72c5dc7275db9cbb9af6138f0d84f83e21d55af88d837c15041.png" src="../_images/90c8b6161f63d72c5dc7275db9cbb9af6138f0d84f83e21d55af88d837c15041.png" />
+<img alt="../_images/3f6d7f0108b1ccf47a76ee165b5e0a1c2f87661878cc1a03626dd5753043735d.png" src="../_images/3f6d7f0108b1ccf47a76ee165b5e0a1c2f87661878cc1a03626dd5753043735d.png" />
 </div>
 </div>
 </section>
 <section id="two-y-axis-on-the-same-plot">
-<h4>Two y-axis on the same plot<a class="headerlink" href="#two-y-axis-on-the-same-plot" title="Permalink to this headline">#</a></h4>
+<h4>Two y-axis on the same plot<a class="headerlink" href="#two-y-axis-on-the-same-plot" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -1301,13 +1335,13 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7f59a451062be2d993bf20d5d4ca7effd25afe60e43d8abdcbc8271d49d759c9.png" src="../_images/7f59a451062be2d993bf20d5d4ca7effd25afe60e43d8abdcbc8271d49d759c9.png" />
+<img alt="../_images/e222c64c9cd75ed5c724a143ceee3475673585db41e5d9829be2a2382132c40c.png" src="../_images/e222c64c9cd75ed5c724a143ceee3475673585db41e5d9829be2a2382132c40c.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="storing-the-plot-as-png-or-pdf-for-later">
-<h3>Storing the plot as png or pdf for later<a class="headerlink" href="#storing-the-plot-as-png-or-pdf-for-later" title="Permalink to this headline">#</a></h3>
+<h3>Storing the plot as png or pdf for later<a class="headerlink" href="#storing-the-plot-as-png-or-pdf-for-later" title="Link to this heading">#</a></h3>
 <p>If you are happy with a plot and want to store it on your computer for later use (in a report or a manuscript), use <code class="docutils literal notranslate"><span class="pre">fig.savefig</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1336,14 +1370,14 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7f59a451062be2d993bf20d5d4ca7effd25afe60e43d8abdcbc8271d49d759c9.png" src="../_images/7f59a451062be2d993bf20d5d4ca7effd25afe60e43d8abdcbc8271d49d759c9.png" />
+<img alt="../_images/e222c64c9cd75ed5c724a143ceee3475673585db41e5d9829be2a2382132c40c.png" src="../_images/e222c64c9cd75ed5c724a143ceee3475673585db41e5d9829be2a2382132c40c.png" />
 </div>
 </div>
 <p><a class="reference external" href="https://matplotlib.org/3.5.0/api/figure_api.html?highlight=savefig#matplotlib.figure.Figure.savefig">figure.savefig</a> has several options available. The first position argument <code class="docutils literal notranslate"><span class="pre">fname</span></code> indicates the path to the file to write (default is is the current working folder) and its format (e.g. <code class="docutils literal notranslate"><span class="pre">.png</span></code>, <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> or <code class="docutils literal notranslate"><span class="pre">.eps</span></code>). The other two arguments are setting the resolution the final image and whether to have margins around the figure (I often use <code class="docutils literal notranslate"><span class="pre">bbox_inches='tight'</span></code>).</p>
 </section>
 </section>
 <section id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">#</a></h2>
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Link to this heading">#</a></h2>
 <p><label><input type="checkbox" id="week05_01" class="box"> I downloaded this notebook from the website and ran all the examples myself.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I understand the main differences between numpy arrays and python lists.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I can create numpy arrays and realise basic operations on them (computations, aggregations…).</input></label><br>
@@ -1352,7 +1386,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <label><input type="checkbox" id="week05_01" class="box"> I can store a plot for later use.</input></label><br></p>
 </section>
 <section id="to-go-further">
-<h2>To go further<a class="headerlink" href="#to-go-further" title="Permalink to this headline">#</a></h2>
+<h2>To go further<a class="headerlink" href="#to-go-further" title="Link to this heading">#</a></h2>
 <p>The <a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/usage.html">Basic usage</a> documentation page is a good place to start if you are curious to learn more</p>
 </section>
 </section>
@@ -1382,8 +1416,10 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 
               
               
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="02-jupyter-dos.html"
@@ -1411,6 +1447,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1456,7 +1493,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -1469,10 +1506,14 @@ By Fabien Maussion
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
-    
+    <p class="last-updated">
+  Last updated on Aug 13, 2024.
+  <br/>
+</p>
   </div>
   
   <div class="footer-item">
@@ -1484,13 +1525,13 @@ By Fabien Maussion
 </a>
 These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
 <br>
-&copy; Copyright 2021-2022.
+&copy; Copyright 2021-2024.
 </p>
 
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -1499,8 +1540,8 @@ These lecture notes and exercises are licensed under a <a href="https://creative
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python dictionaries &#8212; Introduction to Programming</title>
   
@@ -15,68 +14,74 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/save_state.js"></script>
-    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-88391345-1"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-5BGML8VW02"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
                 gtag('js', new Date());
-                gtag('config', 'UA-88391345-1');
+                gtag('config', 'G-5BGML8VW02');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-5BGML8VW02');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'week_08/01-dictionaries';</script>
+    <script data-domain="fabienmaussion.info" defer="defer" src="https://plausible.oggm.org/js/script.js"></script>
+    <script src="../_static/save_state.js?v=c12ce3aa"></script>
+    <script src="../_static/.ipynb_checkpoints/save_state-checkpoint.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Pandas: working with tabular data" href="02-pandas.html" />
     <link rel="prev" title="Assignment 07" href="../week_07/02-Assignment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Aug 13, 2024"/>
   </head>
   
   
@@ -84,19 +89,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -118,12 +127,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -138,9 +155,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../welcome.html">
+  
   
   
   
@@ -150,12 +171,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Programming - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Programming - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -239,13 +271,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework cookbook</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_mat_files.html">Reading MATLAB <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_txt_files.html">Reading space-separated files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_netcdf_files.html">Reading geotiff files with rasterio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/reading_geotiff_files.html">Reading netCDF files with xarray</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Previous exams</span></p>
 <ul class="nav bd-sidenav">
@@ -265,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -274,14 +306,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -306,14 +338,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/fmaussion/intro_to_programming/master?urlpath=lab/tree/book/week_08/01-dictionaries.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -451,26 +483,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -509,15 +543,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-dictionaries">
-<h1>Python dictionaries<a class="headerlink" href="#python-dictionaries" title="Permalink to this headline">#</a></h1>
+<h1>Python dictionaries<a class="headerlink" href="#python-dictionaries" title="Link to this heading">#</a></h1>
 <p>You’ve already learned about a few important datatypes which are built into the python language: <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">int</span></code> (for numbers), <code class="docutils literal notranslate"><span class="pre">str</span></code> (for text), <code class="docutils literal notranslate"><span class="pre">list</span></code> (for mutable sequences), <code class="docutils literal notranslate"><span class="pre">tuple</span></code> (for immutable sequences), <code class="docutils literal notranslate"><span class="pre">func</span></code> (for functions)…</p>
 <p>Today, you will learn about the a further important built-in datatype in the python language: dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <p><em>Copyright notice: this lecture is inspired from the <a class="reference external" href="https://www.py4e.com/html3/09-dictionaries">py4e lecture on dictionaries</a> (CC-BY - Charles R. Severance).</em></p>
 <section id="what-is-a-dictionary">
-<h2>What is a dictionary?<a class="headerlink" href="#what-is-a-dictionary" title="Permalink to this headline">#</a></h2>
+<h2>What is a dictionary?<a class="headerlink" href="#what-is-a-dictionary" title="Link to this heading">#</a></h2>
 <p>You can think of a <strong>dictionary</strong> as a <em>mapping</em> between a set of indices (which are called <strong>keys</strong>) and a set of <strong>values</strong>. Each key maps to a value. The association of a key and a value is called a <strong>key-value pair</strong> or sometimes an item.</p>
 <p>As an example, we’ll build a dictionary that maps from English to German words, so the keys and the values are all strings.</p>
 <p>The function <code class="docutils literal notranslate"><span class="pre">dict</span></code> creates a new dictionary with no items. Because <code class="docutils literal notranslate"><span class="pre">dict</span></code> is the name of a built-in function, you should avoid using it as a variable name:</p>
@@ -590,7 +624,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_123926/90977062.py</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">en2de</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span>
 
 <span class="ne">KeyError</span>: &#39;four&#39;
@@ -653,10 +687,10 @@ document.write(`
 <p>This type of usage is rare for dictionaries though.</p>
 </section>
 <section id="why-dictionaries">
-<h2>Why dictionaries?<a class="headerlink" href="#why-dictionaries" title="Permalink to this headline">#</a></h2>
+<h2>Why dictionaries?<a class="headerlink" href="#why-dictionaries" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">dict</span></code> is the last built-in (“standard”) python datatype you will learn from me in this class. But is is not any less important than the other ones. Dictionaries are used in plenty of situations! Let me show you a few “real world” examples.</p>
 <section id="dictionary-as-translators">
-<h3>Dictionary as “translators”<a class="headerlink" href="#dictionary-as-translators" title="Permalink to this headline">#</a></h3>
+<h3>Dictionary as “translators”<a class="headerlink" href="#dictionary-as-translators" title="Link to this heading">#</a></h3>
 <p>Similar to the example above, dictionaries are good to store data (values) sorted by entries (keys). We use this feature to provide several language on our <a class="reference external" href="https://edu.oggm.org/en/latest/explorer.html">world glacier explorer app</a>. The translation algorithm looks a lot like this simplified code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -691,7 +725,7 @@ Hallo Émilie! Wie geht es dir?
 <p><a class="reference external" href="https://github.com/OGGM/world-glacier-explorer/blob/master/international.py">Here</a> is the translation file for the glacier explorer app if you are interested.</p>
 </section>
 <section id="dictionary-as-a-set-of-counters">
-<h3>Dictionary as a set of counters<a class="headerlink" href="#dictionary-as-a-set-of-counters" title="Permalink to this headline">#</a></h3>
+<h3>Dictionary as a set of counters<a class="headerlink" href="#dictionary-as-a-set-of-counters" title="Link to this heading">#</a></h3>
 <p>Suppose you are given a string and you want to count how many times each letter appears. There are several ways you could do it, but one good way is to use a <code class="docutils literal notranslate"><span class="pre">dict</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -751,7 +785,7 @@ Hallo Émilie! Wie geht es dir?
 <p>The use of the <code class="docutils literal notranslate"><span class="pre">.get()</span></code> method to simplify this counting loop ends up being a very commonly used “idiom” (strategy) in Python. So you should take a moment and compare the loop using the if statement and in operator with the loop using the get method. They do exactly the same thing, but one is more succinct.</p>
 </section>
 <section id="dictionaries-as-very-efficient-search-tools">
-<h3>Dictionaries as very efficient “search” tools<a class="headerlink" href="#dictionaries-as-very-efficient-search-tools" title="Permalink to this headline">#</a></h3>
+<h3>Dictionaries as very efficient “search” tools<a class="headerlink" href="#dictionaries-as-very-efficient-search-tools" title="Link to this heading">#</a></h3>
 <p>Lists and dictionaries have a few things in common:</p>
 <ul class="simple">
 <li><p>they both contain data (they are “containers”)</p></li>
@@ -789,7 +823,7 @@ Hallo Émilie! Wie geht es dir?
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>43.1 ns ± 9.99 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31.5 ns ± 0.0863 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -801,7 +835,7 @@ Hallo Émilie! Wie geht es dir?
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.91 µs ± 146 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.76 μs ± 21.4 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -839,7 +873,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35.5 ns ± 5.58 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20.4 ns ± 0.101 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -852,7 +886,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41.9 ns ± 2.11 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31.7 ns ± 0.092 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -917,13 +951,13 @@ spätzle is not an english word
 </div>
 </section>
 <section id="dictionaries-as-structured-containers">
-<h3>Dictionaries as structured containers<a class="headerlink" href="#dictionaries-as-structured-containers" title="Permalink to this headline">#</a></h3>
+<h3>Dictionaries as structured containers<a class="headerlink" href="#dictionaries-as-structured-containers" title="Link to this heading">#</a></h3>
 <p>This is probably the main use of dictionaries. They allow to share information in a structured and human readable form. For example, the <a class="reference external" href="https://acinn-data.uibk.ac.at/innsbruck/3">ACINN weather data</a> shared online comes in the <a class="reference external" href="https://en.wikipedia.org/wiki/JSON#Syntax">JSON</a> format (which is read as a dictionary in python): the keys are the variable names and the values are the timeseries.</p>
 <p>The dictionary syntax (<code class="docutils literal notranslate"><span class="pre">d['key']</span> <span class="pre">=</span> <span class="pre">value</span></code>) is also used extensively by high-level data structures such as <a class="reference external" href="https://pandas.pydata.org">pandas</a> dataframes. This will be the topic of our next unit.</p>
 </section>
 </section>
 <section id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">#</a></h2>
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Link to this heading">#</a></h2>
 <p><label><input type="checkbox" id="week05_01" class="box"> I understand the differences between a dictionary and a list.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I know what a “key-value pair” is.</input></label><br>
 <label><input type="checkbox" id="week05_01" class="box"> I know how to check if a dictionary contains a key, and if not return a default value.</input></label><br>
@@ -957,8 +991,10 @@ spätzle is not an english word
 
               
               
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="../week_07/02-Assignment.html"
@@ -987,6 +1023,7 @@ spätzle is not an english word
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1010,7 +1047,7 @@ spätzle is not an english word
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -1023,10 +1060,14 @@ By Fabien Maussion
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
-    
+    <p class="last-updated">
+  Last updated on Aug 13, 2024.
+  <br/>
+</p>
   </div>
   
   <div class="footer-item">
@@ -1038,13 +1079,13 @@ By Fabien Maussion
 </a>
 These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
 <br>
-&copy; Copyright 2021-2022.
+&copy; Copyright 2021-2024.
 </p>
 
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -1053,8 +1094,8 @@ These lecture notes and exercises are licensed under a <a href="https://creative
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
