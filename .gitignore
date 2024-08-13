@@ -4,6 +4,7 @@ html/index.html
 book/_build/
 *-correction*
 myfigure.png
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
